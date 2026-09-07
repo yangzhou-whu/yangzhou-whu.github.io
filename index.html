@@ -77,13 +77,10 @@
     <section class="card openings" id="openings">
       <h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.9"></path><path d="M16 3.1a4 4 0 0 1 0 7.8"></path></svg> Openings</h2>
       <p>
-        I am recruiting <b>PhD and Master&rsquo;s students</b> every year. Enquiries welcome at any
-        time &mdash;
-        <span data-u="zhou_yang" data-d="whu.edu.cn"><noscript>zhou_yang [at] whu.edu.cn</noscript></span>
+        I am recruiting <b>PhD and Master&rsquo;s students</b> every year. Enquiries welcome &mdash;
+        <a href="#contact" data-u="zhou_yang" data-d="whu.edu.cn">email me</a>.
       </p>
-      <p class="zh" lang="zh-CN">
-        课题组常年招收博士、硕士研究生（含推免生）。欢迎随时来信咨询。
-      </p>
+      <p class="zh" lang="zh-CN">课题组常年招收博士、硕士研究生（含推免生），欢迎来信咨询。</p>
     </section>
 
     <section class="card" id="publications">
@@ -120,7 +117,7 @@
       <h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg> Contact</h2>
       <div class="foot">
         <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>School of Computer Science, Wuhan University, Wuhan, Hubei, China</span>
-        <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m2 7 10 6 10-6"></path></svg><span data-u="zhou_yang" data-d="whu.edu.cn"><noscript>zhou_yang [at] whu.edu.cn</noscript></span></span>
+        <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m2 7 10 6 10-6"></path></svg><a data-u="zhou_yang" data-d="whu.edu.cn">zhou_yang [at] whu.edu.cn</a></span>
       </div>
     </section>
 
@@ -128,21 +125,15 @@
 </div>
 
 <script>
-/* Addresses are assembled at runtime so they are not sitting in the HTML for
-   address-harvesting crawlers. <noscript> keeps a human-readable fallback. */
+/* No address appears in the markup or in the rendered text: links carry the
+   parts, and the mailto: is assembled at runtime. Beats regex harvesters at
+   both levels; the visible "[at]" form stays readable with JS off. */
 (function () {
-  function addr(el) { return el.getAttribute('data-u') + '@' + el.getAttribute('data-d'); }
-  var a = document.querySelectorAll('a[data-u]'), i;
-  for (i = 0; i < a.length; i++) { a[i].href = 'mailto:' + addr(a[i]); }
-  var s = document.querySelectorAll('span[data-u]'), j, link, subj;
-  for (j = 0; j < s.length; j++) {
-    link = document.createElement('a');
-    subj = s[j].getAttribute('data-s');
-    link.href = 'mailto:' + addr(s[j]) +
-      (subj ? '?subject=' + encodeURIComponent(subj) : '');
-    link.textContent = addr(s[j]);
-    s[j].textContent = '';
-    s[j].appendChild(link);
+  var a = document.querySelectorAll('a[data-u]'), i, s;
+  for (i = 0; i < a.length; i++) {
+    s = a[i].getAttribute('data-s');
+    a[i].href = 'mailto:' + a[i].getAttribute('data-u') + '@' + a[i].getAttribute('data-d') +
+      (s ? '?subject=' + encodeURIComponent(s) : '');
   }
 })();
 </script>

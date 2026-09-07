@@ -145,6 +145,8 @@ h3:first-of-type{margin-top:0}
 /* -------------------------------------------------------------- openings -- */
 /* the one call to action on the page, so it is the one tinted card */
 .openings{background:var(--accent-soft);border-color:var(--accent-edge);box-shadow:none}
+.main .openings{padding:15px 22px}
+.openings h2{margin-bottom:7px}
 .openings a{font-weight:600}
 .zh{font-size:14.5px;line-height:1.8}
 .openings p{margin:0 0 7px}
