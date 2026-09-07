@@ -172,9 +172,9 @@ h3:first-of-type{margin-top:0}
   .threads .k{padding-top:0}
 }
 @media print{
-  .top,.rail nav,.pub .lk{display:none}
+  .top,.rail nav{display:none}
   body{background:#fff;font-size:10pt;color:#000}
   .shell{display:block;max-width:none;padding:0}
   .card{border:0;box-shadow:none;padding:0!important}
-  .row{break-inside:avoid}
+  .row,.pub{break-inside:avoid}
 }
