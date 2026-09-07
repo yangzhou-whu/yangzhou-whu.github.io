@@ -72,23 +72,48 @@
 
   <section id="openings">
     <h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.9"></path><path d="M16 3.1a4 4 0 0 1 0 7.8"></path></svg> openings</h2>
-    <p class="sub">PhD and Master&rsquo;s students, every year.</p>
-    <p>
-      I look for solid mathematics, fluent PyTorch, and genuine curiosity about clinical problems;
-      a medical background is welcome but not required.
-    </p>
-    <p class="apply">
-      Email <span data-u="zhou_yang" data-d="whu.edu.cn"><noscript>zhou_yang [at] whu.edu.cn</noscript></span>
-      with the subject <code>[PhD Application] Your Name</code> or
-      <code>[Master Application] Your Name</code>, attaching your CV and transcript, plus one short
-      paragraph on a paper of mine you have read and what you would do differently.
-    </p>
+    <p class="sub">PhD and Master&rsquo;s students, every year &middot; 常年招收博士、硕士研究生（含推免生）</p>
+    <div class="bi">
+      <div>
+        <span class="flag">English</span>
+        <p>
+          I look for solid mathematics, fluent PyTorch, and genuine curiosity about clinical
+          problems; a medical background is welcome but not required.
+        </p>
+      </div>
+      <div class="zh" lang="zh-CN">
+        <span class="flag">中文</span>
+        <p>
+          VEGA 课题组常年招收博士研究生与硕士研究生（含推免生）。希望你数学基础扎实、能熟练使用
+          PyTorch，并对临床问题抱有真正的好奇心；有医学背景者优先，但并非必需。
+        </p>
+      </div>
+    </div>
+    <div class="apply">
+      <p>
+        Email <span data-u="zhou_yang" data-d="whu.edu.cn"><noscript>zhou_yang [at] whu.edu.cn</noscript></span>
+        with the subject <code>[PhD Application] Your Name</code> or
+        <code>[Master Application] Your Name</code>, attaching your CV and transcript, plus one short
+        paragraph on a paper of mine you have read and what you would do differently.
+      </p>
+      <p class="zh" lang="zh-CN">
+        邮件主题请写明 <code>[博士申请] 姓名</code> 或 <code>[硕士申请] 姓名</code>，
+        附个人简历与成绩单，并用一段话说明你读过我的哪篇论文、你会怎样改进它。这段话我会最先读。
+      </p>
+    </div>
   </section>
 
   <section id="publications">
     <h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"></path></svg> selected publications</h2>
     <p class="sub">Medical image analysis &middot; foundation models &middot; vision&ndash;language models &middot; multimodal LLMs &middot; trustworthy AI for healthcare</p>
-      <div class="pub">
+    <input class="vsw" type="radio" name="pubview" id="v-sel" checked>
+    <input class="vsw" type="radio" name="pubview" id="v-all">
+    <div class="tabs">
+      <label for="v-sel">Selected<span class="n">10</span></label>
+      <label for="v-all">All<span class="n">17</span></label>
+    </div>
+    <div class="pubs">
+      <div class="pub is-sel">
         <div class="yr">2026</div>
         <div class="meta">
           <div class="t">EVLF-FM: Explainable Vision Language Foundation Model for Medicine</div>
@@ -97,16 +122,16 @@
           <div class="lk"><a href="https://arxiv.org/abs/2509.24231" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>arXiv</a></div>
         </div>
       </div>
-      <div class="pub">
+      <div class="pub is-sel">
         <div class="yr">2026</div>
         <div class="meta">
           <div class="t">MerMED-FM: Multimodal, Multi-Disease Medical Imaging Foundation Model</div>
           <div class="au"><b>Yang Zhou</b><sup>*</sup>, Chrystie Wan Ning Quek<sup>*</sup>, Jun Zhou, et al.</div>
           <div class="vn"><em>The Lancet Digital Health</em>, 2026</div>
-          <div class="lk"><a href="https://arxiv.org/abs/2507.00185" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>arXiv</a></div>
+          <div class="lk"><a href="https://arxiv.org/abs/2507.00185" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>arXiv</a><a href="https://github.com/yangzhou12/MerMED" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a></div>
         </div>
       </div>
-      <div class="pub">
+      <div class="pub is-sel">
         <div class="yr">2026</div>
         <div class="meta">
           <div class="t">Note2Chat: Improving LLMs for Multi-Turn Clinical History Taking Using Medical Notes</div>
@@ -115,7 +140,7 @@
           <div class="lk"><a href="https://arxiv.org/abs/2601.21551" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>arXiv</a><a href="https://github.com/zhentingsheng/Note2Chat" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a><a href="https://ojs.aaai.org/index.php/AAAI/article/view/40821" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>AAAI</a></div>
         </div>
       </div>
-      <div class="pub">
+      <div class="pub is-sel">
         <div class="yr">2024</div>
         <div class="meta">
           <div class="t">BenchX: A Unified Benchmark Framework for Medical Vision-Language Pretraining on Chest X-Rays</div>
@@ -124,7 +149,7 @@
           <div class="lk"><a href="https://arxiv.org/abs/2410.21969" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>arXiv</a><a href="https://github.com/yangzhou12/BenchX" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a><a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/0cb35e10bf7bb73d10c12414edbd63fd-Abstract-Datasets_and_Benchmarks_Track.html" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>Proceedings</a></div>
         </div>
       </div>
-      <div class="pub">
+      <div class="pub is-sel">
         <div class="yr">2024</div>
         <div class="meta">
           <div class="t">UrFound: Towards Universal Retinal Foundation Models via Knowledge-Guided Masked Modeling</div>
@@ -133,7 +158,7 @@
           <div class="lk"><a href="https://arxiv.org/abs/2408.05618" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>arXiv</a><a href="https://github.com/yukkai/UrFound" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a><a href="https://doi.org/10.1007/978-3-031-72390-2_70" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>Springer</a></div>
         </div>
       </div>
-      <div class="pub">
+      <div class="pub is-sel">
         <div class="yr">2024</div>
         <div class="meta">
           <div class="t">Topicwise Separable Sentence Retrieval for Medical Report Generation</div>
@@ -142,7 +167,7 @@
           <div class="lk"><a href="https://arxiv.org/abs/2405.04175" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>arXiv</a><a href="https://doi.org/10.1109/TMI.2024.3507076" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>IEEE</a></div>
         </div>
       </div>
-      <div class="pub">
+      <div class="pub is-sel">
         <div class="yr">2023</div>
         <div class="meta">
           <div class="t">Medical Phrase Grounding with Region-Phrase Context Contrastive Alignment</div>
@@ -151,7 +176,7 @@
           <div class="lk"><a href="https://arxiv.org/abs/2303.07618" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>arXiv</a><a href="https://doi.org/10.1007/978-3-031-43990-2_35" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>Springer</a></div>
         </div>
       </div>
-      <div class="pub">
+      <div class="pub is-sel">
         <div class="yr">2023</div>
         <div class="meta">
           <div class="t">Tell2Design: A Dataset for Language-Guided Floor Plan Generation</div>
@@ -160,7 +185,7 @@
           <div class="lk"><a href="https://arxiv.org/abs/2311.15941" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>arXiv</a><a href="https://github.com/LengSicong/Tell2Design" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a><a href="https://aclanthology.org/2023.acl-long.820/" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>ACL Anthology</a></div>
         </div>
       </div>
-      <div class="pub">
+      <div class="pub is-sel">
         <div class="yr">2022</div>
         <div class="meta">
           <div class="t">None Class Ranking Loss for Document-Level Relation Extraction</div>
@@ -169,7 +194,7 @@
           <div class="lk"><a href="https://arxiv.org/abs/2205.00476" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>arXiv</a><a href="https://github.com/yangzhou12/NCRL" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a><a href="https://www.ijcai.org/proceedings/2022/0630" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>Proceedings</a></div>
         </div>
       </div>
-      <div class="pub">
+      <div class="pub is-sel">
         <div class="yr">2021</div>
         <div class="meta">
           <div class="t">Bayesian Low-Tubal-Rank Robust Tensor Factorization with Multi-Rank Determination</div>
@@ -178,9 +203,73 @@
           <div class="lk"><a href="https://github.com/yangzhou12/BTRTF" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a><a href="https://doi.org/10.1109/TPAMI.2019.2923240" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>IEEE</a></div>
         </div>
       </div>
+      <div class="pub">
+        <div class="yr">2021</div>
+        <div class="meta">
+          <div class="t">Probabilistic Rank-One Tensor Analysis with Concurrent Regularizations</div>
+          <div class="au"><b>Yang Zhou</b>, Haiping Lu, Yiu-ming Cheung</div>
+          <div class="vn"><em>IEEE Transactions on Cybernetics</em>, 2021</div>
+          <div class="lk"><a href="https://github.com/yangzhou12/PROTA" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a><a href="https://doi.org/10.1109/TCYB.2019.2914316" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>IEEE</a></div>
+        </div>
+      </div>
+      <div class="pub">
+        <div class="yr">2020</div>
+        <div class="meta">
+          <div class="t">Probabilistic Rank-One Discriminant Analysis via Collective and Individual Variation Modeling</div>
+          <div class="au"><b>Yang Zhou</b>, Yiu-ming Cheung</div>
+          <div class="vn"><em>IEEE Transactions on Cybernetics</em>, 2020</div>
+          <div class="lk"><a href="https://github.com/yangzhou12/PRODA" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a><a href="https://doi.org/10.1109/TCYB.2018.2870440" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>IEEE</a></div>
+        </div>
+      </div>
+      <div class="pub">
+        <div class="yr">2017</div>
+        <div class="meta">
+          <div class="t">Manifold Partition Discriminant Analysis</div>
+          <div class="au"><b>Yang Zhou</b>, Shiliang Sun</div>
+          <div class="vn"><em>IEEE Transactions on Cybernetics</em>, 2017</div>
+          <div class="lk"><a href="https://github.com/yangzhou12/MPDA" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a><a href="https://doi.org/10.1109/TCYB.2016.2529299" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>IEEE</a></div>
+        </div>
+      </div>
+      <div class="pub">
+        <div class="yr">2017</div>
+        <div class="meta">
+          <div class="t">Bilinear Probabilistic Canonical Correlation Analysis via Hybrid Concatenations</div>
+          <div class="au"><b>Yang Zhou</b>, Haiping Lu, Yiu-ming Cheung</div>
+          <div class="vn"><em>AAAI</em>, 2017</div>
+          <div class="lk"><a href="https://doi.org/10.1609/aaai.v31i1.10817" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>AAAI</a></div>
+        </div>
+      </div>
+      <div class="pub">
+        <div class="yr">2016</div>
+        <div class="meta">
+          <div class="t">Probabilistic Rank-One Matrix Analysis with Concurrent Regularization</div>
+          <div class="au"><b>Yang Zhou</b>, Haiping Lu</div>
+          <div class="vn"><em>IJCAI</em>, 2016</div>
+          <div class="lk"><a href="https://github.com/yangzhou12/PROMA" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a></div>
+        </div>
+      </div>
+      <div class="pub">
+        <div class="yr">2015</div>
+        <div class="meta">
+          <div class="t">Semisupervised Tangent Space Discriminant Analysis</div>
+          <div class="au"><b>Yang Zhou</b>, Shiliang Sun</div>
+          <div class="vn"><em>Mathematical Problems in Engineering</em>, 2015</div>
+          <div class="lk"><a href="https://doi.org/10.1155/2015/706180" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>DOI</a></div>
+        </div>
+      </div>
+      <div class="pub">
+        <div class="yr">2015</div>
+        <div class="meta">
+          <div class="t">Local Tangent Space Discriminant Analysis</div>
+          <div class="au"><b>Yang Zhou</b>, Shiliang Sun</div>
+          <div class="vn"><em>Neural Processing Letters</em>, 2015</div>
+          <div class="lk"><a href="https://doi.org/10.1007/s11063-015-9443-4" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>Springer</a></div>
+        </div>
+      </div>
+    </div>
     <p class="foot-note">
       <sup>*</sup> co-first author &nbsp;&middot;&nbsp; <sup>#</sup> corresponding author
-      &nbsp;&middot;&nbsp; full list on <a href="https://scholar.google.com/citations?user=_-cbldUAAAAJ&amp;hl=en" rel="noopener">Google Scholar</a>
+      &nbsp;&middot;&nbsp; also on <a href="https://scholar.google.com/citations?user=_-cbldUAAAAJ&amp;hl=en" rel="noopener">Google Scholar</a>
     </p>
   </section>
 
