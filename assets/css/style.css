@@ -118,19 +118,16 @@ h2 .icon{width:16px;height:16px;color:var(--accent)}
 .row + .row{border-top:1px solid var(--line)}
 .row .yr{color:var(--faint);font-size:13px;padding-top:2px;
   font-variant-numeric:tabular-nums;white-space:nowrap}
-.pub .yr{color:var(--accent);font-weight:600}
+/* publications: title, then one metadata line — no year column */
+.pub{padding:9px 0}
+.pub + .pub{border-top:1px solid var(--line)}
 .pub .t{font-size:15px;font-weight:600;color:var(--ink);line-height:1.4}
-.pub .au{color:var(--muted);font-size:13.5px;line-height:1.5}
-.pub .au b{color:var(--body)}
-.pub .vn{color:var(--body);font-size:13.5px}
-.pub .vn em{color:var(--muted)}
+.pub .m{font-size:13.5px;color:var(--muted);line-height:1.55;text-wrap:pretty}
+.pub .m b{color:var(--body);font-weight:600}
+.pub .m em{color:var(--body);font-style:italic}
 .pub .award{color:var(--award);font-weight:600}
-.pub .lk{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
-.pub .lk a{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:500;
-  color:var(--accent);border:1px solid var(--accent-edge);background:var(--accent-soft);
-  border-radius:5px;padding:1px 7px;line-height:1.6}
-.pub .lk a:hover{background:var(--accent);border-color:var(--accent);color:#fff;text-decoration:none}
-.pub .lk .icon{width:12px;height:12px}
+.pub .lk a{color:var(--accent);font-weight:500;white-space:nowrap}
+.pub .lk a + a::before{content:"\00b7";color:var(--faint);font-weight:400;margin:0 5px}
 .note{color:var(--faint);font-size:12.5px;padding-top:12px;margin:0}
 
 .rec{padding:7px 0}
