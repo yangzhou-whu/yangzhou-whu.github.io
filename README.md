@@ -1,19 +1,21 @@
 # Yang Zhou — academic homepage
 
 One page, one stylesheet, ~20 lines of JavaScript (email obfuscation only). No build step.
-Layout follows the **al-folio** Jekyll theme — sticky top nav, right-floated portrait, lowercase
-section titles, accent `#0076df` from al-folio's own `$blue-color` — with the compact publication
-rows of the **academicpages / Minimal Mistakes** style.
+Layout follows **maureenzou.github.io**: a 980 px shell split into a 212 px identity rail and a
+fluid content column, white cards on a light grey ground, soft shadows, and a compact type scale.
+The bio follows **haipinglu.github.io**: a role paragraph, then a thesis line with three labelled
+research threads, then the artifacts we release.
 
-Source Sans 3 is **self-hosted** in `assets/fonts/` (Google Fonts latin builds, 45 KB, SIL OFL —
-see `assets/fonts/OFL.txt`). Nothing loads from a CDN, so the page renders identically inside and
-outside China.
+DM Sans is **self-hosted** in `assets/fonts/` (Google Fonts latin variable build, 61 KB, SIL OFL —
+see `assets/fonts/OFL.txt`). Only the roman is shipped; the handful of italic venue names are
+browser-slanted, which halves the font payload. Nothing loads from a CDN, so the page renders
+identically inside and outside China.
 
 ```
 index.html                the whole site
 404.html
 assets/css/style.css      all styling; colour variables are the :root block near the top
-assets/fonts/             Source Sans 3 woff2 + licence
+assets/fonts/             DM Sans woff2 + licence
 assets/img/portrait.jpg   560×560, cropped from your headshot
 assets/favicon.svg
 ZY_CV_short.pdf           linked from the header
