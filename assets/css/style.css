@@ -118,16 +118,19 @@ h2 .icon{width:16px;height:16px;color:var(--accent)}
 .row + .row{border-top:1px solid var(--line)}
 .row .yr{color:var(--faint);font-size:13px;padding-top:2px;
   font-variant-numeric:tabular-nums;white-space:nowrap}
-/* publications: title, then one metadata line — no year column */
+/* publications: title / authors / venue-year-award + one Paper link */
 .pub{padding:9px 0}
 .pub + .pub{border-top:1px solid var(--line)}
-.pub .t{font-size:15px;font-weight:600;color:var(--ink);line-height:1.4}
-.pub .m{font-size:13.5px;color:var(--muted);line-height:1.55;text-wrap:pretty}
-.pub .m b{color:var(--body);font-weight:600}
-.pub .m em{color:var(--body);font-style:italic}
+.pub .t{font-size:15px;font-weight:600;color:var(--ink);line-height:1.4;text-wrap:pretty}
+.pub .au{font-size:13.5px;color:var(--muted);line-height:1.5}
+.pub .au b{color:var(--body);font-weight:600}
+.pub .vn{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;
+  gap:0 12px;font-size:13.5px;color:var(--body);line-height:1.5}
+.pub .vn em{color:var(--muted);font-style:italic}
 .pub .award{color:var(--award);font-weight:600}
-.pub .lk a{color:var(--accent);font-weight:500;white-space:nowrap}
-.pub .lk a + a::before{content:"\00b7";color:var(--faint);font-weight:400;margin:0 5px}
+.pub .paper{display:inline-flex;align-items:center;gap:4px;font-weight:500;
+  color:var(--accent);white-space:nowrap}
+.pub .paper .icon{width:12px;height:12px}
 .note{color:var(--faint);font-size:12.5px;padding-top:12px;margin:0}
 
 .rec{padding:7px 0}
