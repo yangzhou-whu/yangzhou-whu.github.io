@@ -7,6 +7,7 @@
 <meta name="description" content="Yang Zhou is a Professor in the School of Computer Science, Wuhan University, leading the VEGA Lab: evidence-grounded AI for health and life science.">
 <meta name="author" content="Yang Zhou">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/dmsans.woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/style.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Yang Zhou","alternateName":"周阳",
@@ -18,291 +19,159 @@
 </head>
 <body>
 
-<nav class="nav">
+<nav class="top">
   <div class="in">
-    <a class="me" href="#top">Yang Zhou</a>
+    <a class="brand" href="#top">Yang Zhou &nbsp;&middot;&nbsp; VEGA Lab</a>
     <ul>
-      <li><a href="#about">about</a></li>
-      <li><a href="#openings">openings</a></li>
-      <li><a href="#publications">publications</a></li>
-      <li><a href="#funding">funding</a></li>
-      <li><a href="#contact">contact</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#openings">Openings</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#funding">Funding</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
 </nav>
 
-<div class="wrap" id="top">
+<div class="shell" id="top">
 
-  <header id="about">
-    <h1>Yang Zhou <span class="cn">周阳</span></h1>
-    <p class="role">Professor, School of Computer Science, Wuhan University</p>
-    <p class="lab"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="3.5"></circle><path d="M12 1v4M12 19v4M1 12h4M19 12h4"></path></svg><b>VEGA Lab</b><i>|</i><span>e<b style="font-weight:600">V</b>id<b style="font-weight:600">E</b>nce <b style="font-weight:600">G</b>rounded <b style="font-weight:600">AI</b></span></p>
-
-    <div class="intro">
-      <div class="txt">
-        <p>
-          I lead the <b>VEGA Lab</b> at Wuhan University: <b>(human/evidence) grounded AI for health
-          and life science</b> &mdash; models built so a person can check what the answer rests on.
-        </p>
-        <p>
-          In practice that means multimodal medical foundation models and vision&ndash;language models
-          that tie a diagnostic claim to the image region, the report sentence, or the calibrated
-          uncertainty behind it &mdash; and the benchmarks that expose when they cannot.
-        </p>
-        <p>
-          Before Wuhan I spent four years at A*STAR&rsquo;s Institute of High Performance Computing in
-          Singapore, latterly as Group Manager and Senior Scientist, and two years as a Research
-          Fellow at NUS with <a href="https://www.comp.nus.edu.sg/~leews/" rel="noopener">Prof. Wee
-          Sun Lee</a>. I hold a Ph.D. from Hong Kong Baptist University, advised by
-          <a href="https://www.comp.hkbu.edu.hk/~ymc/" rel="noopener">Prof. Yiu-ming Cheung</a>, and
-          the NSFC Excellent Young Scientists Fund (Overseas).
-        </p>
-        <div class="links">
-          <a href="#contact" data-u="zhou_yang" data-d="whu.edu.cn"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m2 7 10 6 10-6"></path></svg>Email</a>
-          <a href="https://scholar.google.com/citations?user=_-cbldUAAAAJ&amp;hl=en" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M12 3 2 8.5 12 14l10-5.5L12 3Z"></path><path d="M6 11v5.5c0 1.7 2.7 3 6 3s6-1.3 6-3V11"></path></svg>Google Scholar</a>
-          <a href="https://github.com/yangzhou12" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M9 19c-4.5 1.5-4.5-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"></path></svg>GitHub</a>
-          <a href="ZY_CV_short.pdf"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path><path d="M8 13h8M8 17h5"></path></svg>Curriculum vitae</a>
-        </div>
-      </div>
-      <div class="pic">
-        <img src="assets/img/portrait.jpg" alt="Yang Zhou" width="220" height="220">
-      </div>
-    </div>
-  </header>
-
-  <section id="openings">
-    <h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.9"></path><path d="M16 3.1a4 4 0 0 1 0 7.8"></path></svg> openings</h2>
-    <p class="sub">PhD and Master&rsquo;s students, every year &middot; 常年招收博士、硕士研究生（含推免生）</p>
-    <div class="bi">
+  <aside class="rail">
+    <div class="card">
+      <img src="assets/img/portrait.jpg" alt="Yang Zhou" width="180" height="180">
       <div>
-        <span class="flag">English</span>
-        <p>
-          I look for solid mathematics, fluent PyTorch, and genuine curiosity about clinical
-          problems; a medical background is welcome but not required.
-        </p>
+        <h1>Yang Zhou <span class="cn">周阳</span></h1>
+        <p class="post"><b>Professor</b><br>School of Computer Science<br>Wuhan University</p>
+        <div class="lab"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="3.5"></circle><path d="M12 1v4M12 19v4M1 12h4M19 12h4"></path></svg><div><b>VEGA Lab</b><span>eVidEnce Grounded AI</span></div></div>
       </div>
-      <div class="zh" lang="zh-CN">
-        <span class="flag">中文</span>
-        <p>
-          VEGA 课题组常年招收博士研究生与硕士研究生（含推免生）。希望你数学基础扎实、能熟练使用
-          PyTorch，并对临床问题抱有真正的好奇心；有医学背景者优先，但并非必需。
-        </p>
-      </div>
+      <nav>
+        <a href="#contact" data-u="zhou_yang" data-d="whu.edu.cn"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m2 7 10 6 10-6"></path></svg>Email</a>
+        <a href="https://scholar.google.com/citations?user=_-cbldUAAAAJ&amp;hl=en" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M12 3 2 8.5 12 14l10-5.5L12 3Z"></path><path d="M6 11v5.5c0 1.7 2.7 3 6 3s6-1.3 6-3V11"></path></svg>Google Scholar</a>
+        <a href="https://github.com/yangzhou12" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M9 19c-4.5 1.5-4.5-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"></path></svg>GitHub</a>
+        <a href="ZY_CV_short.pdf"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path><path d="M8 13h8M8 17h5"></path></svg>Curriculum Vitae</a>
+      </nav>
     </div>
-    <div class="apply">
+  </aside>
+
+  <main class="main">
+
+    <section class="card" id="about">
+      <h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg> About</h2>
       <p>
-        Email <span data-u="zhou_yang" data-d="whu.edu.cn"><noscript>zhou_yang [at] whu.edu.cn</noscript></span>
-        with the subject <code>[PhD Application] Your Name</code> or
-        <code>[Master Application] Your Name</code>, attaching your CV and transcript, plus one short
-        paragraph on a paper of mine you have read and what you would do differently.
+        I am a Professor in the School of Computer Science at Wuhan University, where I lead the
+        <b>VEGA Lab</b>. Before Wuhan I was Group Manager and Senior Scientist at A*STAR&rsquo;s
+        Institute of High Performance Computing in Singapore, and a Research Fellow at the National
+        University of Singapore with
+        <a href="https://www.comp.nus.edu.sg/~leews/" rel="noopener">Prof. Wee Sun Lee</a>. I hold a
+        Ph.D. from Hong Kong Baptist University, advised by
+        <a href="https://www.comp.hkbu.edu.hk/~ymc/" rel="noopener">Prof. Yiu-ming Cheung</a>.
       </p>
-      <p class="zh" lang="zh-CN">
-        邮件主题请写明 <code>[博士申请] 姓名</code> 或 <code>[硕士申请] 姓名</code>，
-        附个人简历与成绩单，并用一段话说明你读过我的哪篇论文、你会怎样改进它。这段话我会最先读。
+      <p>
+        My research builds <b>(human/evidence) grounded AI for health and life science</b> &mdash;
+        models a clinician can hold to account:
       </p>
-    </div>
-  </section>
+      <ul class="threads">
+        <li><span class="k">Foundation Models</span><span>Multimodal, multi-disease pretraining across fundus photography, OCT, chest X-ray and pathology.</span></li>
+        <li><span class="k">Grounding &amp; Explainability</span><span>Tying a diagnostic claim to the image region and the report sentence that justify it.</span></li>
+        <li><span class="k">Trustworthy Evaluation</span><span>Hallucination, calibrated uncertainty, and benchmarks that expose failure instead of hiding it.</span></li>
+      </ul>
+      <p>
+        Models, benchmarks and code are released openly &mdash;
+        <a href="https://github.com/yangzhou12/MerMED" rel="noopener">MerMED-FM</a>,
+        <a href="https://github.com/yangzhou12/BenchX" rel="noopener">BenchX</a> and
+        <a href="https://github.com/yukkai/UrFound" rel="noopener">UrFound</a> are on GitHub.
+      </p>
+    </section>
 
-  <section id="publications">
-    <h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"></path></svg> selected publications</h2>
-    <p class="sub">Medical image analysis &middot; foundation models &middot; vision&ndash;language models &middot; multimodal LLMs &middot; trustworthy AI for healthcare</p>
-    <input class="vsw" type="radio" name="pubview" id="v-sel" checked>
-    <input class="vsw" type="radio" name="pubview" id="v-all">
-    <div class="tabs">
-      <label for="v-sel">Selected<span class="n">10</span></label>
-      <label for="v-all">All<span class="n">17</span></label>
-    </div>
-    <div class="pubs">
-      <div class="pub is-sel">
-        <div class="yr">2026</div>
-        <div class="meta">
-          <div class="t">EVLF-FM: Explainable Vision Language Foundation Model for Medicine</div>
-          <div class="au">Yang Bai<sup>*</sup>, Haoran Cheng<sup>*</sup>, <b>Yang Zhou</b><sup>*</sup>, et al.</div>
-          <div class="vn"><em>Nature Medicine</em>, 2026</div>
-          <div class="lk"><a href="https://arxiv.org/abs/2509.24231" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>arXiv</a></div>
+    <section class="card" id="openings">
+      <h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.9"></path><path d="M16 3.1a4 4 0 0 1 0 7.8"></path></svg> Openings</h2>
+      <p class="sub">PhD and Master&rsquo;s students, every year &middot; 常年招收博士、硕士研究生（含推免生）</p>
+      <div class="bi">
+        <div>
+          <span class="flag">English</span>
+          <p>
+            I look for strong AI researchers &mdash; solid mathematics, fluent PyTorch &mdash; who
+            want their models to reach real patients. No medical background needed; that side you
+            pick up here, alongside our clinical collaborators.
+          </p>
+        </div>
+        <div class="zh" lang="zh-CN">
+          <span class="flag">中文</span>
+          <p>
+            希望你人工智能功底扎实（数学与 PyTorch 都能上手），并真心希望自己的模型能落到临床、
+            产生实际影响。无需医学背景&mdash;&mdash;这部分你会在与临床合作者的工作中学会。
+          </p>
         </div>
       </div>
-      <div class="pub is-sel">
-        <div class="yr">2026</div>
-        <div class="meta">
-          <div class="t">MerMED-FM: Multimodal, Multi-Disease Medical Imaging Foundation Model</div>
-          <div class="au"><b>Yang Zhou</b><sup>*</sup>, Chrystie Wan Ning Quek<sup>*</sup>, Jun Zhou, et al.</div>
-          <div class="vn"><em>The Lancet Digital Health</em>, 2026</div>
-          <div class="lk"><a href="https://arxiv.org/abs/2507.00185" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>arXiv</a><a href="https://github.com/yangzhou12/MerMED" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a></div>
-        </div>
+      <div class="apply">
+        <p>
+          Email <span data-u="zhou_yang" data-d="whu.edu.cn"><noscript>zhou_yang [at] whu.edu.cn</noscript></span>
+          with the subject <code>[PhD Application] Your Name</code> or
+          <code>[Master Application] Your Name</code>, your CV and transcript, and one paragraph on
+          a paper of mine you would improve.
+        </p>
+        <p class="zh" lang="zh-CN">
+          邮件主题请写明 <code>[博士申请] 姓名</code> 或 <code>[硕士申请] 姓名</code>，
+          附简历与成绩单，并用一段话说明你想改进我的哪篇论文。
+        </p>
       </div>
-      <div class="pub is-sel">
-        <div class="yr">2026</div>
-        <div class="meta">
-          <div class="t">Note2Chat: Improving LLMs for Multi-Turn Clinical History Taking Using Medical Notes</div>
-          <div class="au"><b>Yang Zhou</b><sup>*</sup>, Zhenting Sheng<sup>*</sup>, Mingrui Tan, et al.</div>
-          <div class="vn"><em>AAAI</em>, 2026</div>
-          <div class="lk"><a href="https://arxiv.org/abs/2601.21551" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>arXiv</a><a href="https://github.com/zhentingsheng/Note2Chat" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a><a href="https://ojs.aaai.org/index.php/AAAI/article/view/40821" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>AAAI</a></div>
-        </div>
-      </div>
-      <div class="pub is-sel">
-        <div class="yr">2024</div>
-        <div class="meta">
-          <div class="t">BenchX: A Unified Benchmark Framework for Medical Vision-Language Pretraining on Chest X-Rays</div>
-          <div class="au"><b>Yang Zhou</b>, Tan Li Lin Faith, Yanyu Xu, et al.</div>
-          <div class="vn"><em>NeurIPS</em>, 2024<span class="award"> &middot; Datasets &amp; Benchmarks Track</span></div>
-          <div class="lk"><a href="https://arxiv.org/abs/2410.21969" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>arXiv</a><a href="https://github.com/yangzhou12/BenchX" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a><a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/0cb35e10bf7bb73d10c12414edbd63fd-Abstract-Datasets_and_Benchmarks_Track.html" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>Proceedings</a></div>
-        </div>
-      </div>
-      <div class="pub is-sel">
-        <div class="yr">2024</div>
-        <div class="meta">
-          <div class="t">UrFound: Towards Universal Retinal Foundation Models via Knowledge-Guided Masked Modeling</div>
-          <div class="au">Kai Yu, <b>Yang Zhou</b><sup>#</sup>, Yang Bai, et al.</div>
-          <div class="vn"><em>MICCAI</em>, 2024</div>
-          <div class="lk"><a href="https://arxiv.org/abs/2408.05618" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>arXiv</a><a href="https://github.com/yukkai/UrFound" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a><a href="https://doi.org/10.1007/978-3-031-72390-2_70" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>Springer</a></div>
-        </div>
-      </div>
-      <div class="pub is-sel">
-        <div class="yr">2024</div>
-        <div class="meta">
-          <div class="t">Topicwise Separable Sentence Retrieval for Medical Report Generation</div>
-          <div class="au">Junting Zhao, <b>Yang Zhou</b>, Zhihao Chen, et al.</div>
-          <div class="vn"><em>IEEE Transactions on Medical Imaging</em>, 2024</div>
-          <div class="lk"><a href="https://arxiv.org/abs/2405.04175" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>arXiv</a><a href="https://doi.org/10.1109/TMI.2024.3507076" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>IEEE</a></div>
-        </div>
-      </div>
-      <div class="pub is-sel">
-        <div class="yr">2023</div>
-        <div class="meta">
-          <div class="t">Medical Phrase Grounding with Region-Phrase Context Contrastive Alignment</div>
-          <div class="au">Zhihao Chen<sup>*</sup>, <b>Yang Zhou</b><sup>*</sup>, Anh Tran, et al.</div>
-          <div class="vn"><em>MICCAI</em>, 2023</div>
-          <div class="lk"><a href="https://arxiv.org/abs/2303.07618" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>arXiv</a><a href="https://doi.org/10.1007/978-3-031-43990-2_35" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>Springer</a></div>
-        </div>
-      </div>
-      <div class="pub is-sel">
-        <div class="yr">2023</div>
-        <div class="meta">
-          <div class="t">Tell2Design: A Dataset for Language-Guided Floor Plan Generation</div>
-          <div class="au">Sicong Leng<sup>*</sup>, <b>Yang Zhou</b><sup>*</sup>, Mohammed Haroon Dupty, et al.</div>
-          <div class="vn"><em>ACL</em>, 2023<span class="award"> &middot; Oral, Area Chair Award</span></div>
-          <div class="lk"><a href="https://arxiv.org/abs/2311.15941" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>arXiv</a><a href="https://github.com/LengSicong/Tell2Design" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a><a href="https://aclanthology.org/2023.acl-long.820/" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>ACL Anthology</a></div>
-        </div>
-      </div>
-      <div class="pub is-sel">
-        <div class="yr">2022</div>
-        <div class="meta">
-          <div class="t">None Class Ranking Loss for Document-Level Relation Extraction</div>
-          <div class="au"><b>Yang Zhou</b>, Wee Sun Lee</div>
-          <div class="vn"><em>IJCAI</em>, 2022</div>
-          <div class="lk"><a href="https://arxiv.org/abs/2205.00476" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>arXiv</a><a href="https://github.com/yangzhou12/NCRL" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a><a href="https://www.ijcai.org/proceedings/2022/0630" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>Proceedings</a></div>
-        </div>
-      </div>
-      <div class="pub is-sel">
-        <div class="yr">2021</div>
-        <div class="meta">
-          <div class="t">Bayesian Low-Tubal-Rank Robust Tensor Factorization with Multi-Rank Determination</div>
-          <div class="au"><b>Yang Zhou</b>, Yiu-ming Cheung</div>
-          <div class="vn"><em>IEEE Transactions on Pattern Analysis and Machine Intelligence</em>, 2021</div>
-          <div class="lk"><a href="https://github.com/yangzhou12/BTRTF" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a><a href="https://doi.org/10.1109/TPAMI.2019.2923240" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>IEEE</a></div>
-        </div>
-      </div>
-      <div class="pub">
-        <div class="yr">2021</div>
-        <div class="meta">
-          <div class="t">Probabilistic Rank-One Tensor Analysis with Concurrent Regularizations</div>
-          <div class="au"><b>Yang Zhou</b>, Haiping Lu, Yiu-ming Cheung</div>
-          <div class="vn"><em>IEEE Transactions on Cybernetics</em>, 2021</div>
-          <div class="lk"><a href="https://github.com/yangzhou12/PROTA" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a><a href="https://doi.org/10.1109/TCYB.2019.2914316" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>IEEE</a></div>
-        </div>
-      </div>
-      <div class="pub">
-        <div class="yr">2020</div>
-        <div class="meta">
-          <div class="t">Probabilistic Rank-One Discriminant Analysis via Collective and Individual Variation Modeling</div>
-          <div class="au"><b>Yang Zhou</b>, Yiu-ming Cheung</div>
-          <div class="vn"><em>IEEE Transactions on Cybernetics</em>, 2020</div>
-          <div class="lk"><a href="https://github.com/yangzhou12/PRODA" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a><a href="https://doi.org/10.1109/TCYB.2018.2870440" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>IEEE</a></div>
-        </div>
-      </div>
-      <div class="pub">
-        <div class="yr">2017</div>
-        <div class="meta">
-          <div class="t">Manifold Partition Discriminant Analysis</div>
-          <div class="au"><b>Yang Zhou</b>, Shiliang Sun</div>
-          <div class="vn"><em>IEEE Transactions on Cybernetics</em>, 2017</div>
-          <div class="lk"><a href="https://github.com/yangzhou12/MPDA" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a><a href="https://doi.org/10.1109/TCYB.2016.2529299" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>IEEE</a></div>
-        </div>
-      </div>
-      <div class="pub">
-        <div class="yr">2017</div>
-        <div class="meta">
-          <div class="t">Bilinear Probabilistic Canonical Correlation Analysis via Hybrid Concatenations</div>
-          <div class="au"><b>Yang Zhou</b>, Haiping Lu, Yiu-ming Cheung</div>
-          <div class="vn"><em>AAAI</em>, 2017</div>
-          <div class="lk"><a href="https://doi.org/10.1609/aaai.v31i1.10817" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>AAAI</a></div>
-        </div>
-      </div>
-      <div class="pub">
-        <div class="yr">2016</div>
-        <div class="meta">
-          <div class="t">Probabilistic Rank-One Matrix Analysis with Concurrent Regularization</div>
-          <div class="au"><b>Yang Zhou</b>, Haiping Lu</div>
-          <div class="vn"><em>IJCAI</em>, 2016</div>
-          <div class="lk"><a href="https://github.com/yangzhou12/PROMA" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a></div>
-        </div>
-      </div>
-      <div class="pub">
-        <div class="yr">2015</div>
-        <div class="meta">
-          <div class="t">Semisupervised Tangent Space Discriminant Analysis</div>
-          <div class="au"><b>Yang Zhou</b>, Shiliang Sun</div>
-          <div class="vn"><em>Mathematical Problems in Engineering</em>, 2015</div>
-          <div class="lk"><a href="https://doi.org/10.1155/2015/706180" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>DOI</a></div>
-        </div>
-      </div>
-      <div class="pub">
-        <div class="yr">2015</div>
-        <div class="meta">
-          <div class="t">Local Tangent Space Discriminant Analysis</div>
-          <div class="au"><b>Yang Zhou</b>, Shiliang Sun</div>
-          <div class="vn"><em>Neural Processing Letters</em>, 2015</div>
-          <div class="lk"><a href="https://doi.org/10.1007/s11063-015-9443-4" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>Springer</a></div>
-        </div>
-      </div>
-    </div>
-    <p class="foot-note">
-      <sup>*</sup> co-first author &nbsp;&middot;&nbsp; <sup>#</sup> corresponding author
-      &nbsp;&middot;&nbsp; also on <a href="https://scholar.google.com/citations?user=_-cbldUAAAAJ&amp;hl=en" rel="noopener">Google Scholar</a>
-    </p>
-  </section>
+    </section>
 
-  <section id="funding">
-    <h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><circle cx="12" cy="8" r="6"></circle><path d="m8.2 13.6-1.4 8L12 19l5.2 2.6-1.4-8"></path></svg> funding &amp; awards</h2>
-    <div class="rec">
-      <div class="yr">2026 &ndash; now</div>
-      <div class="d"><b>Science Fund Program for Excellent Young Scientists (Overseas)</b><span class="chip">PI</span><span>National Natural Science Foundation of China</span></div>
-    </div>    <div class="rec">
-      <div class="yr">2026 &ndash; now</div>
-      <div class="d"><b>Young Scientists Fund (Type C)</b><span class="chip">PI</span><span>National Natural Science Foundation of China</span></div>
-    </div>    <div class="rec">
-      <div class="yr">2023 &ndash; 2025</div>
-      <div class="d"><b>AIDoc: Telehealth AI Grounded by Medical Knowledge</b><span class="chip">Co-PI</span><span>AI Singapore &middot; S$1,000,000</span></div>
-    </div>
-    <div style="height:18px"></div>
-    <div class="rec">
-      <div class="yr">2026</div>
-      <div class="d">Science Fund Program for Excellent Young Scientists (Overseas), NSFC</div>
-    </div>    <div class="rec">
-      <div class="yr">2025</div>
-      <div class="d">Outstanding Reviewer, CVPR</div>
-    </div>    <div class="rec">
-      <div class="yr">2023</div>
-      <div class="d">Area Chair Award &amp; Best Paper Candidate, ACL</div>
-    </div>
-  </section>
+    <section class="card" id="publications">
+      <h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"></path></svg> Selected Publications</h2>
+      <p class="sub">Medical image analysis &middot; foundation models &middot; vision&ndash;language models &middot; multimodal LLMs &middot; trustworthy AI for healthcare</p>
+      <input class="vsw" type="radio" name="pubview" id="v-sel" checked>
+      <input class="vsw" type="radio" name="pubview" id="v-all">
+      <div class="tabs">
+        <label for="v-sel">Selected<span class="n">10</span></label>
+        <label for="v-all">All<span class="n">17</span></label>
+      </div>
+      <div class="pubs">
+      <div class="pub is-sel"><div class="yr">2026</div><div><div class="t">EVLF-FM: Explainable Vision Language Foundation Model for Medicine</div><div class="au">Yang Bai<sup>*</sup>, Haoran Cheng<sup>*</sup>, <b>Yang Zhou</b><sup>*</sup>, et al.</div><div class="vn"><em>Nature Medicine</em>, 2026</div><div class="lk"><a href="https://arxiv.org/abs/2509.24231" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>arXiv</a></div></div></div>
+      <div class="pub is-sel"><div class="yr">2026</div><div><div class="t">MerMED-FM: Multimodal, Multi-Disease Medical Imaging Foundation Model</div><div class="au"><b>Yang Zhou</b><sup>*</sup>, Chrystie Wan Ning Quek<sup>*</sup>, Jun Zhou, et al.</div><div class="vn"><em>The Lancet Digital Health</em>, 2026</div><div class="lk"><a href="https://arxiv.org/abs/2507.00185" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>arXiv</a><a href="https://github.com/yangzhou12/MerMED" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a></div></div></div>
+      <div class="pub is-sel"><div class="yr">2026</div><div><div class="t">Note2Chat: Improving LLMs for Multi-Turn Clinical History Taking Using Medical Notes</div><div class="au"><b>Yang Zhou</b><sup>*</sup>, Zhenting Sheng<sup>*</sup>, Mingrui Tan, et al.</div><div class="vn"><em>AAAI</em>, 2026</div><div class="lk"><a href="https://arxiv.org/abs/2601.21551" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>arXiv</a><a href="https://github.com/zhentingsheng/Note2Chat" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a><a href="https://ojs.aaai.org/index.php/AAAI/article/view/40821" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>AAAI</a></div></div></div>
+      <div class="pub is-sel"><div class="yr">2024</div><div><div class="t">BenchX: A Unified Benchmark Framework for Medical Vision-Language Pretraining on Chest X-Rays</div><div class="au"><b>Yang Zhou</b>, Tan Li Lin Faith, Yanyu Xu, et al.</div><div class="vn"><em>NeurIPS</em>, 2024<span class="award"> &middot; Datasets &amp; Benchmarks Track</span></div><div class="lk"><a href="https://arxiv.org/abs/2410.21969" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>arXiv</a><a href="https://github.com/yangzhou12/BenchX" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a><a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/0cb35e10bf7bb73d10c12414edbd63fd-Abstract-Datasets_and_Benchmarks_Track.html" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>Proceedings</a></div></div></div>
+      <div class="pub is-sel"><div class="yr">2024</div><div><div class="t">UrFound: Towards Universal Retinal Foundation Models via Knowledge-Guided Masked Modeling</div><div class="au">Kai Yu, <b>Yang Zhou</b><sup>#</sup>, Yang Bai, et al.</div><div class="vn"><em>MICCAI</em>, 2024</div><div class="lk"><a href="https://arxiv.org/abs/2408.05618" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>arXiv</a><a href="https://github.com/yukkai/UrFound" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a><a href="https://doi.org/10.1007/978-3-031-72390-2_70" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>Springer</a></div></div></div>
+      <div class="pub is-sel"><div class="yr">2024</div><div><div class="t">Topicwise Separable Sentence Retrieval for Medical Report Generation</div><div class="au">Junting Zhao, <b>Yang Zhou</b>, Zhihao Chen, et al.</div><div class="vn"><em>IEEE Transactions on Medical Imaging</em>, 2024</div><div class="lk"><a href="https://arxiv.org/abs/2405.04175" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>arXiv</a><a href="https://doi.org/10.1109/TMI.2024.3507076" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>IEEE</a></div></div></div>
+      <div class="pub is-sel"><div class="yr">2023</div><div><div class="t">Medical Phrase Grounding with Region-Phrase Context Contrastive Alignment</div><div class="au">Zhihao Chen<sup>*</sup>, <b>Yang Zhou</b><sup>*</sup>, Anh Tran, et al.</div><div class="vn"><em>MICCAI</em>, 2023</div><div class="lk"><a href="https://arxiv.org/abs/2303.07618" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>arXiv</a><a href="https://doi.org/10.1007/978-3-031-43990-2_35" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>Springer</a></div></div></div>
+      <div class="pub is-sel"><div class="yr">2023</div><div><div class="t">Tell2Design: A Dataset for Language-Guided Floor Plan Generation</div><div class="au">Sicong Leng<sup>*</sup>, <b>Yang Zhou</b><sup>*</sup>, Mohammed Haroon Dupty, et al.</div><div class="vn"><em>ACL</em>, 2023<span class="award"> &middot; Oral, Area Chair Award</span></div><div class="lk"><a href="https://arxiv.org/abs/2311.15941" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>arXiv</a><a href="https://github.com/LengSicong/Tell2Design" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a><a href="https://aclanthology.org/2023.acl-long.820/" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>ACL Anthology</a></div></div></div>
+      <div class="pub is-sel"><div class="yr">2022</div><div><div class="t">None Class Ranking Loss for Document-Level Relation Extraction</div><div class="au"><b>Yang Zhou</b>, Wee Sun Lee</div><div class="vn"><em>IJCAI</em>, 2022</div><div class="lk"><a href="https://arxiv.org/abs/2205.00476" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>arXiv</a><a href="https://github.com/yangzhou12/NCRL" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a><a href="https://www.ijcai.org/proceedings/2022/0630" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>Proceedings</a></div></div></div>
+      <div class="pub is-sel"><div class="yr">2021</div><div><div class="t">Bayesian Low-Tubal-Rank Robust Tensor Factorization with Multi-Rank Determination</div><div class="au"><b>Yang Zhou</b>, Yiu-ming Cheung</div><div class="vn"><em>IEEE Transactions on Pattern Analysis and Machine Intelligence</em>, 2021</div><div class="lk"><a href="https://github.com/yangzhou12/BTRTF" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a><a href="https://doi.org/10.1109/TPAMI.2019.2923240" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>IEEE</a></div></div></div>
+      <div class="pub"><div class="yr">2021</div><div><div class="t">Probabilistic Rank-One Tensor Analysis with Concurrent Regularizations</div><div class="au"><b>Yang Zhou</b>, Haiping Lu, Yiu-ming Cheung</div><div class="vn"><em>IEEE Transactions on Cybernetics</em>, 2021</div><div class="lk"><a href="https://github.com/yangzhou12/PROTA" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a><a href="https://doi.org/10.1109/TCYB.2019.2914316" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>IEEE</a></div></div></div>
+      <div class="pub"><div class="yr">2020</div><div><div class="t">Probabilistic Rank-One Discriminant Analysis via Collective and Individual Variation Modeling</div><div class="au"><b>Yang Zhou</b>, Yiu-ming Cheung</div><div class="vn"><em>IEEE Transactions on Cybernetics</em>, 2020</div><div class="lk"><a href="https://github.com/yangzhou12/PRODA" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a><a href="https://doi.org/10.1109/TCYB.2018.2870440" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>IEEE</a></div></div></div>
+      <div class="pub"><div class="yr">2017</div><div><div class="t">Manifold Partition Discriminant Analysis</div><div class="au"><b>Yang Zhou</b>, Shiliang Sun</div><div class="vn"><em>IEEE Transactions on Cybernetics</em>, 2017</div><div class="lk"><a href="https://github.com/yangzhou12/MPDA" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a><a href="https://doi.org/10.1109/TCYB.2016.2529299" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>IEEE</a></div></div></div>
+      <div class="pub"><div class="yr">2017</div><div><div class="t">Bilinear Probabilistic Canonical Correlation Analysis via Hybrid Concatenations</div><div class="au"><b>Yang Zhou</b>, Haiping Lu, Yiu-ming Cheung</div><div class="vn"><em>AAAI</em>, 2017</div><div class="lk"><a href="https://doi.org/10.1609/aaai.v31i1.10817" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>AAAI</a></div></div></div>
+      <div class="pub"><div class="yr">2016</div><div><div class="t">Probabilistic Rank-One Matrix Analysis with Concurrent Regularization</div><div class="au"><b>Yang Zhou</b>, Haiping Lu</div><div class="vn"><em>IJCAI</em>, 2016</div><div class="lk"><a href="https://github.com/yangzhou12/PROMA" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a></div></div></div>
+      <div class="pub"><div class="yr">2015</div><div><div class="t">Semisupervised Tangent Space Discriminant Analysis</div><div class="au"><b>Yang Zhou</b>, Shiliang Sun</div><div class="vn"><em>Mathematical Problems in Engineering</em>, 2015</div><div class="lk"><a href="https://doi.org/10.1155/2015/706180" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>DOI</a></div></div></div>
+      <div class="pub"><div class="yr">2015</div><div><div class="t">Local Tangent Space Discriminant Analysis</div><div class="au"><b>Yang Zhou</b>, Shiliang Sun</div><div class="vn"><em>Neural Processing Letters</em>, 2015</div><div class="lk"><a href="https://doi.org/10.1007/s11063-015-9443-4" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path></svg>Springer</a></div></div></div>
+      </div>
+      <p class="note">
+        <sup>*</sup> co-first author &nbsp;&middot;&nbsp; <sup>#</sup> corresponding author
+        &nbsp;&middot;&nbsp; also on <a href="https://scholar.google.com/citations?user=_-cbldUAAAAJ&amp;hl=en" rel="noopener">Google Scholar</a>
+      </p>
+    </section>
 
-  <footer id="contact">
-    <p><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>School of Computer Science, Wuhan University, Wuhan, Hubei, China</span></p>
-    <p><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m2 7 10 6 10-6"></path></svg><span data-u="zhou_yang" data-d="whu.edu.cn"><noscript>zhou_yang [at] whu.edu.cn</noscript></span></p>
-  </footer>
+    <section class="card" id="funding">
+      <h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><circle cx="12" cy="8" r="6"></circle><path d="m8.2 13.6-1.4 8L12 19l5.2 2.6-1.4-8"></path></svg> Funding &amp; Awards</h2>
+      <div class="split">
+        <div>
+          <h3>Funding</h3>
+          <div class="rec"><div class="yr">2026 &ndash;</div><div class="d"><b>Science Fund Program for Excellent Young Scientists (Overseas)</b><span class="chip">PI</span><span>NSFC</span></div></div><div class="rec"><div class="yr">2026 &ndash;</div><div class="d"><b>Young Scientists Fund (Type C)</b><span class="chip">PI</span><span>NSFC</span></div></div><div class="rec"><div class="yr">2023 &ndash; 25</div><div class="d"><b>AIDoc: Telehealth AI Grounded by Medical Knowledge</b><span class="chip">Co-PI</span><span>AI Singapore &middot; S$1,000,000</span></div></div>
+        </div>
+        <div>
+          <h3>Awards</h3>
+          <div class="rec"><div class="yr">2026</div><div class="d">Excellent Young Scientists Fund (Overseas), NSFC</div></div><div class="rec"><div class="yr">2025</div><div class="d">Outstanding Reviewer, CVPR</div></div><div class="rec"><div class="yr">2023</div><div class="d">Area Chair Award &amp; Best Paper Candidate, ACL</div></div>
+        </div>
+      </div>
+    </section>
 
+    <section class="card" id="contact">
+      <h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg> Contact</h2>
+      <div class="foot">
+        <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>School of Computer Science, Wuhan University, Wuhan, Hubei, China</span>
+        <span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m2 7 10 6 10-6"></path></svg><span data-u="zhou_yang" data-d="whu.edu.cn"><noscript>zhou_yang [at] whu.edu.cn</noscript></span></span>
+      </div>
+    </section>
+
+  </main>
 </div>
 
 <script>

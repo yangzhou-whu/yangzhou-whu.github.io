@@ -1,7 +1,6 @@
-Source Sans 3 is Copyright (c) Adobe (https://github.com/adobe-fonts/source-sans),
+DM Sans is Copyright (c) Colophon Foundry, Jonny Pinhorn and Indian Type Foundry,
 licensed under the SIL Open Font License, Version 1.1 — https://openfontlicense.org
 
-The .woff2 files in this directory are the Google Fonts "latin" builds, self-hosted
-so that this site loads no resources from fonts.gstatic.com (which is not reachable
-from mainland China). Full license text:
-https://github.com/adobe-fonts/source-sans/blob/release/LICENSE.md
+The .woff2 files here are the Google Fonts "latin" variable builds, self-hosted so that
+this site loads no resources from fonts.gstatic.com (not reachable from mainland China).
+Full license text: https://github.com/googlefonts/dm-fonts/blob/main/OFL.txt
