@@ -24,8 +24,8 @@
     <a class="brand" href="#top">Yang Zhou</a>
     <ul>
       <li><a href="#top">Home</a></li>
-      <li><a href="#publications">Publications</a></li>
       <li><a href="#openings">Openings</a></li>
+      <li><a href="#publications">Publications</a></li>
       <li><a href="#contact">Contact</a></li>
       <li class="bar" aria-hidden="true"></li>
       <li class="soon" title="In preparation">VEGA Lab <i>Soon</i></li>
@@ -74,6 +74,18 @@
       </ul>
     </section>
 
+    <section class="card openings" id="openings">
+      <h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.9"></path><path d="M16 3.1a4 4 0 0 1 0 7.8"></path></svg> Openings</h2>
+      <p>
+        I am recruiting <b>PhD and Master&rsquo;s students</b> every year. If you want to build AI
+        that reaches real patients, I would like to hear from you &mdash;
+        <span data-u="zhou_yang" data-d="whu.edu.cn" data-s="[PhD Application] Your Name"><noscript>zhou_yang [at] whu.edu.cn</noscript></span>.
+      </p>
+      <p class="zh" lang="zh-CN">
+        课题组常年招收博士、硕士研究生（含推免生）。若你希望让人工智能真正走进临床，欢迎来信。
+      </p>
+    </section>
+
     <section class="card" id="publications">
       <h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"></path></svg> Selected Publications</h2>
         <div class="row pub"><div class="yr">2026</div><div><div class="t">EVLF-FM: Explainable Vision Language Foundation Model for Medicine</div><div class="au">Yang Bai<sup>*</sup>, Haoran Cheng<sup>*</sup>, <b>Yang Zhou</b><sup>*</sup>, et al.</div><div class="vn"><em>Nature Medicine</em>, 2026</div><div class="lk"><a href="https://arxiv.org/abs/2509.24231" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>arXiv</a></div></div></div>
@@ -89,17 +101,6 @@
       <p class="note">
         <sup>*</sup> co-first author &nbsp;&middot;&nbsp; <sup>#</sup> corresponding author
         &nbsp;&middot;&nbsp; full list on <a href="https://scholar.google.com/citations?user=_-cbldUAAAAJ&amp;hl=en" rel="noopener">Google Scholar</a>
-      </p>
-    </section>
-
-    <section class="card openings" id="openings">
-      <h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.9"></path><path d="M16 3.1a4 4 0 0 1 0 7.8"></path></svg> Openings</h2>
-      <p>
-        I am recruiting PhD and Master&rsquo;s students who are strong in AI and want their models to
-        reach real patients &mdash; email me with your CV, subject <code>[PhD Application] Your Name</code>.
-      </p>
-      <p class="zh" lang="zh-CN">
-        常年招收博士、硕士研究生（含推免生）：人工智能功底扎实，并希望模型真正落地临床。
       </p>
     </section>
 
@@ -133,11 +134,12 @@
   function addr(el) { return el.getAttribute('data-u') + '@' + el.getAttribute('data-d'); }
   var a = document.querySelectorAll('a[data-u]'), i;
   for (i = 0; i < a.length; i++) { a[i].href = 'mailto:' + addr(a[i]); }
-  var s = document.querySelectorAll('span[data-u]'), j, link;
+  var s = document.querySelectorAll('span[data-u]'), j, link, subj;
   for (j = 0; j < s.length; j++) {
     link = document.createElement('a');
+    subj = s[j].getAttribute('data-s');
     link.href = 'mailto:' + addr(s[j]) +
-      '?subject=' + encodeURIComponent('[PhD Application] Your Name');
+      (subj ? '?subject=' + encodeURIComponent(subj) : '');
     link.textContent = addr(s[j]);
     s[j].textContent = '';
     s[j].appendChild(link);
