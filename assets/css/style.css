@@ -106,11 +106,13 @@ h2 .icon{width:16px;height:16px;color:var(--accent)}
 .main .card > p:last-child{margin-bottom:0}
 
 /* ------------------------------------------------------- research threads -- */
-.threads{display:flex;flex-direction:column;gap:8px;margin:11px 0 0}
+.lead-in{margin-bottom:8px}
+.threads{display:flex;flex-direction:column;gap:7px;margin:0}
 .threads li{display:grid;grid-template-columns:var(--gutter) minmax(0,1fr);gap:0 14px;
   font-size:14.5px;line-height:1.55}
 .threads .k{font-weight:600;color:var(--ink);font-size:13px;padding-top:1px;white-space:nowrap}
 .threads li > span:last-child{text-wrap:pretty}
+.main .card > .threads:last-child{margin-bottom:0}
 
 /* ------------------------------------------------------------------ rows -- */
 /* publications, funding and awards all share this grid so they line up */
