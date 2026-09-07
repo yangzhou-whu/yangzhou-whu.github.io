@@ -109,7 +109,8 @@ h2 .icon{width:16px;height:16px;color:var(--accent)}
 .threads{display:flex;flex-direction:column;gap:8px;margin:11px 0 0}
 .threads li{display:grid;grid-template-columns:var(--gutter) minmax(0,1fr);gap:0 14px;
   font-size:14.5px;line-height:1.55}
-.threads .k{font-weight:600;color:var(--ink);font-size:13px;padding-top:1px}
+.threads .k{font-weight:600;color:var(--ink);font-size:13px;padding-top:1px;white-space:nowrap}
+.threads li > span:last-child{text-wrap:pretty}
 
 /* ------------------------------------------------------------------ rows -- */
 /* publications, funding and awards all share this grid so they line up */
@@ -132,13 +133,11 @@ h2 .icon{width:16px;height:16px;color:var(--accent)}
 .pub .lk .icon{width:12px;height:12px}
 .note{color:var(--faint);font-size:12.5px;padding-top:12px;margin:0}
 
-.rec .d{font-size:14.5px;line-height:1.5}
+.rec{padding:7px 0}
+.rec .d{font-size:14.5px;line-height:1.5;text-wrap:pretty}
 .rec .d b{color:var(--ink);font-weight:600}
-.rec .d span{display:block;color:var(--muted);font-size:13px}
-.chip{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.03em;
-  border:1px solid var(--accent-edge);color:var(--accent);background:var(--accent-soft);
-  border-radius:4px;padding:0 6px;margin-left:7px;vertical-align:1.5px}
-h3{margin:18px 0 2px;font-size:11.5px;font-weight:600;letter-spacing:.11em;
+.rec .d .m{color:var(--muted);font-size:13.5px;white-space:nowrap}
+h3{margin:15px 0 1px;font-size:11.5px;font-weight:600;letter-spacing:.11em;
   text-transform:uppercase;color:var(--faint)}
 h3:first-of-type{margin-top:0}
 
