@@ -4,49 +4,63 @@ Plain static files. No build step, no Jekyll (`.nojekyll` tells GitHub Pages to 
 verbatim). The repo is already initialised on `main` with everything committed — nothing has been
 pushed yet.
 
-## 1. Pick where it lives
+## 1. Where it lives
 
-`marswhu.github.io` (Mang Ye's group) is a **second GitHub account** named after the lab. GitHub's
-terms allow only one free *personal* account, so the sanctioned equivalent is a free
-**Organization** — same `<name>.github.io` URL, and you can add students to it later.
+The site is going to **`https://yangzhou-whu.github.io/`**.
 
-Available as of 2026-09-07: `vega-whu`, `whu-vega`, `vegalab-whu`, `yangzhou-whu`.
-Taken: `vega-lab`, `vegalab`, `VEGA-Lab`.
+`marswhu.github.io` (Mang Ye's group) is a second GitHub account named for the lab rather than the
+person's handle. GitHub's terms allow only one free *personal* account, so the sanctioned equivalent
+is a free **Organization** — same `<name>.github.io` URL, and you can add students to it later.
 
-Do **not** rename the `yangzhou12` account. `BenchX`, `NCRL`, `BTRTF` and others are cited in
-papers and linked from this page; GitHub redirects the old name but then lets anyone else claim it.
+Every plain form of the name is taken (`yangzhou`, `zhouyang`, `yang-zhou`, `yangzhou-ai`).
+Checked free on 2026-09-08: `yangzhou-whu`, `zhouyang-whu`, `yzhou-whu`, `vega-whu`, `whu-vega`,
+`vegalab-whu`, `vega-lab-whu`, `yangzhoulab`, `vegalab-ai`.
+
+Do **not** rename the `yangzhou12` account. `BenchX`, `NCRL`, `BTRTF` and others are cited in papers
+and linked from this page; GitHub redirects the old name but then lets anyone else claim it.
 
 ## 2. Push
 
-Personal account — serves at `https://yangzhou12.github.io/`:
+**Step 1 — create the organization (you, in a browser).** There is no API for this: `POST /user/orgs`
+returns 404, and `gh` cannot do it either. Go to <https://github.com/organizations/new>, choose the
+**Free** plan, and set the organization name to `yangzhou-whu`.
+
+**Step 2 — create the repo and push (one command).**
 
 ```sh
 cd /home/zhouyang/OpenEye/personal_website
-gh repo create yangzhou12.github.io --public --source=. --remote=origin --push
+gh repo create yangzhou-whu/yangzhou-whu.github.io --public --source=. --remote=origin --push
 ```
 
-Lab organization — serves at `https://vega-whu.github.io/`:
+For a repo named `<owner>.github.io`, Pages turns itself on from `main` at root. To confirm, or to
+force it:
 
 ```sh
-cd /home/zhouyang/OpenEye/personal_website
-gh api -X POST /user/orgs -f login=vega-whu          # or create it at github.com/organizations/new
-gh repo create vega-whu/vega-whu.github.io --public --source=. --remote=origin --push
-```
-
-For a repo named `<owner>.github.io`, Pages turns itself on from `main` at root. To confirm or force
-it:
-
-```sh
-gh api -X POST repos/<owner>/<owner>.github.io/pages \
-  -f 'source[branch]=main' -f 'source[path]=/'       # 409 just means it is already on
-gh api repos/<owner>/<owner>.github.io/pages --jq '.html_url, .status'
+gh api -X POST repos/yangzhou-whu/yangzhou-whu.github.io/pages \
+  -f 'source[branch]=main' -f 'source[path]=/'      # 409 just means it is already on
+gh api repos/yangzhou-whu/yangzhou-whu.github.io/pages --jq '.html_url, .status'
 ```
 
 Later edits: `git add -A && git commit -m "…" && git push`. Live in under a minute.
 
+**Staying on the personal account instead.** If you would rather skip the organization, this also
+works with no new account, at `https://yangzhou12.github.io/`:
+
+```sh
+gh repo create yangzhou12.github.io --public --source=. --remote=origin --push
+```
+
 ## 3. Custom domain (do this whenever the domain is bought)
 
 Any repo can serve a custom domain at its root, so the repo name stops mattering once this is set.
+
+Any repo can serve a custom domain at its root, so the repo name stops mattering once this is set —
+you can publish under the GitHub name today and attach a domain later without breaking anything.
+
+Checked on 2026-09-08 with `dig NS`, no DNS delegation (very likely unregistered — confirm at a
+registrar): `vega-lab.org`, `vega-lab.ai`, `vega-lab.dev`, `vega-lab.net`, `zhouyang.ai`,
+`yangzhou.wiki`. Already taken: `yangzhou.ai`, `vegalab.ai`, `vegalab.org`, `yangzhou.dev`,
+`zhouyang.dev`, `vegalab.dev`, `vegalab.net`, `yangzhou.info`.
 
 **In the repo** — one line, no scheme, no trailing slash:
 
@@ -63,7 +77,7 @@ values from a blog post:
 |---|---|---|
 | A | `@` | `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153` |
 | AAAA | `@` | `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153` |
-| CNAME | `www` | `<owner>.github.io.` |
+| CNAME | `www` | `yangzhou-whu.github.io.` |
 
 If you prefer `www.` as the primary, put `www.vega-lab.org` in `CNAME` and keep the apex A records
 so the bare domain redirects to it.
