@@ -28,7 +28,7 @@ returns 404, and `gh` cannot do it either. Go to <https://github.com/organizatio
 **Step 2 — create the repo and push (one command).**
 
 ```sh
-cd /home/zhouyang/OpenEye/personal_website
+cd /home/zhouyang/OpenEye/homepage_zy
 gh repo create yangzhou-whu/yangzhou-whu.github.io --public --source=. --remote=origin --push
 ```
 
