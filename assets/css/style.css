@@ -122,19 +122,22 @@ h2 .icon{width:16px;height:16px;color:var(--accent)}
 .row + .row{border-top:1px solid var(--line)}
 .row .yr{color:var(--faint);font-size:13px;padding-top:2px;
   font-variant-numeric:tabular-nums;white-space:nowrap}
-/* publications: title / authors / venue-year-award + one Paper link */
+/* publications: title / authors / links then venue-year-award */
 .pub{padding:9px 0}
 .pub + .pub{border-top:1px solid var(--line)}
 .pub .t{font-size:15px;font-weight:600;color:var(--ink);line-height:1.4;text-wrap:pretty}
 .pub .au{font-size:13.5px;color:var(--muted);line-height:1.5}
 .pub .au b{color:var(--body);font-weight:600}
-.pub .vn{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;
-  gap:0 12px;font-size:13.5px;color:var(--body);line-height:1.5}
+.pub .vn{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;
+  font-size:13.5px;color:var(--body);line-height:1.5;margin-top:3px}
 .pub .vn em{color:var(--muted);font-style:italic}
 .pub .award{color:var(--award);font-weight:600}
-.pub .paper{display:inline-flex;align-items:center;gap:4px;font-weight:500;
-  color:var(--accent);white-space:nowrap}
-.pub .paper .icon{width:12px;height:12px}
+.pub .lk{display:inline-flex;gap:5px;flex:none}
+.pub .lk a{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:500;
+  color:var(--accent);border:1px solid var(--accent-edge);background:var(--accent-soft);
+  border-radius:5px;padding:1px 7px;line-height:1.6;white-space:nowrap}
+.pub .lk a:hover{background:var(--accent);border-color:var(--accent);color:#fff;text-decoration:none}
+.pub .lk .icon{width:12px;height:12px}
 .note{color:var(--faint);font-size:12.5px;padding-top:12px;margin:0}
 
 .rec{padding:7px 0}
@@ -175,7 +178,7 @@ h3:first-of-type{margin-top:0}
   .row .yr{padding-top:0}
 }
 @media print{
-  .top,.rail nav{display:none}
+  .top,.rail nav,.pub .lk{display:none}
   body{background:#fff;font-size:10pt;color:#000}
   .shell{display:block;max-width:none;padding:0}
   .card{border:0;box-shadow:none;padding:0!important}
