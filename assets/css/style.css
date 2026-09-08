@@ -130,7 +130,7 @@ h2 .icon{width:16px;height:16px;color:var(--accent)}
 .pub .au b{color:var(--body);font-weight:600}
 .pub .vn{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;
   font-size:13.5px;color:var(--body);line-height:1.5;margin-top:3px}
-.pub .vn em{color:var(--muted);font-style:italic}
+.pub .vn em{color:inherit;font-style:italic}
 .pub .award{color:var(--award);font-weight:600}
 .pub .lk{display:inline-flex;gap:5px;flex:none}
 .pub .lk a{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:500;
