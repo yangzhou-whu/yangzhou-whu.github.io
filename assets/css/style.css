@@ -15,7 +15,7 @@
 :root{
   --shell:980px;
   --rail:212px;
-  --gutter:66px;            /* one left column for every list on the page */
+  --gutter:78px;            /* one left column for every list; fits "Foundation" */
   --bg:#f4f5f7;
   --card:#ffffff;
   --ink:#14161a;
@@ -110,7 +110,7 @@ h2 .icon{width:16px;height:16px;color:var(--accent)}
 .lead-in{margin-bottom:8px}
 .threads{display:flex;flex-direction:column;gap:7px;margin:0}
 .threads li{display:grid;grid-template-columns:var(--gutter) minmax(0,1fr);gap:0 14px;
-  font-size:14.5px;line-height:1.55}
+  font-size:14px;line-height:1.55}
 .threads .k{font-weight:600;color:var(--ink);font-size:13px;padding-top:1px;white-space:nowrap}
 .threads li > span:last-child{text-wrap:pretty}
 .main .card > .threads:last-child{margin-bottom:0}
