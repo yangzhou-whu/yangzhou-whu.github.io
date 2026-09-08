@@ -109,13 +109,12 @@ h2 .icon{width:16px;height:16px;color:var(--accent)}
 .card > p:last-child{margin-bottom:0}
 
 /* ------------------------------------------------------- research threads -- */
+/* the label runs inline so each item gets the card's full width and a
+   larger size; 15px leaves the longest line ~5% spare */
 .lead-in{margin-bottom:8px}
-.threads{display:flex;flex-direction:column;gap:7px;margin:0}
-.threads li{display:grid;grid-template-columns:var(--gutter) minmax(0,1fr);gap:0 14px;
-  font-size:14px;line-height:1.55}
-.threads .k{font-weight:600;color:var(--ink);font-size:13px;padding-top:1px;white-space:nowrap}
-.threads li > span:last-child{text-wrap:pretty}
-.card > .threads:last-child{margin-bottom:0}
+.threads{display:flex;flex-direction:column;gap:6px;margin:0}
+.threads li{font-size:15px;line-height:1.55;color:var(--body);text-wrap:pretty}
+.threads li b{color:var(--ink);font-weight:600}
 
 /* ------------------------------------------------------------------ rows -- */
 /* publications, funding and awards all share this grid so they line up */
@@ -158,8 +157,8 @@ h3:first-of-type{margin-top:0}
 
 /* --------------------------------------------------------------- contact -- */
 .foot{display:flex;flex-direction:column;gap:7px;font-size:14px;color:var(--muted)}
-.foot span{display:inline-flex;align-items:flex-start;gap:9px}
-.foot .icon{color:var(--faint);margin-top:3px}
+.foot > span{display:flex;align-items:center;gap:9px;min-width:0}
+.foot .icon{color:var(--faint)}
 
 /* ------------------------------------------------------------ responsive -- */
 @media (max-width:860px){
@@ -172,9 +171,8 @@ h3:first-of-type{margin-top:0}
 @media (max-width:560px){
   .rail.card{grid-template-columns:1fr}
   .rail img{width:124px;margin-bottom:12px}
-  .row,.threads li{grid-template-columns:1fr;gap:0}
+  .row{grid-template-columns:1fr;gap:0}
   .row .yr{padding-top:0}
-  .threads .k{padding-top:0}
 }
 @media print{
   .top,.rail nav{display:none}
