@@ -68,11 +68,6 @@ a:hover{color:var(--accent-dark);text-decoration:underline;text-underline-offset
 .top ul a{color:var(--muted);white-space:nowrap}
 .top ul a:hover{color:var(--accent);text-decoration:none}
 .top .bar{width:1px;height:15px;background:var(--line-2);flex:none}
-.top .soon{display:inline-flex;align-items:center;gap:7px;color:var(--faint);
-  white-space:nowrap;cursor:default}
-.top .soon i{font-style:normal;font-size:10px;font-weight:600;letter-spacing:.07em;
-  text-transform:uppercase;color:var(--faint);background:#fff;
-  border:1px solid var(--line-2);border-radius:4px;padding:0 5px;line-height:1.6}
 
 /* ---------------------------------------------------------------- shell -- */
 /* the rail and the About card share grid row 1, so they are the same height;

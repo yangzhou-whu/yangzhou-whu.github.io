@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>本科生科研入门指南 | VEGA Lab | Yang Zhou</title>
+<meta name="description" content="VEGA Lab 本科生科研入门指南：医学基础模型、证据定位、医学大语言模型与智能体、生信与生理信号大模型；结合 Linux、conda、Codex 和 Claude Code 完成科研实践。">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" as="font" type="font/woff2" href="../assets/fonts/dmsans.woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/research-guide.css">
+</head>
+<body class="guide-page">
+<a class="skip-link" href="#guide-top">跳至指南正文</a>
+<nav class="top" aria-label="主导航"><div class="in">
+<a class="brand" href="../index.html">Yang Zhou</a>
+<ul>
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html#openings">Openings</a></li>
+<li><a href="../index.html#publications">Publications</a></li>
+<li><a href="../index.html#contact">Contact</a></li>
+<li class="bar" aria-hidden="true"></li>
+<li><a href="#guide-top" aria-current="page">VEGA Lab</a></li>
+</ul></div></nav>
+<main class="shell guide-shell">
+<section class="card" id="guide-top" aria-labelledby="guide-title">
+<p class="guide-kicker">VEGA LAB / RESEARCH GUIDE</p>
+<h1 id="guide-title">本科生科研入门指南</h1>
+<p class="byline">VEGA Lab · 武汉大学计算机学院</p>
+<p>从一个具体问题开始，读懂论文、跑通代码、设计实验，再用结果支持自己的判断。Codex、Claude Code 可以协助阅读、编程和分析；研究问题、实验依据与最终结论，需要由你理解和核验。</p>
+<p>第一个项目以完成以下三项成果为目标：</p>
+<ul><li><strong>两篇论文精读</strong> 讲清问题、方法与关键证据。</li><li><strong>一项代码复现</strong> 保存配置、日志与结果对照。</li><li><strong>一组对照实验</strong> 检验一个具体假设。</li></ul>
+<p>已有基础可直接从选题和代码开始；初学者先搭建 Linux 环境，完成一个小型训练与评估任务，再按四周安排推进。</p>
+</section>
+<aside class="rail card" aria-label="指南目录">
+<p class="lab-name">阅读目录</p>
+<p class="post">从选题到第一次科研汇报</p>
+<nav aria-label="章节目录"><a href="#research"><span>01</span>研究方向与选题</a><a href="#preparation"><span>02</span>开始前的准备</a><a href="#resources"><span>03</span>学习教程与资料</a><a href="#compute"><span>04</span>小规模免费 GPU 实验</a><a href="#practice"><span>05</span>用大模型完成一次科研实践</a><a href="#schedule"><span>06</span>四周入门安排</a><a href="#standards"><span>07</span>实验与科研规范</a><a href="#sharing"><span>08</span>整理成果与交流</a><a href="#templates"><span>09</span>实践模板</a><a href="#references"><span>10</span>参考文献</a></nav>
+</aside>
+<section class="card" id="research" aria-labelledby="research-heading"><h2 id="research-heading"><span class="section-index" aria-hidden="true">01</span>研究方向与选题</h2><p>VEGA Lab 关注健康与生命科学中的人工智能。以下四条主线提供选题入口，每个方向附入门任务与 Nature、Science 系列期刊的补充阅读。先选一条主线，不必同时学习所有方向。</p>
+<h3>医学多模态基础模型 · Foundation</h3>
+<p>医学数据包含影像、文本等不同模态。我们关注模型如何利用这些数据学习可迁移的表征，以及如何在标注有限时适应新的任务。MerMED-FM <a class="citation" href="#ref-1" aria-label="参考文献 1">[1]</a> 研究多模态、多疾病医学影像基础模型，UrFound <a class="citation" href="#ref-2" aria-label="参考文献 2">[2]</a> 关注视网膜基础模型。</p>
+<p class="starter-task"><strong>入门任务</strong>选择一个分类任务，比较预训练特征上的线性分类器与小规模微调，观察标注量变化对结果的影响。</p>
+<p class="further-reading"><strong>补充阅读</strong>RETFound <a class="citation" href="#ref-3" aria-label="参考文献 3">[3]</a> 关注视网膜自监督预训练；Ark+ <a class="citation" href="#ref-4" aria-label="参考文献 4">[4]</a> 从多套胸片专家标注中积累知识；PanDerm <a class="citation" href="#ref-5" aria-label="参考文献 5">[5]</a> 学习多类皮肤影像表征；Merlin <a class="citation" href="#ref-6" aria-label="参考文献 6">[6]</a> 联合三维 CT、放射报告和电子病历建模。比较它们的监督信号、迁移任务与外部验证方式。</p>
+<h3>医学证据定位 · Grounding</h3>
+<p>模型给出判断或生成描述时，应当能够指出相应的图像区域或文本依据。MedRPG <a class="citation" href="#ref-7" aria-label="参考文献 7">[7]</a> 研究医学短语定位，EVLF-FM <a class="citation" href="#ref-8" aria-label="参考文献 8">[8]</a> 结合医学视觉语言建模与视觉证据定位。</p>
+<p class="starter-task"><strong>入门任务</strong>检查定位区域是否支持对应描述，整理定位错误、遗漏异常和无证据描述的案例，提出一个有针对性的改进。</p>
+<p class="further-reading"><strong>补充阅读</strong>MedSAM <a class="citation" href="#ref-9" aria-label="参考文献 9">[9]</a> 研究提示驱动的医学分割；UniBiomed <a class="citation" href="#ref-10" aria-label="参考文献 10">[10]</a> 联合生成诊断描述与目标分割；MedSegX <a class="citation" href="#ref-11" aria-label="参考文献 11">[11]</a> 研究开放世界医学分割。区分框定位、像素分割与文本证据对齐，检查模型在新模态、新器官上的表现。</p>
+<h3>医学大语言模型及智能体</h3>
+<p>从医学文本生成出发，进一步研究多轮问诊、知识检索和工具调用。Teaser <a class="citation" href="#ref-12" aria-label="参考文献 12">[12]</a> 按主题检索句子来生成医学报告；Note2Chat <a class="citation" href="#ref-13" aria-label="参考文献 13">[13]</a> 利用医疗笔记构建训练对话，提升多轮病史采集能力。两者分别提供报告生成与对话建模的入口；智能体进一步涉及规划和工具调用。</p>
+<p class="starter-task"><strong>入门任务</strong>用获准使用的病例或模拟病例，比较两种问诊策略的信息完整性、重复提问和无依据推断，或检查报告中的异常遗漏。保存对话轨迹、检索证据和评分依据。</p>
+<p class="further-reading"><strong>补充阅读</strong>AMIE <a class="citation" href="#ref-14" aria-label="参考文献 14">[14]</a> 研究多次就诊中的管理推理与对话，结合临床指南和药物知识；DeepRare <a class="citation" href="#ref-15" aria-label="参考文献 15">[15]</a> 结合多个智能体、专业工具与知识来源，支持罕见病鉴别诊断。重点看证据追踪与评测设置，区分模拟评测与真实临床应用的证据。</p>
+<h3>生信与生理信号大模型</h3>
+<p>研究数据从 DNA、RNA 和蛋白质序列延伸到睡眠、生理信号及可穿戴设备记录。ComBodied Agents <a class="citation" href="#ref-16" aria-label="参考文献 16">[16]</a> 提出以人为中心的智能体框架，讨论持续感知、长期记忆与个体状态建模，适合启发可穿戴数据相关选题；其中的框架设想与已完成的实验验证应分开理解。</p>
+<p class="starter-task"><strong>入门任务</strong>用公开且获准使用的数据，比较简单基线与预训练表征，完成序列分类或生理时间序列预测。检查时间戳、缺失值、采样频率与个体差异，按受试者及时间划分数据，避免相邻片段泄漏到测试集。</p>
+<p class="further-reading"><strong>补充阅读</strong>Biomni <a class="citation" href="#ref-17" aria-label="参考文献 17">[17]</a> 调用工具执行生物医学研究任务；SleepFM <a class="citation" href="#ref-18" aria-label="参考文献 18">[18]</a> 从多导睡眠监测信号学习表征并预测疾病；LucaOne <a class="citation" href="#ref-19" aria-label="参考文献 19">[19]</a> 联合建模核酸与蛋白质序列。SleepFM 迁移到日常可穿戴设备时，还需验证传感器差异与泛化能力。</p>
+<p>选定主线后，先精读一篇相关论文，再补读一篇直接相关的基线或后续工作。结合数据、代码、模型权重和算力的可获得性，与导师确定第一个项目的范围。更多论文见<a href="../index.html#publications">周阳老师主页</a>。</p></section><section class="card" id="preparation" aria-labelledby="preparation-heading"><h2 id="preparation-heading"><span class="section-index" aria-hidden="true">02</span>开始前的准备</h2><h3>以 Linux 为主要开发和实验环境</h3>
+<p>科研代码、依赖安装和运行脚本优先在 Linux 环境中完成，便于迁移到实验室服务器。Linux 用户可直接开发；Windows 用户建议使用 WSL 2 中的 Ubuntu；macOS 用户可以在本地编辑代码，通过 SSH 连接 Linux 服务器运行实验。环境搭建可参考 <a href="https://missing-semester-cn.github.io/2026/development-environment/">MIT Missing Semester 2026：开发环境与工具（社区中译）</a>。</p>
+<p>基本配置为“编辑器或终端 + Git + conda 环境 + PyTorch”。VS Code 可连接 WSL 或远程 Linux 主机。复现时遵循作者仓库的 Python、PyTorch 和 CUDA 兼容要求，先跑通原有环境，再考虑升级依赖。</p>
+<p>开始实验前，应能完成以下操作：</p>
+<ul><li>在终端中查看路径和文件，理解相对路径、文件权限、管道和输出重定向。</li><li>使用 Git 拉取代码、查看差异、提交和回退；将原始数据、权重和密钥排除在代码仓库之外。</li><li>用 SSH 登录获准使用的服务器，在服务器上检查 Python 环境；NVIDIA GPU 环境用 <code>nvidia-smi</code> 查看显存和进程。</li><li>在允许的远程服务器上用 tmux 管理会话，将参数写入配置文件，用脚本启动实验并保存日志；遵守共享 GPU 的使用安排。</li></ul>
+<p>Linux 环境不要求自购 GPU。先在 CPU 上检查数据和代码，再将同一项目放到服务器或下文的免费 GPU Notebook 平台上运行。Notebook 用于探索和小规模练习，正式实验尽量整理成可重复执行的脚本。</p>
+<h3>用 conda 隔离项目环境</h3>
+<p>conda 管理软件包与虚拟环境。每个环境拥有独立的 Python 和依赖版本，避免不同项目互相冲突。建议一篇论文或一个项目使用一个环境，实验依赖不要装进 <code>base</code>；环境隔离不负责数据隔离或 GPU 分配。</p>
+<p>在 Linux、WSL 或服务器中使用该系统内安装的 conda，先运行 <code>conda --version</code> 检查是否可用。下面以 Python 3.11 为例；实际版本按作者仓库要求选择。若仓库已有 <code>environment.yml</code>，优先按其说明重建环境。</p>
+<pre><code># 创建并进入项目环境
+conda create -n vega-research python=3.11 pip
+conda activate vega-research
+python --version
+which python
+
+# 仅在仓库提供 requirements.txt 时执行
+python -m pip install -r requirements.txt
+
+# 保存环境和 pip 包版本，随实验材料归档
+conda env export --no-builds &gt; environment.yml
+python -m pip freeze &gt; requirements-frozen.txt
+conda deactivate
+
+# 在另一台兼容的 Linux 机器上重建
+conda env create -n vega-reproduce -f environment.yml
+conda activate vega-reproduce</code></pre>
+<p>导出前检查当前环境名称，分享前去掉 <code>environment.yml</code> 中指向本机的 <code>prefix</code> 路径，检查本地包路径和私有源地址。完整导出有助于记录一次运行；跨系统迁移时，可另用 <code>conda env export --from-history</code> 保存显式安装的 conda 依赖，并单独补齐 pip 依赖。任何导出文件都要经过实际重建验证。</p>
+<p>PyTorch 与 CUDA 按仓库和官方安装说明配置，conda 环境不能替代主机 NVIDIA 驱动。在 Notebook 中还要选择对应的 Python 内核。让 Codex 或 Claude Code 运行实验时，明确环境名，并要求它先报告解释器路径；也可用 <code>conda run -n vega-research python train.py</code> 指定环境，其中脚本名按项目替换。</p>
+<h3>基础知识掌握到什么程度</h3>
+<p>学习基础知识与动手实践可以同时进行。先找出当前任务需要的概念，在代码中观察它们如何工作，再逐步补足理论。</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">基础</th><th scope="col">需要掌握的内容</th></tr></thead><tbody>
+<tr><td data-label="基础">Python 与 PyTorch</td><td data-label="需要掌握的内容">张量形状、数据加载、前向传播、损失与反向传播；训练模式和评估模式的区别</td></tr>
+<tr><td data-label="基础">数学与机器学习</td><td data-label="需要掌握的内容">向量和矩阵运算、梯度、过拟合、数据划分，以及评价指标的含义</td></tr>
+<tr><td data-label="基础">视觉与语言模型</td><td data-label="需要掌握的内容">按选题学习 CNN、ViT、Transformer、对比学习和预训练；需要模型适配时再学习指令微调与 LoRA</td></tr>
+<tr><td data-label="基础">实验环境</td><td data-label="需要掌握的内容">创建独立环境，用 Git 查看和回退修改；使用服务器时掌握 SSH、显存检查和日志保存</td></tr>
+<tr><td data-label="基础">文献与表达</td><td data-label="需要掌握的内容">查找原论文和作者代码，管理引用，用简短文字和图表说明问题与结果</td></tr>
+</tbody></table></div>
+<p>完成一个小型训练、验证和测试任务，尝试解释每一步的数据形状与计算过程。学习资料按下一节选用，不必一次学完全部课程。</p>
+<h3>配置一个 AI 编程助手</h3>
+<p>选择 Codex 或 Claude Code，在项目目录中开始工作。它们可以结合项目文件理解任务、修改代码、执行命令和检查结果，具体能力取决于环境与权限。把论文、README、运行环境和预算交代清楚，每次完成一个可以检查的小任务。操作方法见 <a href="https://learn.chatgpt.com/docs/prompting">Codex 官方文档</a>和 <a href="https://code.claude.com/docs/en/quickstart">Claude Code 官方文档</a>。</p></section><section class="card" id="resources" aria-labelledby="resources-heading"><h2 id="resources-heading"><span class="section-index" aria-hidden="true">03</span>学习教程与资料</h2><p>优先选中文资料，按当前任务补课，每项先完成一个小练习。以下课程与新版材料均为2025年及以后版本，英文课程用于补充；研究论文不受这一年份限制。</p>
+<div class="resource-list">
+<article class="resource-row"><h3>Linux 与命令行</h3><div><p><a href="https://missing-semester-cn.github.io/2026/course-shell/">MIT Missing Semester：Shell 入门</a>及<a href="https://missing-semester-cn.github.io/2026/development-environment/">开发环境与工具</a>，2026，社区中译</p><p class="exercise"><span>练习</span>路径、权限、管道、远程连接；在 Linux 终端启动程序并保存日志</p></div></article>
+<article class="resource-row"><h3>Git 与调试</h3><div><p><a href="https://missing.csail.mit.edu/2026/version-control/">MIT：Version Control and Git</a>及<a href="https://missing.csail.mit.edu/2026/debugging-profiling/">Debugging and Profiling</a>，2026，英文补充</p><p class="exercise"><span>练习</span>用提交保存一次修改，用断点与日志解释一次错误</p></div></article>
+<article class="resource-row"><h3>Python 编程</h3><div><p><a href="https://docs.python.org/zh-cn/3.14/tutorial/">Python 3.14 官方中文教程</a>，2025年发布的3.14版本文档</p><p class="exercise"><span>练习</span>适合已有基本编程经验的同学；学习函数、文件、异常与数据结构，写一个日志汇总脚本；项目运行版本仍按依赖要求选择</p></div></article>
+<article class="resource-row"><h3>机器学习与 PyTorch</h3><div><p><a href="https://speech.ee.ntu.edu.tw/~hylee/ml/2025-spring.php">李宏毅：机器学习2025春季课程</a>，中文授课，附讲义、视频与作业入口</p><p class="exercise"><span>练习</span>按课程基础与作业准备材料补足训练、优化和泛化知识，跑通一次数据加载、训练与评估</p></div></article>
+<article class="resource-row"><h3>视觉模型</h3><div><p><a href="https://cs231n.stanford.edu/2025/schedule.html">Stanford CS231n Spring 2025</a>，英文补充</p><p class="exercise"><span>练习</span>按选题阅读优化、CNN、注意力、自监督和视觉语言建模讲义，追踪实际代码中的张量变化</p></div></article>
+<article class="resource-row"><h3>大语言模型</h3><div><p><a href="https://speech.ee.ntu.edu.tw/~hylee/GenAI-ML/2025-fall.php">李宏毅：生成式人工智慧与机器学习导论2025秋季课程</a>，中文授课</p><p class="exercise"><span>练习</span>理解语言模型训练、提示与模型能力的来源；比较同一任务中的两种提示，并解释差异</p></div></article>
+<article class="resource-row"><h3>AI 辅助编程</h3><div><p><a href="https://missing-semester-cn.github.io/2026/agentic-coding/">MIT Missing Semester：智能体编程</a>，2026，社区中译</p><p class="exercise"><span>练习</span>学习上下文、任务拆分与验证；让 Codex 或 Claude Code 完成一次可审查的代码修改</p></div></article>
+<article class="resource-row"><h3>智能体开发</h3><div><p><a href="https://github.com/datawhalechina/hello-agents">Datawhale Hello-Agents：从零开始构建智能体</a>，2025起，中文开源教程</p><p class="exercise"><span>练习</span>从基础范式、工具调用、记忆和检索入手；做一个能检索文献并返回来源的简单助手，记录调用过程</p></div></article>
+<article class="resource-row"><h3>文献检索</h3><div><p><a href="https://lib.tsinghua.edu.cn/info/1247/7924.htm">清华图书馆2025年秋季培训</a>第5、8、19讲及课件，中文</p><p class="exercise"><span>练习</span>学习医学文献、理工科调研与开放资源检索；找到两篇原文，记录查询词、版本和引用关系</p></div></article>
+<article class="resource-row"><h3>LaTeX 与 Overleaf</h3><div><p><a href="https://lib.tsinghua.edu.cn/info/1247/7924.htm">清华图书馆2025年秋季培训</a>第21讲“如何使用LaTeX排版论文”及课件，中文</p><p class="exercise"><span>练习</span>学习模板、公式、图表与引用，在 Overleaf 编译一份两页短文</p></div></article>
+<article class="resource-row"><h3>文献管理</h3><div><p><a href="https://sandbox.acrl.org/resources/zotero-quick-guide">ACRL：Zotero Quick Guide</a>，2025，英文补充</p><p class="exercise"><span>练习</span>为两篇论文建立条目、校正作者和年份，整理阅读笔记并导出 BibTeX</p></div></article>
+<article class="resource-row"><h3>研究报告与展示</h3><div><p><a href="https://lib.tsinghua.edu.cn/info/1247/7924.htm">清华图书馆2025年秋季培训</a>第23讲“PPT的设计制作与科研汇报”及课件，中文</p><p class="exercise"><span>练习</span>提炼一个研究问题、一张主要结果图与一个结论，再按本指南的交付要求组织汇报</p></div></article>
+</div>
+<p>中文翻译用于帮助理解；遇到命令、术语或接口差异，回查课程原文及所用软件版本的官方说明。学习智能体教程时，优先选择少量调用即可完成的练习，区分免费教材与模型 API 的费用。</p>
+<h3>Vibe coding 入门</h3>
+<p>推荐从 <a href="https://www.deeplearning.ai/courses/vibe-coding-101-with-replit">Vibe Coding 101 with Replit</a> 开始。这门2025年发布的公开课程由 DeepLearning.AI 与 Replit 合作推出，约94分钟，通过两个应用介绍如何说明需求、提供上下文、分步构建和调试。它适合建立 AI 辅助开发的基本习惯，再将这些方法用到 Codex、Claude Code 和科研代码中。</p>
+<p>课程页面提供免费学习入口；平台运行额度、测验或证书的收费条件需另行查看。科研实践中，每次接受生成代码后都查看差异并运行验证，尤其检查数据划分、损失函数和评测逻辑。</p>
+<h3>用 arXiv 和 Google Scholar 找论文</h3>
+<p><a href="https://arxiv.org/">arXiv</a> 是开放的学术预印本平台，适合追踪人工智能领域的新工作。按题名、作者或关键词检索，在摘要页查看提交时间、版本历史、PDF、代码链接以及可能存在的期刊信息。预印本上架不等于完成同行评审；阅读笔记应记录具体版本，如 <code>v1</code> 或 <code>v2</code>，避免将不同版本的实验混用。平台性质见 <a href="https://info.arxiv.org/about/index.html">arXiv 官方介绍</a>。</p>
+<p><a href="https://scholar.google.com/">Google Scholar（谷歌学术）</a> 是学术搜索引擎，可跨出版商和预印本平台查找论文。用英文任务词组合检索，例如 <code>medical image grounding</code>；用完整题名加引号寻找已知论文。通过“被引用”追踪后续工作，通过“所有版本”寻找作者公开稿，按年份筛选近期文献，并为需要持续跟进的主题设置提醒。引用计数只作线索，仍需阅读方法与实验；检索功能见 <a href="https://scholar.google.com/intl/en/scholar/help.html">Google Scholar 官方帮助</a>。</p>
+<p>一次完整检索练习：从本指南选一篇论文，在 Google Scholar 找到一篇相关后续工作，再到 arXiv、出版页面或作者主页取得原文。将两篇论文导入 Zotero，合并同一工作的重复版本，核对 DOI 和发表年份，导出 <code>.bib</code>，在两页短文中引用。优先引用已正式发表的版本；若使用的结论仅出现在预印本中，则注明该版本。模型提供的题名和引用必须能在原始来源中找到。</p>
+<h3>用 LaTeX、Overleaf 和 Zotero 整理研究</h3>
+<p>LaTeX 是用文本标记编写并编译文档的排版系统，适合公式、交叉引用、参考文献和论文模板。Overleaf 是浏览器中的 LaTeX 编辑与协作环境，可以编译预览 PDF；开始练习时不必先在本机安装完整 TeX 环境。Zotero 用于收集论文、整理笔记和管理书目信息，LaTeX 项目中的 <code>.bib</code> 文件则保存引用条目。</p>
+<p>第一项练习：在 <a href="https://www.overleaf.com/">Overleaf</a> 中新建项目，完成一份两页短文，包含标题、一个公式、一幅图、一张表、文内引用和参考文献。结合清华图书馆2025年 LaTeX 课件修改 <code>.tex</code> 与 <code>.bib</code> 文件；用 <code>\label</code>、<code>\ref</code> 维护图表编号，用 <code>\cite{引用键}</code> 插入引用，避免手动编排编号。中文文档可选用支持中文的模板，并按模板要求设置编译器。</p>
+<p>论文写作采用目标会议或期刊的模板，日常汇报可以用 PowerPoint 或 LaTeX Beamer。每次交付都同时保存 PDF 与可编辑源文件；从 Zotero 或出版页面导入的引用，也要核对作者、题名、年份和 DOI。</p></section><section class="card" id="compute" aria-labelledby="compute-heading"><h2 id="compute-heading"><span class="section-index" aria-hidden="true">04</span>小规模免费 GPU 实验</h2><p>先选择能正常访问的平台，完成一次小批次训练或推理，再扩大实验。以下免费条件按2026年9月的官方页面核对，实际可用 GPU 与额度以账户界面为准。</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">平台</th><th scope="col">适合的入门任务</th><th scope="col">免费条件与使用方式</th></tr></thead><tbody>
+<tr><td data-label="平台"><a href="https://www.kaggle.com/docs/notebooks">Kaggle Notebooks</a></td><td data-label="适合的入门任务">公开数据上的图像分类、小模型微调、基线评测；预装环境可减少配置工作</td><td data-label="免费条件与使用方式">注册并完成平台要求的账户验证后，在 Notebook 设置中选择 GPU。官方<a href="https://www.kaggle.com/docs/efficient-gpu-usage">使用说明</a>给出按周重置的配额，通常为30小时，可能随供需调整；高峰期可能排队</td></tr>
+<tr><td data-label="平台"><a href="https://research.google.com/colaboratory/faq.html">Google Colab</a></td><td data-label="适合的入门任务">课程 Notebook、PyTorch 入门、少量推理与短时微调</td><td data-label="免费条件与使用方式">使用 Google 账户，在运行时类型中选择 GPU。免费资源动态分配，不保证具体型号和固定时数；会话可能因空闲或时限结束，需及时导出成果</td></tr>
+</tbody></table></div>
+<p>第一次使用时，先确认 GPU 是否分配成功，再检查 PyTorch 是否识别 CUDA。将模型与输入放到同一设备；只修改运行时类型并不意味着程序已经用上 GPU。</p>
+<p>尽量先在 CPU 上完成数据清洗和代码调试，GPU 只用于确实需要加速的步骤。缩小输入、batch size 和训练轮数，优先使用已有权重，定期保存 checkpoint。Kaggle 使用版本保存功能保留输出，Colab 将结果导出到获准使用的持久存储；临时运行目录不作为唯一备份。</p>
+<p>免费 Notebook 按平台允许的方式使用。Colab 免费托管运行时不支持将 SSH 远程控制作为使用方式，不应套用实验室服务器的远程开发流程。长时间训练或受限医疗数据实验，使用导师安排的合适环境。</p></section><section class="card" id="practice" aria-labelledby="practice-heading"><h2 id="practice-heading"><span class="section-index" aria-hidden="true">05</span>用大模型完成一次科研实践</h2><p>向工具交代清楚研究目标、已有材料、运行约束和期望成果。把较大的工作拆成可以逐项检查的任务，每完成一步，都保存结果并核对证据。</p>
+<h3>1. 读论文，确定要验证什么</h3>
+<p>先自己阅读摘要、方法图和核心实验，形成初步理解，再让工具帮助解释具体难点。例如：</p>
+<blockquote><p>根据这篇论文，说明研究问题、核心方法、关键实验和局限，标注对应章节、公式或表格。区分作者的结论和你的推测。用一个小例子解释核心公式，最后提出三个检查我是否理解的问题。</p></blockquote>
+<p>写一页论文笔记，回答：输入输出是什么？方法改变了什么？哪项实验支持主要结论？哪些问题尚未验证？引文、公式和数字都应回查原文，工具推荐的相关论文也要核实。准备作为代码基础的论文，需要进一步理解其实现细节。</p>
+<h3>2. 读代码，跑通最小流程</h3>
+<p>把论文和作者仓库提供给工具，先找到实际执行路径：</p>
+<blockquote><p>阅读 README、环境配置和主要代码，定位数据加载、训练、推理与评测入口，标明文件位置。追踪一个 batch 的张量形状，说明代码与论文的对应关系。列出所需数据、权重、显存和缺失条件，给出最小运行方案。</p></blockquote>
+<p>核对方案后，在独立环境中运行一个小批次，检查数据、损失和输出，再执行选定的正式实验。查看每次代码修改的差异；依赖调整和实现偏差都应写入记录。</p>
+<p>复现前先确认材料能否获得。例如，<a href="https://github.com/yangzhou12/BenchX">BenchX 仓库</a> <a class="citation" href="#ref-20" aria-label="参考文献 20">[20]</a> 提供代码和数据处理说明，原始数据需要另行获取；<a href="https://github.com/DAMO-NLP-SG/CMM">CMM 仓库</a> <a class="citation" href="#ref-21" aria-label="参考文献 21">[21]</a> 提供评测资料，并列有数据使用限制。条件尚未具备时，可以先阅读代码、用模拟数据检查接口，或与导师更换任务。</p>
+<h3>3. 做对照实验，检验一个假设</h3>
+<p>基线是用来比较的参照方法。先保存基线结果，再确定要改变的因素，以及什么结果会支持或推翻自己的判断。例如：</p>
+<blockquote><p>基线已经跑通。我想比较两种模型在不同标注量下的表现。请固定患者划分、评价指标和训练预算，设计两个标注比例的实验。两个方法使用相同的训练子集，验证集和测试集保持不变。列出对照关系，再编写配置和运行脚本。</p></blockquote>
+<p>先小规模检查，再按预算扩大实验。用验证集选择超参数和阈值，在方案确定后评估测试集。若结果出现异常提升，先排查数据泄漏、标签处理和指标实现。</p>
+<p>统一评测可从 BenchX <a class="citation" href="#ref-20" aria-label="参考文献 20">[20]</a> 支持的一个任务入手，确认两种可用权重，核对预处理和标签顺序，再进行比较。小批次运行用于检查流程，完整结论需要对应规模的正式评测。</p>
+<h3>4. 分析结果，写清证据和局限</h3>
+<p>将真实日志和预测文件交给工具，要求它从这些材料生成图表：</p>
+<blockquote><p>只使用提供的日志和预测文件整理结果，标注样本量、随机种子与运行配置，保留失败实验。区分观察结果、解释假设和尚未验证的结论。检查错误案例，指出最值得继续验证的问题。</p></blockquote>
+<p>图表由脚本生成，并保留原始数据。涉及随机训练时，在预算允许范围内使用多个种子、报告波动；只有一次运行则明确注明。没有稳定改善也应如实报告，并解释当前证据的局限。</p>
+<p>让工具协助整理材料、润色论证和检查引用。最终需要自己解释关键代码，核对至少一个核心指标，并讲清一个失败案例。</p>
+<h3>5. 保存项目规则与实验记录</h3>
+<p>把研究目标、数据路径、环境、运行命令、评价指标和预算写入项目规则，减少每次对话重复说明。Codex 使用 <code>AGENTS.md</code>；Claude Code 使用 <code>CLAUDE.md</code>，也可以在其中写入 <code>@AGENTS.md</code> 共享同一份规则。具体配置见 <a href="https://learn.chatgpt.com/docs/agent-configuration/agents-md">Codex 文档</a>和 <a href="https://code.claude.com/docs/en/memory">Claude Code 文档</a>。</p>
+<p>文末提供了可直接填写的模板。一个流程反复使用并验证有效后，可以将其整理为 Skill，例如论文笔记、复现检查或实验结果汇总。</p></section><section class="card" id="schedule" aria-labelledby="schedule-heading"><h2 id="schedule-heading"><span class="section-index" aria-hidden="true">06</span>四周入门安排</h2><p>以下节奏适合规划第一个项目，可根据基础、课程安排和实验条件调整。</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">阶段</th><th scope="col">任务</th><th scope="col">阶段成果</th></tr></thead><tbody>
+<tr><td data-label="阶段">第1周</td><td data-label="任务">建立 Linux 开发环境和 Git 仓库，完成小型训练与评估，练习使用科研助手</td><td data-label="阶段成果">可运行示例与 README，能解释数据流和损失</td></tr>
+<tr><td data-label="阶段">第2周</td><td data-label="任务">精读两篇论文，梳理作者代码，确认数据、权重和算力</td><td data-label="阶段成果">两篇笔记与范围明确的复现计划</td></tr>
+<tr><td data-label="阶段">第3周</td><td data-label="任务">复现一篇论文中的一个任务，核对与原文的设置差异</td><td data-label="阶段成果">配置、日志、预测及结果对照</td></tr>
+<tr><td data-label="阶段">第4周</td><td data-label="任务">完成一组对照或消融实验，分析错误案例并汇报</td><td data-label="阶段成果">一个有证据支持的判断、简短报告和可重跑材料</td></tr>
+</tbody></table></div>
+<p>使用现成权重完成评估时，说明完成的是推理或评测复现；仅运行小规模配置时，说明完成的是小规模验证。没有 GPU 时，也可以先做代码追踪、获准使用的预测文件评估和指标核验，再与导师安排后续训练。</p></section><section class="card" id="standards" aria-labelledby="standards-heading"><h2 id="standards-heading"><span class="section-index" aria-hidden="true">07</span>实验与科研规范</h2><p>医学数据按使用协议处理，检查患者级隔离，避免同一患者的信息跨训练与测试。真实病历、受限影像和未公开数据，只有在明确获准后才能发送到外部模型服务；密钥不应写入代码或实验报告。</p>
+<p>公平比较需要一致的数据划分、预处理和评价方式，并记录模型权重与训练预算。分类、定位和生成任务应选择适合各自目标的指标；报告与对话还需要检查事实是否有证据支持。</p>
+<p>每次实验保存代码版本、环境、配置、运行命令、原始日志和预测。保留负结果，不通过改变标签、划分或指标来追求更好数字。另一个模型给出相同答案，也不能代替原文核对或实验验证。</p>
+<p>结论应与证据范围相符。小样本、模拟病例或单个数据集上的结果，都有相应局限。涉及医学含义的解释，应结合证据并请具备相应专业知识的人核验。</p></section><section class="card" id="sharing" aria-labelledby="sharing-heading"><h2 id="sharing-heading"><span class="section-index" aria-hidden="true">08</span>整理成果与交流</h2><h3>1. 文献与实验报告</h3>
+<p>提交一份 PDF 报告，并附可编辑源文件。正文建议6至10页，参考文献和实验日志可另附；以讲清工作为准。报告按以下内容组织：</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">部分</th><th scope="col">具体要求</th></tr></thead><tbody>
+<tr><td data-label="部分">基础理解</td><td data-label="具体要求">不超过2页。围绕自己的任务解释数据、模型、损失和指标；用一个例子说明，不拼贴教材定义</td></tr>
+<tr><td data-label="部分">两篇论文精读</td><td data-label="具体要求">每篇说明研究背景、具体问题、动机与贡献、方法图或关键公式、核心实验及局限；至少提出一个有依据的疑问</td></tr>
+<tr><td data-label="部分">一项代码复现</td><td data-label="具体要求">写明论文版本、代码提交号、Linux/Python/框架环境、数据划分、权重、运行命令、超参数和评测设置；列出原文与自己结果的对照表</td></tr>
+<tr><td data-label="部分">对照或消融实验</td><td data-label="具体要求">说明假设、基线、改变的因素和控制条件；报告样本量、随机种子、主要指标和至少一个失败案例；解释偏差与局限</td></tr>
+<tr><td data-label="部分">个人思考与下一步</td><td data-label="具体要求">写清学会了什么、哪些问题仍不理解，提出一个可以执行的后续实验</td></tr>
+<tr><td data-label="部分">参考文献与 AI 使用</td><td data-label="具体要求">文内引用与文末条目一一对应；说明 AI 协助的步骤、关键修改、纠正的错误及人工核验方式</td></tr>
+</tbody></table></div>
+<p>复现未达到原文结果时，按数据、预处理、权重、训练预算和实现差异逐项分析。未运行的实验明确标注，不用推测数字填补结果表。背景和方法要讲清，实验部分也应足以让读者判断结论是否成立。</p>
+<h3>2. 代码与复现材料</h3>
+<p>提交代码仓库链接或源码压缩包，至少包含以下材料：</p>
+<ul><li><code>README.md</code>：研究问题、目录说明、数据获取条件、环境安装、从数据准备到训练/推理和评测的完整命令，以及当前完成范围。</li><li>环境与配置文件：如 <code>requirements.txt</code> 或 <code>environment.yml</code>、训练配置和固定的数据划分标识；保存代码版本及随机种子。</li><li>运行与分析脚本：提供最小验证命令、正式实验命令和作图脚本，使用可修改的路径配置，不依赖个人机器的硬编码路径。</li><li>结果材料：主要日志、逐样本预测或合规的汇总结果、指标表与图表。大权重提供合法下载地址及版本信息，受限数据不随仓库分发。</li></ul>
+<p>提交前，从一个新建环境按 README 重跑最小示例，确认其他人能找到所需材料。代码截图可以解释局部实现，但必须同时提供可运行代码。</p>
+<h3>3. 文献与实验汇报</h3>
+<p>准备10至12页幻灯片，汇报约10分钟，并预留讨论时间。建议按“问题与背景1至2页、两篇论文的方法和关键证据4页、自己的复现与对照3至4页、局限和下一步1页”组织，可按内容调整。</p>
+<p>每页只保留一个主要信息，方法图、结果表和对照样本应能独立看懂。图表有标题、坐标、单位和必要图例；引用或改绘的图表在当页底部标明来源。中文和英文分别保持一致字体，字号以投影可读为准；不依赖动画呈现关键内容。提交 PDF，同时保留 <code>.pptx</code> 或 Beamer 源文件。</p>
+<p>汇报时准备回答：为什么研究这个问题？方法相对基线改变了什么？一次前向传播的数据形状如何变化？为什么选这个指标？哪项结果支持结论？AI 写出的哪些关键部分经过了你的检查？</p>
+<h3>4. 提交与每周沟通</h3>
+<p>文件统一命名为 <code>姓名_方向_材料类型_日期</code>，例如 <code>张三_医学基础模型_报告_20260930.pdf</code>。提交报告 PDF、幻灯片 PDF、源码或仓库链接，并附3至5行摘要：完成了什么、主要发现、尚存问题和希望讨论的内容。通过导师指定渠道提交；联系信息见<a href="../index.html#contact">周阳老师主页</a>，共享链接应保证接收人可访问。</p>
+<p>每周沟通用一页笔记说明本周完成的任务，附实验编号、图表或代码链接；记录阻塞问题及已尝试的方法，列出下周1至2项具体工作。遇到报错时，提供环境、完整错误信息和最小复现步骤；涉及密钥或受限数据的内容先移除。</p></section><section class="card" id="templates" aria-labelledby="templates-heading"><h2 id="templates-heading"><span class="section-index" aria-hidden="true">09</span>实践模板</h2><details><summary>项目规则</summary><p>将以下内容填入项目的 <code>AGENTS.md</code>，根据任务更新路径和命令。</p>
+<pre><code># 项目
+- 研究问题：
+- 参考论文、版本与作者代码：
+- 复现范围与基线：
+- 数据来源、使用条件与固定划分：
+- 环境、权重与运行命令：
+- 主指标与验证集选择规则：
+- 设备、运行时间与费用预算：
+
+# 工作约定
+- 依据论文和真实代码开展工作，标注缺失信息与推测。
+- 原始数据和既有结果只读，新增输出放入独立实验目录。
+- 保持既定数据划分、标签、指标和预算；调整前说明原因。
+- 正式运行前先做小批次检查，保存配置、命令和日志。
+- 图表只使用真实输出，未运行的结果注明“未运行”。
+- 外部服务只接收获准发送的材料，不输出密钥。
+- 完成后说明修改内容、验证结果和尚未解决的问题。</code></pre></details><details><summary>论文笔记</summary><pre><code># 论文标题
+- 来源：论文链接、版本与作者代码。
+- 问题：输入输出是什么，现有方法有什么不足？
+- 方法：核心思路是什么，对应哪张图或哪个公式？
+- 证据：哪些实验支持结论，对照是否充分？
+- 局限：哪些条件限制了结论？
+- 下一步：我最想验证什么，如何做最小实验？
+- 核对：AI解释了什么，我如何回查原文？</code></pre></details><details><summary>实验记录</summary><pre><code># 实验编号
+- 假设、基线与本次改变的因素：
+- 数据划分、样本量与预处理：
+- 代码版本、环境、模型权重与配置：
+- 运行命令、种子、设备与耗时：
+- 指标、预测、日志和作图脚本路径：
+- 观察结果、解释假设与局限：
+- AI协助的步骤与人工核验：</code></pre></details></section><section class="card" id="references" aria-labelledby="references-heading"><h2 id="references-heading"><span class="section-index" aria-hidden="true">10</span>参考文献</h2><p class="bib-download"><a href="references.bib" download>下载 BibTeX 参考文献</a></p><article class="reference" id="ref-1"><span class="reference-number">[1]</span><div><p class="reference-title"><a href="https://doi.org/10.1016/j.landig.2026.101007">MerMED-FM: Multimodal, Multi-Disease Medical Imaging Foundation Model</a></p><p class="reference-authors"><b>Yang Zhou</b>, Chrystie Wan Ning Quek, Jun Zhou, et al.</p><p class="reference-venue"><em>The Lancet Digital Health</em>, 8(7):101007, 2026.</p><p class="reference-links"><a href="https://arxiv.org/abs/2507.00185">arXiv</a> · <a href="https://github.com/yangzhou12/MerMED">代码</a> · <a href="https://huggingface.co/youngzhou12/MerMED">模型权重</a></p></div></article>
+<article class="reference" id="ref-2"><span class="reference-number">[2]</span><div><p class="reference-title"><a href="https://doi.org/10.1007/978-3-031-72390-2_70">UrFound: Towards Universal Retinal Foundation Models via Knowledge-Guided Masked Modeling</a></p><p class="reference-authors">Kai Yu, <b>Yang Zhou</b>, Yang Bai, et al.</p><p class="reference-venue"><em>MICCAI</em>, pp. 753–762, 2024.</p><p class="reference-links"><a href="https://papers.miccai.org/miccai-2024/paper/1942_paper.pdf">PDF</a> · <a href="https://github.com/yukkai/UrFound">代码</a> · <a href="https://huggingface.co/yyyyk/UrFound">模型权重</a></p></div></article>
+<article class="reference" id="ref-3"><span class="reference-number">[3]</span><div><p class="reference-title"><a href="https://doi.org/10.1038/s41586-023-06555-x">A foundation model for generalizable disease detection from retinal images</a></p><p class="reference-authors">Yukun Zhou, Mark A. Chia, Siegfried K. Wagner, et al.</p><p class="reference-venue"><em>Nature</em>, 622(7981):156–163, 2023.</p><p class="reference-links"><span class="reference-tag">RETFound</span></p></div></article>
+<article class="reference" id="ref-4"><span class="reference-number">[4]</span><div><p class="reference-title"><a href="https://doi.org/10.1038/s41586-025-09079-8">A fully open AI foundation model applied to chest radiography</a></p><p class="reference-authors">DongAo Ma, Jiaxuan Pang, Michael B. Gotway, Jianming Liang</p><p class="reference-venue"><em>Nature</em>, 643(8071):488–498, 2025.</p><p class="reference-links"><span class="reference-tag">Ark+</span></p></div></article>
+<article class="reference" id="ref-5"><span class="reference-number">[5]</span><div><p class="reference-title"><a href="https://doi.org/10.1038/s41591-025-03747-y">A multimodal vision foundation model for clinical dermatology</a></p><p class="reference-authors">Siyuan Yan, Zhen Yu, Clare Primiero, et al.</p><p class="reference-venue"><em>Nature Medicine</em>, 31(8):2691–2702, 2025.</p><p class="reference-links"><span class="reference-tag">PanDerm</span></p></div></article>
+<article class="reference" id="ref-6"><span class="reference-number">[6]</span><div><p class="reference-title"><a href="https://doi.org/10.1038/s41586-026-10181-8">Merlin: a computed tomography vision-language foundation model and dataset</a></p><p class="reference-authors">Louis Blankemeier, Ashwin Kumar, Joseph Paul Cohen, et al.</p><p class="reference-venue"><em>Nature</em>, 652(8112):1318–1328, 2026.</p></div></article>
+<article class="reference" id="ref-7"><span class="reference-number">[7]</span><div><p class="reference-title"><a href="https://doi.org/10.1007/978-3-031-43990-2_35">Medical Phrase Grounding with Region-Phrase Context Contrastive Alignment</a></p><p class="reference-authors">Zhihao Chen, <b>Yang Zhou</b>, Anh Tran, et al.</p><p class="reference-venue"><em>MICCAI</em>, pp. 371–381, 2023.</p><p class="reference-links"><span class="reference-tag">MedRPG</span> · <a href="https://arxiv.org/abs/2303.07618">arXiv</a> · <a href="https://github.com/eraserNut/MedRPG">代码</a></p></div></article>
+<article class="reference" id="ref-8"><span class="reference-number">[8]</span><div><p class="reference-title"><a href="https://arxiv.org/abs/2509.24231">EVLF-FM: Explainable Vision Language Foundation Model for Medicine</a></p><p class="reference-authors">Yang Bai, Haoran Cheng, <b>Yang Zhou</b>, et al.</p><p class="reference-venue"><em>Nature Medicine</em> (Accepted), 2026.</p></div></article>
+<article class="reference" id="ref-9"><span class="reference-number">[9]</span><div><p class="reference-title"><a href="https://doi.org/10.1038/s41467-024-44824-z">Segment anything in medical images</a></p><p class="reference-authors">Jun Ma, Yuting He, Feifei Li, et al.</p><p class="reference-venue"><em>Nature Communications</em>, 15(1):654, 2024.</p><p class="reference-links"><span class="reference-tag">MedSAM</span></p></div></article>
+<article class="reference" id="ref-10"><span class="reference-number">[10]</span><div><p class="reference-title"><a href="https://doi.org/10.1038/s41467-026-73986-1">A universal foundation model for grounded biomedical image interpretation</a></p><p class="reference-authors">Linshan Wu, Yuxiang Nie, Sunan He, et al.</p><p class="reference-venue"><em>Nature Communications</em>, 17(1):7173, 2026.</p><p class="reference-links"><span class="reference-tag">UniBiomed</span></p></div></article>
+<article class="reference" id="ref-11"><span class="reference-number">[11]</span><div><p class="reference-title"><a href="https://doi.org/10.1038/s41551-025-01497-3">A generalist foundation model and database for open-world medical image segmentation</a></p><p class="reference-authors">Siqi Zhang, Qizhe Zhang, Shanghang Zhang, et al.</p><p class="reference-venue"><em>Nature Biomedical Engineering</em>, 10(5):1026–1041, 2026.</p><p class="reference-links"><span class="reference-tag">MedSegX</span></p></div></article>
+<article class="reference" id="ref-12"><span class="reference-number">[12]</span><div><p class="reference-title"><a href="https://doi.org/10.1109/TMI.2024.3507076">Topicwise Separable Sentence Retrieval for Medical Report Generation</a></p><p class="reference-authors">Junting Zhao, <b>Yang Zhou</b>, Zhihao Chen, et al.</p><p class="reference-venue"><em>IEEE Transactions on Medical Imaging</em>, 44(3):1505–1517, 2025.</p><p class="reference-links"><span class="reference-tag">Teaser</span> · <a href="https://arxiv.org/abs/2405.04175">arXiv</a> · <a href="https://github.com/CindyZJT/Teaser">代码</a></p></div></article>
+<article class="reference" id="ref-13"><span class="reference-number">[13]</span><div><p class="reference-title"><a href="https://doi.org/10.1609/aaai.v40i41.40821">Note2Chat: Improving LLMs for Multi-Turn Clinical History Taking Using Medical Notes</a></p><p class="reference-authors"><b>Yang Zhou</b>, Zhenting Sheng, Mingrui Tan, et al.</p><p class="reference-venue"><em>AAAI</em>, 40(41):35149–35157, 2026.</p><p class="reference-links"><a href="https://github.com/zhentingsheng/Note2Chat">代码</a></p></div></article>
+<article class="reference" id="ref-14"><span class="reference-number">[14]</span><div><p class="reference-title"><a href="https://doi.org/10.1038/s41586-026-10764-5">Towards conversational artificial intelligence for disease management</a></p><p class="reference-authors">Valentin Liévin, Anil Palepu, Wei-Hung Weng, et al.</p><p class="reference-venue"><em>Nature</em>, 655(8125):1292–1299, 2026.</p><p class="reference-links"><span class="reference-tag">AMIE</span></p></div></article>
+<article class="reference" id="ref-15"><span class="reference-number">[15]</span><div><p class="reference-title"><a href="https://doi.org/10.1038/s41586-025-10097-9">An agentic system for rare disease diagnosis with traceable reasoning</a></p><p class="reference-authors">Weike Zhao, Chaoyi Wu, Yanjie Fan, et al.</p><p class="reference-venue"><em>Nature</em>, 651(8106):775–784, 2026.</p><p class="reference-links"><span class="reference-tag">DeepRare</span></p></div></article>
+<article class="reference" id="ref-16"><span class="reference-number">[16]</span><div><p class="reference-title"><a href="https://arxiv.org/abs/2608.10915v2">ComBodied Agents: a New Paradigm of Human-Centric Agentic AI</a></p><p class="reference-authors">Qianggang Ding, Xingyao Wang, Rui Feng, et al.</p><p class="reference-venue">arXiv:2608.10915v2, 2026.</p></div></article>
+<article class="reference" id="ref-17"><span class="reference-number">[17]</span><div><p class="reference-title"><a href="https://doi.org/10.1126/science.adz4351">Autonomous biomedical research with an artificial intelligence agent</a></p><p class="reference-authors">Kexin Huang, Serena Zhang, Hanchen Wang, et al.</p><p class="reference-venue"><em>Science</em>, 393(6813):eadz4351, 2026.</p><p class="reference-links"><span class="reference-tag">Biomni</span></p></div></article>
+<article class="reference" id="ref-18"><span class="reference-number">[18]</span><div><p class="reference-title"><a href="https://doi.org/10.1038/s41591-025-04133-4">A multimodal sleep foundation model for disease prediction</a></p><p class="reference-authors">Rahul Thapa, Magnus Ruud Kjaer, Bryan He, et al.</p><p class="reference-venue"><em>Nature Medicine</em>, 32(2):752–762, 2026.</p><p class="reference-links"><span class="reference-tag">SleepFM</span></p></div></article>
+<article class="reference" id="ref-19"><span class="reference-number">[19]</span><div><p class="reference-title"><a href="https://doi.org/10.1038/s42256-025-01044-4">Generalized biological foundation model with unified nucleic acid and protein language</a></p><p class="reference-authors">Yong He, Pan Fang, Yongtao Shan, et al.</p><p class="reference-venue"><em>Nature Machine Intelligence</em>, 7(6):942–953, 2025.</p><p class="reference-links"><span class="reference-tag">LucaOne</span></p></div></article>
+<article class="reference" id="ref-20"><span class="reference-number">[20]</span><div><p class="reference-title"><a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/0cb35e10bf7bb73d10c12414edbd63fd-Paper-Datasets_and_Benchmarks_Track.pdf">BenchX: A Unified Benchmark Framework for Medical Vision-Language Pretraining on Chest X-Rays</a></p><p class="reference-authors"><b>Yang Zhou</b>, Li Lin Faith Tan, Yanyu Xu, et al.</p><p class="reference-venue"><em>NeurIPS Datasets and Benchmarks Track</em>, 2024.</p><p class="reference-links"><a href="https://github.com/yangzhou12/BenchX">代码</a></p></div></article>
+<article class="reference" id="ref-21"><span class="reference-number">[21]</span><div><p class="reference-title"><a href="https://doi.org/10.52202/085713-3601">The Curse of Multi-Modalities: Evaluating Hallucinations of Large Multimodal Models across Language, Visual, and Audio</a></p><p class="reference-authors">Sicong Leng, Yun Xing, Zesen Cheng, et al.</p><p class="reference-venue"><em>NeurIPS</em>, 2025.</p><p class="reference-links"><span class="reference-tag">CMM</span> · <a href="https://arxiv.org/abs/2410.12787">arXiv</a> · <a href="https://github.com/DAMO-NLP-SG/CMM">代码</a></p></div></article></section>
+</main>
+</body></html>
