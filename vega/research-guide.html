@@ -35,7 +35,7 @@
 <aside class="rail card" aria-label="指南目录">
 <p class="lab-name">阅读目录</p>
 <p class="post">从选题到第一次科研汇报</p>
-<nav aria-label="章节目录"><a href="#research"><span>01</span>研究方向与选题</a><a href="#preparation"><span>02</span>开始前的准备</a><a href="#resources"><span>03</span>学习教程与资料</a><a href="#compute"><span>04</span>小规模免费 GPU 实验</a><a href="#practice"><span>05</span>用大模型完成一次科研实践</a><a href="#schedule"><span>06</span>四周入门安排</a><a href="#standards"><span>07</span>实验与科研规范</a><a href="#sharing"><span>08</span>整理成果与交流</a><a href="#templates"><span>09</span>实践模板</a><a href="#references"><span>10</span>参考文献</a></nav>
+<nav aria-label="章节目录"><a href="#research"><span>01</span>研究方向与选题</a><a href="#preparation"><span>02</span>开始前的准备</a><a href="#resources"><span>03</span>学习教程与资料</a><a href="#compute"><span>04</span>免费 GPU 实验</a><a href="#practice"><span>05</span>大模型科研实践</a><a href="#schedule"><span>06</span>四周入门安排</a><a href="#standards"><span>07</span>实验与科研规范</a><a href="#sharing"><span>08</span>整理成果与交流</a><a href="#templates"><span>09</span>实践模板</a><a href="#references"><span>10</span>参考文献</a></nav>
 </aside>
 <section class="card" id="research" aria-labelledby="research-heading"><h2 id="research-heading"><span class="section-index" aria-hidden="true">01</span>研究方向与选题</h2><p>VEGA Lab 关注健康与生命科学中的人工智能。以下四条主线提供选题入口，每个方向附入门任务与 Nature、Science 系列期刊的补充阅读。先选一条主线，不必同时学习所有方向。</p>
 <h3>医学多模态基础模型 · Foundation</h3>
@@ -119,14 +119,14 @@ conda activate vega-reproduce</code></pre>
 <h3>用 LaTeX、Overleaf 和 Zotero 整理研究</h3>
 <p>LaTeX 是用文本标记编写并编译文档的排版系统，适合公式、交叉引用、参考文献和论文模板。Overleaf 是浏览器中的 LaTeX 编辑与协作环境，可以编译预览 PDF；开始练习时不必先在本机安装完整 TeX 环境。Zotero 用于收集论文、整理笔记和管理书目信息，LaTeX 项目中的 <code>.bib</code> 文件则保存引用条目。</p>
 <p>第一项练习：在 <a href="https://www.overleaf.com/">Overleaf</a> 中新建项目，完成一份两页短文，包含标题、一个公式、一幅图、一张表、文内引用和参考文献。结合清华图书馆2025年 LaTeX 课件修改 <code>.tex</code> 与 <code>.bib</code> 文件；用 <code>\label</code>、<code>\ref</code> 维护图表编号，用 <code>\cite{引用键}</code> 插入引用，避免手动编排编号。中文文档可选用支持中文的模板，并按模板要求设置编译器。</p>
-<p>论文写作采用目标会议或期刊的模板，日常汇报可以用 PowerPoint 或 LaTeX Beamer。每次交付都同时保存 PDF 与可编辑源文件；从 Zotero 或出版页面导入的引用，也要核对作者、题名、年份和 DOI。</p></section><section class="card" id="compute" aria-labelledby="compute-heading"><h2 id="compute-heading"><span class="section-index" aria-hidden="true">04</span>小规模免费 GPU 实验</h2><p>先选择能正常访问的平台，完成一次小批次训练或推理，再扩大实验。以下免费条件按2026年9月的官方页面核对，实际可用 GPU 与额度以账户界面为准。</p>
+<p>论文写作采用目标会议或期刊的模板，日常汇报可以用 PowerPoint 或 LaTeX Beamer。每次交付都同时保存 PDF 与可编辑源文件；从 Zotero 或出版页面导入的引用，也要核对作者、题名、年份和 DOI。</p></section><section class="card" id="compute" aria-labelledby="compute-heading"><h2 id="compute-heading"><span class="section-index" aria-hidden="true">04</span>免费 GPU 实验</h2><p>先选择能正常访问的平台，完成一次小批次训练或推理，再扩大实验。以下免费条件按2026年9月的官方页面核对，实际可用 GPU 与额度以账户界面为准。</p>
 <div class="table-wrap"><table><thead><tr><th scope="col">平台</th><th scope="col">适合的入门任务</th><th scope="col">免费条件与使用方式</th></tr></thead><tbody>
 <tr><td data-label="平台"><a href="https://www.kaggle.com/docs/notebooks">Kaggle Notebooks</a></td><td data-label="适合的入门任务">公开数据上的图像分类、小模型微调、基线评测；预装环境可减少配置工作</td><td data-label="免费条件与使用方式">注册并完成平台要求的账户验证后，在 Notebook 设置中选择 GPU。官方<a href="https://www.kaggle.com/docs/efficient-gpu-usage">使用说明</a>给出按周重置的配额，通常为30小时，可能随供需调整；高峰期可能排队</td></tr>
 <tr><td data-label="平台"><a href="https://research.google.com/colaboratory/faq.html">Google Colab</a></td><td data-label="适合的入门任务">课程 Notebook、PyTorch 入门、少量推理与短时微调</td><td data-label="免费条件与使用方式">使用 Google 账户，在运行时类型中选择 GPU。免费资源动态分配，不保证具体型号和固定时数；会话可能因空闲或时限结束，需及时导出成果</td></tr>
 </tbody></table></div>
 <p>第一次使用时，先确认 GPU 是否分配成功，再检查 PyTorch 是否识别 CUDA。将模型与输入放到同一设备；只修改运行时类型并不意味着程序已经用上 GPU。</p>
 <p>尽量先在 CPU 上完成数据清洗和代码调试，GPU 只用于确实需要加速的步骤。缩小输入、batch size 和训练轮数，优先使用已有权重，定期保存 checkpoint。Kaggle 使用版本保存功能保留输出，Colab 将结果导出到获准使用的持久存储；临时运行目录不作为唯一备份。</p>
-<p>免费 Notebook 按平台允许的方式使用。Colab 免费托管运行时不支持将 SSH 远程控制作为使用方式，不应套用实验室服务器的远程开发流程。长时间训练或受限医疗数据实验，使用导师安排的合适环境。</p></section><section class="card" id="practice" aria-labelledby="practice-heading"><h2 id="practice-heading"><span class="section-index" aria-hidden="true">05</span>用大模型完成一次科研实践</h2><p>向工具交代清楚研究目标、已有材料、运行约束和期望成果。把较大的工作拆成可以逐项检查的任务，每完成一步，都保存结果并核对证据。</p>
+<p>免费 Notebook 按平台允许的方式使用。Colab 免费托管运行时不支持将 SSH 远程控制作为使用方式，不应套用实验室服务器的远程开发流程。长时间训练或受限医疗数据实验，使用导师安排的合适环境。</p></section><section class="card" id="practice" aria-labelledby="practice-heading"><h2 id="practice-heading"><span class="section-index" aria-hidden="true">05</span>大模型科研实践</h2><p>向工具交代清楚研究目标、已有材料、运行约束和期望成果。把较大的工作拆成可以逐项检查的任务，每完成一步，都保存结果并核对证据。</p>
 <h3>1. 读论文，确定要验证什么</h3>
 <p>先自己阅读摘要、方法图和核心实验，形成初步理解，再让工具帮助解释具体难点。例如：</p>
 <blockquote><p>根据这篇论文，说明研究问题、核心方法、关键实验和局限，标注对应章节、公式或表格。区分作者的结论和你的推测。用一个小例子解释核心公式，最后提出三个检查我是否理解的问题。</p></blockquote>
