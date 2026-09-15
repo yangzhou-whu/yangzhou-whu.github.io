@@ -51,7 +51,8 @@ itemised; the key parts sit in the third bio paragraph.
 `vega/research-guide.html` is Chinese-language, one `<section class="card">` per chapter, with a
 sticky table of contents in the rail. It is adapted from the MARS Lab research guideline
 (<https://ucn4705ufmx1.feishu.cn/wiki/KUBrwA9CmiCJkPkCt3kcuioVntc>), credited at the end of the
-introduction card. Citations in the text are `<a class="citation" href="#ref-n">[n]</a>`;
+introduction card. The byline carries the last-updated date in a `<time>` element; bump it whenever
+the content changes. Citations in the text are `<a class="citation" href="#ref-n">[n]</a>`;
 references are numbered in order of first citation, and `vega/references.bib` lists the same
 entries in the same order, so `[n]` in the page is the n-th BibTeX entry.
 
