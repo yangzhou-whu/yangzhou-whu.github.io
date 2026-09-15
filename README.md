@@ -7,8 +7,11 @@ render identically inside and outside China.
 
 ```
 index.html                     the homepage
-vega/research-guide.html       VEGA Lab 本科生科研入门指南 (linked from the nav and Openings)
+vega/index.html                VEGA Lab landing page (nav "VEGA Lab")
+vega/research-guide.html       本科生科研入门指南 (linked from the lab page and Openings)
 vega/references.bib            the guide's 21 references, downloadable from the page
+vega/build_references.py       regenerates references.bib + the page's reference block
+vega/references-authors.json   full author lists the generator reads
 404.html
 assets/css/style.css           shared styling; colour variables are the :root block near the top
 assets/css/research-guide.css  reading layout for the guide, on top of style.css
@@ -18,8 +21,7 @@ assets/favicon.svg
 ZY_CV_short.pdf                linked from the header
 ```
 
-`ChatGPT_ZY_Skin_Smoothing.png` (the 1.8 MB original headshot) is git-ignored and not referenced by
-either page; it stays out of the published site.
+The original 1.8 MB headshot lives outside the repo at `~/Pictures/ChatGPT_ZY_Skin_Smoothing.png`.
 
 Layout follows **maureenzou.github.io**: a 980 px shell split into a 212 px identity rail and a
 fluid content column, white cards on a light grey ground, soft shadows, a compact type scale. The
@@ -39,7 +41,8 @@ To add a paper, copy one `.pub` block in `index.html`:
 ```
 
 `<b>` marks your name, `<sup>*</sup>` co-first, `<sup>#</sup>` corresponding, `.award` renders in
-red. Accepted-but-unpublished work is written `<em>Journal</em> (Accepted), year`. Copy an existing
+red. Accepted-but-unpublished work is written `<em>Journal</em> (Accepted), year`; "Paper" links go to
+the DOI once one exists. Copy an existing
 `<svg class="icon">` for link icons (paper, code, model, mail, scholar, github, cv, and the section
 icons).
 
@@ -56,7 +59,9 @@ the content changes. Citations in the text are `<a class="citation" href="#ref-n
 references are numbered in order of first citation, and `vega/references.bib` lists the same
 entries in the same order, so `[n]` in the page is the n-th BibTeX entry.
 
-Reference format (keep every entry to it):
+References are generated: edit the entry list in `vega/build_references.py` (author lists in
+`vega/references-authors.json`), then run `python3 vega/build_references.py` to rewrite both the
+BibTeX and the page's reference block. The format it enforces:
 
 - **Title** links to the version of record (`https://doi.org/…`) when a DOI exists, otherwise to the
   open full text (arXiv abstract page or proceedings PDF).
@@ -68,6 +73,9 @@ Reference format (keep every entry to it):
 - **BibTeX**: key `firstauthorYEARshortname`, authors `Family, Given` with the full list where the
   source gives one, titles double-braced, `doi` plus `url` for open full text, `note = {Accepted}`
   for accepted work. Volume, issue and pages were checked against Crossref on 2026-09-15.
+
+`vega/index.html` is the lab landing page: an identity rail plus two cards, same stylesheets as
+the guide (`body.lab-page` shortens the rail's grid span).
 
 ## Email obfuscation
 
