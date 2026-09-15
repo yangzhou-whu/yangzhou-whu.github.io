@@ -22,6 +22,7 @@ body.guide-page{font-size:1rem;line-height:1.85}
 .guide-shell p{margin:0 0 16px;text-wrap:pretty}
 .guide-shell p:last-child{margin-bottom:0}
 .guide-shell .guide-kicker{font-size:.75rem;letter-spacing:.12em;color:var(--accent-dark);font-weight:600;margin-bottom:12px}
+.guide-shell .guide-credit{font-size:.875rem;color:var(--muted);margin-top:4px}
 .guide-shell .byline{font-size:.875rem;color:var(--muted);margin-bottom:22px}
 .guide-shell a{overflow-wrap:anywhere;text-underline-offset:3px}
 .guide-shell #guide-top>ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));list-style:none;padding:0;margin:18px 0 22px;gap:0;background:#f7f9fc;border:1px solid var(--line);border-radius:var(--r)}
