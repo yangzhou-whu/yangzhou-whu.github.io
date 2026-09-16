@@ -55,7 +55,9 @@ itemised; the key parts sit in the third bio paragraph.
 sticky table of contents in the rail. It is adapted from the MARS Lab research guideline
 (<https://ucn4705ufmx1.feishu.cn/wiki/KUBrwA9CmiCJkPkCt3kcuioVntc>), credited at the end of the
 introduction card. The byline carries the last-updated date in a `<time>` element; bump it whenever
-the content changes. Citations in the text are `<a class="citation" href="#ref-n">[n]</a>`;
+the content changes. Every learning link must open without a campus IP or a login: the Tsinghua
+Library courseware was replaced on 2026-09-15 because its files answer `您的IP不允许访问` off-campus.
+Chinese material first, English marked `英文补充`. Citations in the text are `<a class="citation" href="#ref-n">[n]</a>`;
 references are numbered in order of first citation, and `vega/references.bib` lists the same
 entries in the same order, so `[n]` in the page is the n-th BibTeX entry.
 
