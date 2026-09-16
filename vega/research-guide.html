@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="stylesheet" href="../assets/css/research-guide.css">
 </head>
-<body class="guide-page">
+<body class="guide-page guide-doc">
 <a class="skip-link" href="#guide-top">跳至指南正文</a>
 <nav class="top" aria-label="主导航"><div class="in">
 <a class="brand" href="../index.html">Yang Zhou</a>
@@ -37,7 +37,7 @@
 <aside class="rail card" aria-label="指南目录">
 <p class="lab-name">阅读目录</p>
 <p class="post">从选题到第一次科研汇报</p>
-<nav aria-label="章节目录"><a href="#research"><span>01</span>研究方向与选题</a><a href="#preparation"><span>02</span>开始前的准备</a><a href="#resources"><span>03</span>学习教程与资料</a><a href="#compute"><span>04</span>免费 GPU 实验</a><a href="#practice"><span>05</span>大模型科研实践</a><a href="#schedule"><span>06</span>四周入门安排</a><a href="#standards"><span>07</span>实验与科研规范</a><a href="#sharing"><span>08</span>整理成果与交流</a><a href="#templates"><span>09</span>实践模板</a><a href="#references"><span>10</span>参考文献</a></nav>
+<nav aria-label="章节目录"><a href="#research"><span>01</span>研究方向与选题</a><a href="#preparation"><span>02</span>开始前的准备</a><a href="#resources"><span>03</span>学习教程与资料</a><a href="#compute"><span>04</span>免费 GPU 实验</a><a href="#practice"><span>05</span>大模型科研实践</a><a href="#schedule"><span>06</span>四周入门安排</a><a href="#standards"><span>07</span>实验与科研规范</a><a href="#sharing"><span>08</span>整理成果与交流</a><a href="#templates"><span>09</span>实践模板</a><a href="#references"><span>10</span>参考文献</a><a class="rail-top" href="#guide-top">返回顶部</a></nav>
 </aside>
 <section class="card" id="research" aria-labelledby="research-heading"><h2 id="research-heading"><span class="section-index" aria-hidden="true">01</span>研究方向与选题</h2><p>VEGA Lab 关注健康与生命科学中的人工智能。以下四条主线提供选题入口，每个方向附入门任务与 Nature、Science 系列期刊的补充阅读。先选一条主线，不必同时学习所有方向。</p>
 <h3>医学多模态基础模型 · Foundation</h3>
@@ -97,18 +97,18 @@ conda activate vega-reproduce</code></pre>
 <h3>配置一个 AI 编程助手</h3>
 <p>选择 Codex 或 Claude Code，在项目目录中开始工作。它们可以结合项目文件理解任务、修改代码、执行命令和检查结果，具体能力取决于环境与权限。把论文、README、运行环境和预算交代清楚，每次完成一个可以检查的小任务。操作方法见 <a href="https://learn.chatgpt.com/docs/prompting">Codex 官方文档</a>和 <a href="https://code.claude.com/docs/zh-CN/quickstart">Claude Code 官方文档</a>。</p></section><section class="card" id="resources" aria-labelledby="resources-heading"><h2 id="resources-heading"><span class="section-index" aria-hidden="true">03</span>学习教程与资料</h2><p>优先选中文资料，按当前任务补课，每项先完成一个小练习。以下课程与新版材料均为2025年及以后版本，英文课程用于补充；研究论文不受这一年份限制。</p>
 <div class="resource-list">
-<article class="resource-row"><h3>Linux 与命令行</h3><div><p><a href="https://missing-semester-cn.github.io/2026/course-shell/">MIT Missing Semester：Shell 入门</a>及<a href="https://missing-semester-cn.github.io/2026/development-environment/">开发环境与工具</a>，2026，社区中译</p><p class="exercise"><span>练习</span>路径、权限、管道、远程连接；在 Linux 终端启动程序并保存日志</p></div></article>
-<article class="resource-row"><h3>Git 与调试</h3><div><p><a href="https://missing.csail.mit.edu/2026/version-control/">MIT：Version Control and Git</a>及<a href="https://missing.csail.mit.edu/2026/debugging-profiling/">Debugging and Profiling</a>，2026，英文补充；2026 版尚无中译，可对照 2020 版中译<a href="https://missing-semester-cn.github.io/2020/version-control/">版本控制</a>与<a href="https://missing-semester-cn.github.io/2020/debugging-profiling/">调试及性能分析</a></p><p class="exercise"><span>练习</span>用提交保存一次修改，用断点与日志解释一次错误</p></div></article>
-<article class="resource-row"><h3>Python 编程</h3><div><p><a href="https://docs.python.org/zh-cn/3.14/tutorial/">Python 3.14 官方中文教程</a>，2025年发布的3.14版本文档</p><p class="exercise"><span>练习</span>适合已有基本编程经验的同学；学习函数、文件、异常与数据结构，写一个日志汇总脚本；项目运行版本仍按依赖要求选择</p></div></article>
-<article class="resource-row"><h3>机器学习与 PyTorch</h3><div><p><a href="https://speech.ee.ntu.edu.tw/~hylee/ml/2025-spring.php">李宏毅：机器学习2025春季课程</a>，中文授课，附讲义、视频与作业入口；讲义 PDF 可直接下载，视频托管于 YouTube</p><p class="exercise"><span>练习</span>按课程基础与作业准备材料补足训练、优化和泛化知识，跑通一次数据加载、训练与评估</p></div></article>
-<article class="resource-row"><h3>视觉模型</h3><div><p><a href="https://cs231n.stanford.edu/2025/schedule.html">Stanford CS231n Spring 2025</a>，英文补充</p><p class="exercise"><span>练习</span>按选题阅读优化、CNN、注意力、自监督和视觉语言建模讲义，追踪实际代码中的张量变化</p></div></article>
-<article class="resource-row"><h3>大语言模型</h3><div><p><a href="https://speech.ee.ntu.edu.tw/~hylee/GenAI-ML/2025-fall.php">李宏毅：生成式人工智慧与机器学习导论2025秋季课程</a>，中文授课</p><p class="exercise"><span>练习</span>理解语言模型训练、提示与模型能力的来源；比较同一任务中的两种提示，并解释差异</p></div></article>
-<article class="resource-row"><h3>AI 辅助编程</h3><div><p><a href="https://missing-semester-cn.github.io/2026/agentic-coding/">MIT Missing Semester：智能体编程</a>，2026，社区中译</p><p class="exercise"><span>练习</span>学习上下文、任务拆分与验证；让 Codex 或 Claude Code 完成一次可审查的代码修改</p></div></article>
-<article class="resource-row"><h3>智能体开发</h3><div><p><a href="https://github.com/datawhalechina/hello-agents">Datawhale Hello-Agents：从零开始构建智能体</a>，2025起，中文开源教程</p><p class="exercise"><span>练习</span>从基础范式、工具调用、记忆和检索入手；做一个能检索文献并返回来源的简单助手，记录调用过程</p></div></article>
-<article class="resource-row"><h3>文献检索</h3><div><p><a href="https://www.icourse163.org/course/WHU-29001">武汉大学：信息检索</a>（黄如花，中国大学MOOC，每学期开课），中文；<a href="https://pubmed.ncbi.nlm.nih.gov/help/">PubMed 官方帮助</a>，英文补充，用于医学文献</p><p class="exercise"><span>练习</span>学习医学文献、理工科调研与开放资源检索；找到两篇原文，记录查询词、版本和引用关系</p></div></article>
-<article class="resource-row"><h3>LaTeX 与 Overleaf</h3><div><p><a href="https://github.com/CTeX-org/lshort-zh-cn/releases/download/v6.05/lshort-zh-cn.pdf">一份（不太）简短的 LaTeX 2ε 介绍</a>（lshort-zh-cn v6.05，2024年12月），中文；<a href="https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes">Overleaf：Learn LaTeX in 30 minutes</a>，英文补充</p><p class="exercise"><span>练习</span>学习模板、公式、图表与引用，在 Overleaf 编译一份两页短文</p></div></article>
-<article class="resource-row"><h3>文献管理</h3><div><p><a href="https://zotero-chinese.com/user-guide/">Zotero 中文社区：用户指南</a>，中文，覆盖 Zotero 7；<a href="https://sandbox.acrl.org/resources/zotero-quick-guide">ACRL：Zotero Quick Guide</a>，2025，英文补充</p><p class="exercise"><span>练习</span>为两篇论文建立条目、校正作者和年份，整理阅读笔记并导出 BibTeX</p></div></article>
-<article class="resource-row"><h3>研究报告与展示</h3><div><p><a href="https://www.microsoft.com/en-us/research/academic-program/give-great-research-talk/">Simon Peyton Jones：How to give a great research talk</a>（Microsoft Research），英文补充；幻灯片 PDF 可直接下载，视频托管于 YouTube</p><p class="exercise"><span>练习</span>提炼一个研究问题、一张主要结果图与一个结论，再按本指南的交付要求组织汇报</p></div></article>
+<article class="resource-row"><h3>Linux 与命令行</h3><div><p><a href="https://missing-semester-cn.github.io/2026/course-shell/">MIT Missing Semester：Shell 入门</a>及<a href="https://missing-semester-cn.github.io/2026/development-environment/">开发环境与工具</a>，2026，社区中译</p><p class="exercise">路径、权限、管道、远程连接；在 Linux 终端启动程序并保存日志</p></div></article>
+<article class="resource-row"><h3>Git 与调试</h3><div><p><a href="https://missing.csail.mit.edu/2026/version-control/">MIT：Version Control and Git</a>及<a href="https://missing.csail.mit.edu/2026/debugging-profiling/">Debugging and Profiling</a>，2026，英文补充；2026 版尚无中译，可对照 2020 版中译<a href="https://missing-semester-cn.github.io/2020/version-control/">版本控制</a>与<a href="https://missing-semester-cn.github.io/2020/debugging-profiling/">调试及性能分析</a></p><p class="exercise">用提交保存一次修改，用断点与日志解释一次错误</p></div></article>
+<article class="resource-row"><h3>Python 编程</h3><div><p><a href="https://docs.python.org/zh-cn/3.14/tutorial/">Python 3.14 官方中文教程</a>，2025年发布的3.14版本文档</p><p class="exercise">适合已有基本编程经验的同学；学习函数、文件、异常与数据结构，写一个日志汇总脚本；项目运行版本仍按依赖要求选择</p></div></article>
+<article class="resource-row"><h3>机器学习与 PyTorch</h3><div><p><a href="https://speech.ee.ntu.edu.tw/~hylee/ml/2025-spring.php">李宏毅：机器学习2025春季课程</a>，中文授课，附讲义、视频与作业入口；讲义 PDF 可直接下载，视频托管于 YouTube</p><p class="exercise">按课程基础与作业准备材料补足训练、优化和泛化知识，跑通一次数据加载、训练与评估</p></div></article>
+<article class="resource-row"><h3>视觉模型</h3><div><p><a href="https://cs231n.stanford.edu/2025/schedule.html">Stanford CS231n Spring 2025</a>，英文补充</p><p class="exercise">按选题阅读优化、CNN、注意力、自监督和视觉语言建模讲义，追踪实际代码中的张量变化</p></div></article>
+<article class="resource-row"><h3>大语言模型</h3><div><p><a href="https://speech.ee.ntu.edu.tw/~hylee/GenAI-ML/2025-fall.php">李宏毅：生成式人工智慧与机器学习导论2025秋季课程</a>，中文授课</p><p class="exercise">理解语言模型训练、提示与模型能力的来源；比较同一任务中的两种提示，并解释差异</p></div></article>
+<article class="resource-row"><h3>AI 辅助编程</h3><div><p><a href="https://missing-semester-cn.github.io/2026/agentic-coding/">MIT Missing Semester：智能体编程</a>，2026，社区中译</p><p class="exercise">学习上下文、任务拆分与验证；让 Codex 或 Claude Code 完成一次可审查的代码修改</p></div></article>
+<article class="resource-row"><h3>智能体开发</h3><div><p><a href="https://github.com/datawhalechina/hello-agents">Datawhale Hello-Agents：从零开始构建智能体</a>，2025起，中文开源教程</p><p class="exercise">从基础范式、工具调用、记忆和检索入手；做一个能检索文献并返回来源的简单助手，记录调用过程</p></div></article>
+<article class="resource-row"><h3>文献检索</h3><div><p><a href="https://www.icourse163.org/course/WHU-29001">武汉大学：信息检索</a>（黄如花，中国大学MOOC，每学期开课），中文；<a href="https://pubmed.ncbi.nlm.nih.gov/help/">PubMed 官方帮助</a>，英文补充，用于医学文献</p><p class="exercise">学习医学文献、理工科调研与开放资源检索；找到两篇原文，记录查询词、版本和引用关系</p></div></article>
+<article class="resource-row"><h3>LaTeX 与 Overleaf</h3><div><p><a href="https://github.com/CTeX-org/lshort-zh-cn/releases/download/v6.05/lshort-zh-cn.pdf">一份（不太）简短的 LaTeX 2ε 介绍</a>（lshort-zh-cn v6.05，2024年12月），中文；<a href="https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes">Overleaf：Learn LaTeX in 30 minutes</a>，英文补充</p><p class="exercise">学习模板、公式、图表与引用，在 Overleaf 编译一份两页短文</p></div></article>
+<article class="resource-row"><h3>文献管理</h3><div><p><a href="https://zotero-chinese.com/user-guide/">Zotero 中文社区：用户指南</a>，中文，覆盖 Zotero 7；<a href="https://sandbox.acrl.org/resources/zotero-quick-guide">ACRL：Zotero Quick Guide</a>，2025，英文补充</p><p class="exercise">为两篇论文建立条目、校正作者和年份，整理阅读笔记并导出 BibTeX</p></div></article>
+<article class="resource-row"><h3>研究报告与展示</h3><div><p><a href="https://www.microsoft.com/en-us/research/academic-program/give-great-research-talk/">Simon Peyton Jones：How to give a great research talk</a>（Microsoft Research），英文补充；幻灯片 PDF 可直接下载，视频托管于 YouTube</p><p class="exercise">提炼一个研究问题、一张主要结果图与一个结论，再按本指南的交付要求组织汇报</p></div></article>
 </div>
 <p>中文翻译用于帮助理解；遇到命令、术语或接口差异，回查课程原文及所用软件版本的官方说明。学习智能体教程时，优先选择少量调用即可完成的练习，区分免费教材与模型 API 的费用。</p>
 <h3>Vibe coding 入门</h3>
@@ -130,26 +130,26 @@ conda activate vega-reproduce</code></pre>
 <p>第一次使用时，先确认 GPU 是否分配成功，再检查 PyTorch 是否识别 CUDA。将模型与输入放到同一设备；只修改运行时类型并不意味着程序已经用上 GPU。</p>
 <p>尽量先在 CPU 上完成数据清洗和代码调试，GPU 只用于确实需要加速的步骤。缩小输入、batch size 和训练轮数，优先使用已有权重，定期保存 checkpoint。Kaggle 使用版本保存功能保留输出，Colab 将结果导出到获准使用的持久存储；临时运行目录不作为唯一备份。</p>
 <p>免费 Notebook 按平台允许的方式使用。Colab 免费托管运行时不支持将 SSH 远程控制作为使用方式，不应套用实验室服务器的远程开发流程。长时间训练或受限医疗数据实验，使用导师安排的合适环境。</p></section><section class="card" id="practice" aria-labelledby="practice-heading"><h2 id="practice-heading"><span class="section-index" aria-hidden="true">05</span>大模型科研实践</h2><p>向工具交代清楚研究目标、已有材料、运行约束和期望成果。把较大的工作拆成可以逐项检查的任务，每完成一步，都保存结果并核对证据。</p>
-<h3>1. 读论文，确定要验证什么</h3>
+<h3>读论文，确定要验证什么</h3>
 <p>先自己阅读摘要、方法图和核心实验，形成初步理解，再让工具帮助解释具体难点。例如：</p>
 <blockquote><p>根据这篇论文，说明研究问题、核心方法、关键实验和局限，标注对应章节、公式或表格。区分作者的结论和你的推测。用一个小例子解释核心公式，最后提出三个检查我是否理解的问题。</p></blockquote>
 <p>写一页论文笔记，回答：输入输出是什么？方法改变了什么？哪项实验支持主要结论？哪些问题尚未验证？引文、公式和数字都应回查原文，工具推荐的相关论文也要核实。准备作为代码基础的论文，需要进一步理解其实现细节。</p>
-<h3>2. 读代码，跑通最小流程</h3>
+<h3>读代码，跑通最小流程</h3>
 <p>把论文和作者仓库提供给工具，先找到实际执行路径：</p>
 <blockquote><p>阅读 README、环境配置和主要代码，定位数据加载、训练、推理与评测入口，标明文件位置。追踪一个 batch 的张量形状，说明代码与论文的对应关系。列出所需数据、权重、显存和缺失条件，给出最小运行方案。</p></blockquote>
 <p>核对方案后，在独立环境中运行一个小批次，检查数据、损失和输出，再执行选定的正式实验。查看每次代码修改的差异；依赖调整和实现偏差都应写入记录。</p>
 <p>复现前先确认材料能否获得。例如，<a href="https://github.com/yangzhou12/BenchX">BenchX 仓库</a> <a class="citation" href="#ref-20" aria-label="参考文献 20">[20]</a> 提供代码和数据处理说明，原始数据需要另行获取；<a href="https://github.com/DAMO-NLP-SG/CMM">CMM 仓库</a> <a class="citation" href="#ref-21" aria-label="参考文献 21">[21]</a> 提供评测资料，并列有数据使用限制。条件尚未具备时，可以先阅读代码、用模拟数据检查接口，或与导师更换任务。</p>
-<h3>3. 做对照实验，检验一个假设</h3>
+<h3>做对照实验，检验一个假设</h3>
 <p>基线是用来比较的参照方法。先保存基线结果，再确定要改变的因素，以及什么结果会支持或推翻自己的判断。例如：</p>
 <blockquote><p>基线已经跑通。我想比较两种模型在不同标注量下的表现。请固定患者划分、评价指标和训练预算，设计两个标注比例的实验。两个方法使用相同的训练子集，验证集和测试集保持不变。列出对照关系，再编写配置和运行脚本。</p></blockquote>
 <p>先小规模检查，再按预算扩大实验。用验证集选择超参数和阈值，在方案确定后评估测试集。若结果出现异常提升，先排查数据泄漏、标签处理和指标实现。</p>
 <p>统一评测可从 BenchX <a class="citation" href="#ref-20" aria-label="参考文献 20">[20]</a> 支持的一个任务入手，确认两种可用权重，核对预处理和标签顺序，再进行比较。小批次运行用于检查流程，完整结论需要对应规模的正式评测。</p>
-<h3>4. 分析结果，写清证据和局限</h3>
+<h3>分析结果，写清证据和局限</h3>
 <p>将真实日志和预测文件交给工具，要求它从这些材料生成图表：</p>
 <blockquote><p>只使用提供的日志和预测文件整理结果，标注样本量、随机种子与运行配置，保留失败实验。区分观察结果、解释假设和尚未验证的结论。检查错误案例，指出最值得继续验证的问题。</p></blockquote>
 <p>图表由脚本生成，并保留原始数据。涉及随机训练时，在预算允许范围内使用多个种子、报告波动；只有一次运行则明确注明。没有稳定改善也应如实报告，并解释当前证据的局限。</p>
 <p>让工具协助整理材料、润色论证和检查引用。最终需要自己解释关键代码，核对至少一个核心指标，并讲清一个失败案例。</p>
-<h3>5. 保存项目规则与实验记录</h3>
+<h3>保存项目规则与实验记录</h3>
 <p>把研究目标、数据路径、环境、运行命令、评价指标和预算写入项目规则，减少每次对话重复说明。Codex 使用 <code>AGENTS.md</code>；Claude Code 使用 <code>CLAUDE.md</code>，也可以在其中写入 <code>@AGENTS.md</code> 共享同一份规则。具体配置见 <a href="https://learn.chatgpt.com/docs/agent-configuration/agents-md">Codex 文档</a>和 <a href="https://code.claude.com/docs/zh-CN/memory">Claude Code 文档</a>。</p>
 <p>文末提供了可直接填写的模板。一个流程反复使用并验证有效后，可以将其整理为 Skill，例如论文笔记、复现检查或实验结果汇总。</p></section><section class="card" id="schedule" aria-labelledby="schedule-heading"><h2 id="schedule-heading"><span class="section-index" aria-hidden="true">06</span>四周入门安排</h2><p>以下节奏适合规划第一个项目，可根据基础、课程安排和实验条件调整。</p>
 <div class="table-wrap"><table><thead><tr><th scope="col">阶段</th><th scope="col">任务</th><th scope="col">阶段成果</th></tr></thead><tbody>
@@ -161,7 +161,7 @@ conda activate vega-reproduce</code></pre>
 <p>与第08节的定期沟通对应，建议在第2周和第4周结束时各汇报一次：第一次确认选题、笔记与复现计划，第二次汇报复现结果与对照实验。使用现成权重完成评估时，说明完成的是推理或评测复现；仅运行小规模配置时，说明完成的是小规模验证。没有 GPU 时，也可以先做代码追踪、获准使用的预测文件评估和指标核验，再与导师安排后续训练。</p></section><section class="card" id="standards" aria-labelledby="standards-heading"><h2 id="standards-heading"><span class="section-index" aria-hidden="true">07</span>实验与科研规范</h2><p>医学数据按使用协议处理，检查患者级隔离，避免同一患者的信息跨训练与测试。真实病历、受限影像和未公开数据，只有在明确获准后才能发送到外部模型服务；密钥不应写入代码或实验报告。</p>
 <p>公平比较需要一致的数据划分、预处理和评价方式，并记录模型权重与训练预算。分类、定位和生成任务应选择适合各自目标的指标；报告与对话还需要检查事实是否有证据支持。</p>
 <p>每次实验保存代码版本、环境、配置、运行命令、原始日志和预测。保留负结果，不通过改变标签、划分或指标来追求更好数字。另一个模型给出相同答案，也不能代替原文核对或实验验证。</p>
-<p>结论应与证据范围相符。小样本、模拟病例或单个数据集上的结果，都有相应局限。涉及医学含义的解释，应结合证据并请具备相应专业知识的人核验。</p></section><section class="card" id="sharing" aria-labelledby="sharing-heading"><h2 id="sharing-heading"><span class="section-index" aria-hidden="true">08</span>整理成果与交流</h2><h3>1. 文献与实验报告</h3>
+<p>结论应与证据范围相符。小样本、模拟病例或单个数据集上的结果，都有相应局限。涉及医学含义的解释，应结合证据并请具备相应专业知识的人核验。</p></section><section class="card" id="sharing" aria-labelledby="sharing-heading"><h2 id="sharing-heading"><span class="section-index" aria-hidden="true">08</span>整理成果与交流</h2><h3>文献与实验报告</h3>
 <p>提交一份 PDF 报告，并附可编辑源文件。正文建议6至10页，参考文献和实验日志可另附；以讲清工作为准。报告按以下内容组织：</p>
 <div class="table-wrap"><table><thead><tr><th scope="col">部分</th><th scope="col">具体要求</th></tr></thead><tbody>
 <tr><td data-label="部分">基础理解</td><td data-label="具体要求">不超过2页。围绕自己的任务解释数据、模型、损失和指标；用一个例子说明，不拼贴教材定义</td></tr>
@@ -172,17 +172,17 @@ conda activate vega-reproduce</code></pre>
 <tr><td data-label="部分">参考文献与 AI 使用</td><td data-label="具体要求">文内引用与文末条目一一对应；说明 AI 协助的步骤、关键修改、纠正的错误及人工核验方式</td></tr>
 </tbody></table></div>
 <p>复现未达到原文结果时，按数据、预处理、权重、训练预算和实现差异逐项分析。未运行的实验明确标注，不用推测数字填补结果表。背景和方法要讲清，实验部分也应足以让读者判断结论是否成立。</p>
-<h3>2. 代码与复现材料</h3>
+<h3>代码与复现材料</h3>
 <p>提交代码仓库链接或源码压缩包，至少包含以下材料：</p>
 <ul><li><code>README.md</code>：研究问题、目录说明、数据获取条件、环境安装、从数据准备到训练/推理和评测的完整命令，以及当前完成范围。</li><li>环境与配置文件：如 <code>requirements.txt</code> 或 <code>environment.yml</code>、训练配置和固定的数据划分标识；保存代码版本及随机种子。</li><li>运行与分析脚本：提供最小验证命令、正式实验命令和作图脚本，使用可修改的路径配置，不依赖个人机器的硬编码路径。</li><li>结果材料：主要日志、逐样本预测或合规的汇总结果、指标表与图表。大权重提供合法下载地址及版本信息，受限数据不随仓库分发。</li></ul>
 <p>提交前，从一个新建环境按 README 重跑最小示例，确认其他人能找到所需材料。代码截图可以解释局部实现，但必须同时提供可运行代码。</p>
-<h3>3. 文献与实验汇报</h3>
+<h3>文献与实验汇报</h3>
 <p>准备10至12页幻灯片，汇报约10分钟，并预留讨论时间。建议按“问题与背景1至2页、两篇论文的方法和关键证据4页、自己的复现与对照3至4页、局限和下一步1页”组织，可按内容调整。</p>
 <p>每页只保留一个主要信息，方法图、结果表和对照样本应能独立看懂。图表有标题、坐标、单位和必要图例；引用或改绘的图表在当页底部标明来源。中文和英文分别保持一致字体，字号以投影可读为准；不依赖动画呈现关键内容。提交 PDF，同时保留 <code>.pptx</code> 或 Beamer 源文件。</p>
 <p>汇报时准备回答：为什么研究这个问题？方法相对基线改变了什么？一次前向传播的数据形状如何变化？为什么选这个指标？哪项结果支持结论？AI 写出的哪些关键部分经过了你的检查？</p>
-<h3>4. 提交与定期沟通</h3>
+<h3>提交与定期沟通</h3>
 <p>文件统一命名为 <code>姓名_方向_材料类型_日期</code>，例如 <code>张三_医学基础模型_报告_20260930.pdf</code>。提交报告 PDF、幻灯片 PDF、源码或仓库链接，并附3至5行摘要：完成了什么、主要发现、尚存问题和希望讨论的内容。通过导师指定渠道提交；联系信息见<a href="../index.html#contact">周阳老师主页</a>，共享链接应保证接收人可访问。</p>
-<p>建议每两周左右沟通一次，时间可按课程安排与实验进度调整。用一页笔记说明这段时间完成的任务，附实验编号、图表或代码链接；记录阻塞问题及已尝试的方法，列出下一阶段1至2项具体工作。遇到报错时，提供环境、完整错误信息和最小复现步骤；涉及密钥或受限数据的内容先移除。</p></section><section class="card" id="templates" aria-labelledby="templates-heading"><h2 id="templates-heading"><span class="section-index" aria-hidden="true">09</span>实践模板</h2><details><summary>项目规则</summary><p>将以下内容填入项目的 <code>AGENTS.md</code>，根据任务更新路径和命令。</p>
+<p>建议每两周左右沟通一次，时间可按课程安排与实验进度调整。用一页笔记说明这段时间完成的任务，附实验编号、图表或代码链接；记录阻塞问题及已尝试的方法，列出下一阶段1至2项具体工作。遇到报错时，提供环境、完整错误信息和最小复现步骤；涉及密钥或受限数据的内容先移除。</p></section><section class="card" id="templates" aria-labelledby="templates-heading"><h2 id="templates-heading"><span class="section-index" aria-hidden="true">09</span>实践模板</h2><details open><summary>项目规则</summary><p>将以下内容填入项目的 <code>AGENTS.md</code>，根据任务更新路径和命令。</p>
 <pre><code># 项目
 - 研究问题：
 - 参考论文、版本与作者代码：

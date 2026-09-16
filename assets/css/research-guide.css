@@ -1,4 +1,6 @@
-/* Reading layout extends the homepage's shared fonts, colors and surfaces. */
+/* Reading layout extends the homepage's shared fonts, colors and surfaces.
+   Rules on bare .guide-page/.guide-shell also style vega/index.html (the lab page);
+   guide-only treatment lives under body.guide-doc, which only research-guide.html carries. */
 .lab-page .guide-shell>.rail{grid-row:1 / span 2}
 .lab-page h1 .lab-cap{color:var(--accent)}
 body.guide-page{font-size:1rem;line-height:1.85}
@@ -11,103 +13,133 @@ body.guide-page{font-size:1rem;line-height:1.85}
 .guide-shell>.rail{grid-row:1 / span 11;position:sticky;top:76px;align-self:start;max-height:calc(100vh - 92px);overflow-y:auto}
 .guide-shell .rail.card{display:flex;padding:20px 14px}
 .guide-shell .rail .lab-name{font-size:1rem;color:var(--ink);font-weight:600;margin:0 6px}
-.guide-shell .rail .post{font-size:.875rem;line-height:1.6;margin:4px 6px 17px}
+.guide-shell .rail .post{font-size:.875rem;line-height:1.6;margin:3px 6px 12px}
 .guide-shell .rail nav{margin:0;padding-top:12px;gap:3px}
-.guide-shell .rail nav a{font-size:.875rem;padding:7px 6px;line-height:1.6;border-radius:6px}
+.guide-shell .rail nav a{font-size:.875rem;padding:5px 6px;line-height:1.6;border-radius:6px}
 .guide-shell .rail nav a:hover,.guide-shell .rail nav a:focus-visible{background:var(--accent-soft);color:var(--accent-dark)}
 .guide-shell .rail nav a span{color:var(--muted);font-size:.8125rem;font-variant-numeric:tabular-nums;min-width:19px}
 .guide-shell h1{font-size:1.9rem;line-height:1.4;letter-spacing:-.025em;color:var(--ink);margin:0 0 8px;font-weight:600}
 .guide-shell h2{font-size:1.25rem;line-height:1.55;margin:0 0 22px;padding-bottom:14px;border-bottom:1px solid var(--line);display:block}
-.guide-shell h2 .section-index{color:var(--accent);font-size:.875rem;font-weight:500;margin-right:10px;vertical-align:2px;font-variant-numeric:tabular-nums}
-.guide-shell h3{font-size:1.0625rem;line-height:1.65;letter-spacing:0;text-transform:none;color:var(--ink);margin:30px 0 12px;font-weight:600}
-.guide-shell h3:first-of-type{margin-top:24px}
+.guide-shell h3{font-size:1.125rem;line-height:1.5;letter-spacing:0;text-transform:none;color:var(--ink);margin:34px 0 10px;font-weight:600}
+.guide-shell h3:first-of-type{margin-top:22px}
+.guide-shell h2+h3{margin-top:0}
 .guide-shell p{margin:0 0 16px;text-wrap:pretty}
 .guide-shell p:last-child{margin-bottom:0}
 .guide-shell .guide-kicker{font-size:.75rem;letter-spacing:.12em;color:var(--accent-dark);font-weight:600;margin-bottom:12px}
 .guide-shell .guide-credit{font-size:.875rem;color:var(--muted);margin-top:4px}
 .guide-shell .byline{font-size:.875rem;color:var(--muted);margin-bottom:22px}
-.guide-shell a{overflow-wrap:anywhere;text-underline-offset:3px}
-.guide-shell #guide-top>ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));list-style:none;padding:0;margin:18px 0 22px;gap:0;background:#f7f9fc;border:1px solid var(--line);border-radius:var(--r)}
+.guide-shell a{overflow-wrap:break-word;text-underline-offset:3px}
+.guide-shell #guide-top>ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));list-style:none;padding:0;margin:18px 0 22px;gap:0;background:var(--surface-2);border:1px solid var(--line);border-radius:var(--r)}
 .guide-shell #guide-top>ul>li{padding:14px 12px;margin:0;font-size:.875rem;line-height:1.7}
-.guide-shell #guide-top>ul>li+li{border-left:1px solid var(--line)}
+.guide-shell #guide-top>ul>li+li{border-left:1px solid var(--line);margin-top:0}
 .guide-shell #guide-top>ul strong{display:block;color:var(--accent-dark);font-size:1rem;margin-bottom:4px}
-.guide-shell #research h3:not(:first-of-type){padding-top:25px;border-top:1px solid var(--line)}
-.guide-shell .starter-task{padding:12px 15px;background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;font-size:.9375rem;line-height:1.8}
-.guide-shell .starter-task strong,.guide-shell .further-reading strong{display:block;font-size:.875rem;margin-bottom:4px}
+.guide-shell #research h3:not(:first-of-type){padding-top:26px;border-top:1px solid var(--line);margin-top:26px}
+.guide-shell #practice,.guide-shell #sharing{counter-reset:step}
+.guide-shell #practice h3,.guide-shell #sharing h3{counter-increment:step;display:flex;align-items:center;gap:10px}
+.guide-shell #practice h3::before,.guide-shell #sharing h3::before{content:counter(step);flex:none;width:26px;height:26px;border-radius:7px;background:var(--accent-soft);color:var(--accent-dark);font-size:.8125rem;font-weight:600;display:inline-flex;align-items:center;justify-content:center;font-variant-numeric:tabular-nums}
+.guide-shell .starter-task{padding:12px 16px;background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;font-size:.9375rem;line-height:1.8}
+.guide-shell .starter-task strong,.guide-shell .further-reading strong{display:block;font-size:.8125rem;letter-spacing:.06em;margin-bottom:4px}
 .guide-shell .starter-task strong{color:var(--accent-dark)}
-.guide-shell .further-reading{font-size:.9375rem;line-height:1.8}
-.guide-shell blockquote{margin:16px 0;padding:15px 18px;border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 8px 8px 0;font-size:.9375rem;line-height:1.85}
+.guide-shell .further-reading{font-size:.9375rem;line-height:1.8;padding-left:16px;border-left:3px solid var(--line-2)}
+.guide-shell .further-reading strong{color:var(--muted)}
+.guide-shell blockquote{margin:14px 0 18px;padding:14px 18px;border:1px solid var(--line-2);border-radius:var(--r);background:var(--surface-2);font-size:.9375rem;line-height:1.85;color:var(--body)}
+.guide-shell blockquote::before{content:"提示词示例";display:block;font-size:.75rem;letter-spacing:.08em;color:var(--muted);font-weight:600;margin-bottom:6px}
 .guide-shell blockquote p{margin:0}
 .guide-shell code{font-size:.875em;overflow-wrap:anywhere}
-.guide-shell pre{background:#f7f9fb;border:1px solid var(--line-2);border-radius:var(--r);margin:16px 0 20px;padding:18px;overflow:auto;font-size:.875rem;line-height:1.85;tab-size:4}
+.guide-shell pre{background:var(--surface-2);border:1px solid var(--line-2);border-radius:var(--r);margin:16px 0 20px;padding:18px;overflow:auto;font-size:.875rem;line-height:1.85;tab-size:4}
 .guide-shell pre code{font-size:inherit;background:none;border:0;padding:0;white-space:pre-wrap;overflow-wrap:anywhere}
-.guide-shell .table-wrap{overflow-x:auto;margin:16px 0 22px;border:1px solid var(--line);border-radius:var(--r)}
-.guide-shell table{width:100%;border-collapse:collapse;font-size:1rem;line-height:1.8;text-align:left}
-.guide-shell th{background:#f7f9fb;color:var(--ink);font-weight:600}
-.guide-shell th,.guide-shell td{padding:13px 14px;vertical-align:top;border-bottom:1px solid var(--line)}
+.guide-shell .table-wrap{overflow-x:auto;margin:16px 0 24px;border:1px solid var(--line);border-radius:var(--r)}
+.guide-shell table{width:100%;border-collapse:collapse;font-size:.9375rem;line-height:1.75;text-align:left}
+.guide-shell th{background:var(--surface-2);color:var(--body);font-weight:600;font-size:.8125rem;letter-spacing:.04em;border-bottom:1px solid var(--line-2)}
+.guide-shell th,.guide-shell td{padding:12px 14px;vertical-align:top;border-bottom:1px solid var(--line)}
 .guide-shell tr:last-child td{border-bottom:0}
-.guide-shell th:first-child,.guide-shell td:first-child{min-width:100px}
-.guide-shell td:first-child{color:var(--ink);font-weight:500}
-.guide-shell .resource-list{margin:20px 0 24px}
-.guide-shell .resource-row{display:grid;grid-template-columns:112px minmax(0,1fr);gap:18px;padding:19px 0;border-top:1px solid var(--line)}
-.guide-shell .resource-row:last-child{border-bottom:1px solid var(--line)}
-.guide-shell .resource-row h3{font-size:1rem;line-height:1.75;margin:0}
-.guide-shell .resource-row p{font-size:1rem;line-height:1.8;margin:0 0 8px}
+.guide-shell th:first-child,.guide-shell td:first-child{min-width:112px;padding-left:16px}
+.guide-shell td:first-child{color:var(--ink);font-weight:600}
+.guide-shell .resource-list{margin:20px 0 26px;border-top:1px solid var(--line)}
+.guide-shell .resource-row{padding:15px 0 16px;border-bottom:1px solid var(--line)}
+.guide-shell .resource-row h3{font-size:.9375rem;line-height:1.6;margin:0 0 5px;color:var(--ink)}
+.guide-shell .resource-row p{font-size:1rem;line-height:1.75;margin:0 0 5px}
 .guide-shell .resource-row p:last-child{margin-bottom:0}
-.guide-shell .resource-row .exercise{color:var(--body);font-size:.875rem}
-.guide-shell .exercise>span{color:var(--muted);margin-right:8px;font-weight:500}
-.guide-shell ul{list-style:disc;padding-left:21px;margin:14px 0 18px}
-.guide-shell li+li{margin-top:9px}
+.guide-shell .resource-row>div>p:first-child{color:var(--muted)}
+.guide-shell .resource-row .exercise{color:var(--body);font-size:.875rem;line-height:1.7}
+.guide-shell ul{list-style:disc;padding-left:1.4em;margin:12px 0 18px}
+.guide-shell li{padding-left:2px;text-wrap:pretty}
+.guide-shell li+li{margin-top:8px}
+.guide-shell li::marker{color:var(--faint)}
 .guide-shell details{border-top:1px solid var(--line);padding:17px 0}
 .guide-shell details:last-child{padding-bottom:0}
 .guide-shell summary{cursor:pointer;font-weight:600;color:var(--ink);font-size:1rem;line-height:1.7}
 .guide-shell details[open] summary{margin-bottom:12px}
 .guide-shell details summary::marker{color:var(--accent)}
 .guide-shell .citation{white-space:nowrap;font-size:.82em;vertical-align:super;line-height:0}
-.guide-shell .reference{display:grid;grid-template-columns:29px minmax(0,1fr);gap:8px;font-size:.875rem;line-height:1.7;scroll-margin-top:90px;padding:16px 0;border-top:1px solid var(--line);overflow-wrap:anywhere}
+.guide-shell .reference{display:grid;grid-template-columns:29px minmax(0,1fr);gap:8px;font-size:.875rem;line-height:1.7;scroll-margin-top:90px;padding:14px 0;border-top:1px solid var(--line);overflow-wrap:anywhere}
 .guide-shell .reference p{margin:0 0 4px}
-.guide-shell .reference .reference-title{font-size:1rem;font-weight:500;line-height:1.65}
+.guide-shell .reference .reference-title{font-size:1rem;font-weight:600;line-height:1.65}
 .guide-shell .reference-authors{color:var(--muted)}
+.guide-shell .reference-venue{color:var(--body)}
+.guide-shell .reference-venue em{color:var(--ink)}
 .guide-shell .reference-links{color:var(--muted)}
 .guide-shell .reference-tag{color:var(--accent-dark);font-weight:500}
 .guide-shell .reference-number{color:var(--muted);font-variant-numeric:tabular-nums;padding-top:1px}
 .guide-shell .reference:target{background:var(--accent-soft);border-radius:8px;outline:8px solid var(--accent-soft)}
 .guide-shell .bib-download{font-size:.875rem;margin:0 0 20px}
-.guide-shell .bib-download a{display:inline-block;padding:6px 12px;background:var(--accent-soft);border:1px solid var(--accent-edge);border-radius:6px;color:var(--accent-dark)}
+.guide-shell .bib-download a{display:inline-block;padding:6px 12px;background:var(--accent-soft);border:1px solid var(--accent-edge);border-radius:6px;color:var(--accent-dark);font-weight:500}
 .skip-link{position:fixed;left:16px;top:-100px;z-index:50;background:var(--card);padding:8px 14px;border:1px solid var(--accent);border-radius:var(--r)}
 .skip-link:focus{top:10px}
+
+/* ---- guide-doc: the research guide only (the lab page keeps the plain card, h2 and white rail) ---- */
+.guide-doc .guide-shell>section.card{padding:30px 30px 32px}
+.guide-doc .guide-shell h2{display:flex;align-items:center;gap:12px;font-size:1.375rem;line-height:1.35;margin:0 0 20px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.guide-doc .guide-shell h2 .section-index{display:inline-flex;align-items:center;justify-content:center;flex:none;width:30px;height:30px;border-radius:8px;background:var(--accent-soft);color:var(--accent-dark);font-size:.8125rem;font-weight:600;margin:0;letter-spacing:.02em;font-variant-numeric:tabular-nums}
+.guide-doc .guide-shell .rail nav .rail-top{margin-top:6px;padding-top:12px;border-top:1px solid var(--line);border-radius:0;color:var(--muted);font-size:.8125rem}
+.guide-doc .guide-shell .rail nav .rail-top:hover,.guide-doc .guide-shell .rail nav .rail-top:focus-visible{background:none;color:var(--accent-dark)}
+
 @media(max-width:860px){
  .guide-shell{max-width:760px;row-gap:18px}
  .guide-shell>#guide-top{grid-row:auto}
- .guide-shell>.rail{position:static;grid-row:auto;max-height:none;overflow:hidden}
+ .guide-shell>.rail{position:static;grid-row:auto;max-height:none;overflow:visible}
  .guide-shell .rail.card{display:block;padding:14px 18px}
  .guide-shell .rail .lab-name{font-size:.875rem;margin:0}
  .guide-shell .rail .post{display:none}
  .guide-shell .rail nav{display:flex;flex-direction:row;flex-wrap:nowrap;gap:6px 16px;margin:8px 0 0;padding:0 0 4px;border:0;overflow-x:auto;scrollbar-width:thin}
  .guide-shell .rail nav a{white-space:nowrap;padding:6px 0;flex-shrink:0}
  .guide-shell>section.card{scroll-margin-top:120px}
+ .guide-doc .guide-shell .rail nav{gap:8px;margin:10px 0 0;padding:0 24px 2px 0;scroll-snap-type:x proximity;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent)}
+ .guide-doc .guide-shell .rail nav a{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:6px 14px;border:1px solid var(--line-2);border-radius:999px;background:var(--surface-2);white-space:nowrap;scroll-snap-align:start}
+ .guide-doc .guide-shell .rail nav a span{min-width:0;color:var(--faint)}
+ .guide-doc .guide-shell .rail nav .rail-top{display:none}
 }
 @media(max-width:560px){
  .guide-page .top .in{padding:10px 16px;gap:5px}
  .guide-page .top ul{gap:14px}
+ .guide-doc .top ul a{display:inline-block;padding:8px 0}
  .guide-shell>section.card{padding:22px 18px}
- .guide-shell h1{font-size:1.6rem}
+ .guide-doc .guide-shell>section.card{padding:22px 16px 24px}
+ .guide-shell h1{font-size:1.5rem}
  .guide-shell h2{font-size:1.1875rem}
+ .guide-doc .guide-shell h2{font-size:1.1875rem;gap:10px}
+ .guide-doc .guide-shell h2 .section-index{width:26px;height:26px;font-size:.75rem}
+ .guide-shell h3{font-size:1.0625rem;margin-top:28px}
  .guide-shell #guide-top>ul{grid-template-columns:1fr}
  .guide-shell #guide-top>ul>li{padding:12px 14px}
  .guide-shell #guide-top>ul>li+li{border-left:0;border-top:1px solid var(--line)}
  .guide-shell #guide-top>ul strong{display:inline;margin-right:5px}
- .guide-shell .resource-row{grid-template-columns:1fr;gap:7px;padding:17px 0}
- .guide-shell .resource-row h3{color:var(--ink)}
+ .guide-shell .resource-row{padding:14px 0}
  .guide-shell .table-wrap{border:0;border-radius:0}
+ .guide-shell table{font-size:1rem}
  .guide-shell table,.guide-shell tbody,.guide-shell tr,.guide-shell td{display:block}
  .guide-shell thead{display:none}
  .guide-shell tr{padding:14px 0;border-top:1px solid var(--line)}
- .guide-shell td{border:0;padding:4px 0}
- .guide-shell td::before{content:attr(data-label) "：";font-size:.875rem;color:var(--muted)}
- .guide-shell td:first-child{font-weight:600;color:var(--ink);padding:0 0 7px}
+ .guide-shell tr:first-child{border-top:0}
+ .guide-shell td{border:0;padding:0 0 10px;min-width:0}
+ .guide-shell td:last-child{padding-bottom:0}
+ .guide-shell td::before{content:attr(data-label);display:block;font-size:.75rem;letter-spacing:.06em;color:var(--muted);margin-bottom:2px}
+ .guide-shell td:first-child{font-weight:600;color:var(--ink);font-size:1.0625rem;padding:0 0 8px}
  .guide-shell td:first-child::before{content:none}
- .guide-shell .reference{gap:4px;grid-template-columns:27px minmax(0,1fr)}
+ .guide-shell pre{padding:14px;font-size:.8125rem;line-height:1.7;margin:14px 0 18px}
+ .guide-shell blockquote{padding:12px 14px}
+ .guide-shell .starter-task{padding:10px 14px}
+ .guide-shell .reference{gap:6px;padding:14px 0;grid-template-columns:27px minmax(0,1fr)}
 }
 @media print{
  .guide-shell>.rail,.skip-link,.guide-kicker,.bib-download{display:none!important}

@@ -77,7 +77,9 @@ BibTeX and the page's reference block. The format it enforces:
   for accepted work. Volume, issue and pages were checked against Crossref on 2026-09-15.
 
 `vega/index.html` is the lab landing page: an identity rail plus two cards, same stylesheets as
-the guide (`body.lab-page` shortens the rail's grid span).
+the guide (`body.lab-page` shortens the rail's grid span). Guide-only styling (chapter tiles, borderless
+TOC, resource rows, tables, phone chip strip) lives under `body.guide-doc`, which only the guide
+carries; rules on bare `.guide-page`/`.guide-shell` selectors also style the lab page.
 
 ## Email obfuscation
 
