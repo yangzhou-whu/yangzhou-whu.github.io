@@ -13,6 +13,9 @@ vega/references.bib            the guide's 21 references, downloadable from the 
 vega/build_references.py       regenerates references.bib + the page's reference block
 vega/references-authors.json   full author lists the generator reads
 404.html
+robots.txt                     allows all crawlers, points at the sitemap
+sitemap.xml                    the three pages; bump <lastmod> when a page visibly changes
+google21b79f3e44d38881.html    Google Search Console ownership token, must stay in place
 assets/css/style.css           shared styling; colour variables are the :root block near the top
 assets/css/research-guide.css  reading layout for the guide, on top of style.css
 assets/fonts/                  DM Sans woff2 (self-hosted, SIL OFL — see OFL.txt)
