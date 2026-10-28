@@ -43,12 +43,12 @@ To add a paper, copy one `.pub` block in `index.html`:
 </div>
 ```
 
-The **Publications** card has a Selected / All by year switch (`.seg` tabs, script at the bottom
-of `index.html`). `#pub-selected` holds the few headline papers as `.pub` blocks with Paper/Code/Model
+The **Selected Publications** card has two views of the same selection, **Highlights** and
+**By year** (`.seg` tabs, script at the bottom of `index.html`). `#pub-selected` holds the few headline papers as `.pub` blocks with Paper/Code/Model
 buttons. `#pub-all` is the by-year list: one `<li>` per paper inside that year's `.row`, the title
 linking to the DOI (or the open PDF when there is none). It holds main-author papers plus
 middle-author papers at top venues, with no preprints, workshops or minor venues. A selected paper goes in
-both panels. Without JavaScript both panels show and the switch is hidden; `#all-publications`
+both panels. Without JavaScript both panels show and the tabs are hidden; `#all-publications`
 in a link opens the full list.
 
 `<b>` marks your name, `<sup>*</sup>` co-first, `<sup>#</sup>` corresponding, `.award` renders in
