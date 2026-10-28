@@ -4,22 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Yang Zhou — School of Computer Science, Wuhan University</title>
-<meta name="description" content="Yang Zhou is a Professor in the School of Computer Science, Wuhan University, working on medical foundation models, vision–language models and trustworthy AI for healthcare.">
+<meta name="description" content="Yang Zhou is a Professor in the School of Computer Science, Wuhan University, working on multimodal foundation models, LLM reasoning and agents, and trustworthy AI.">
 <meta name="author" content="Yang Zhou">
 <link rel="canonical" href="https://yangzhou-whu.github.io/">
 <meta property="og:type" content="profile">
 <meta property="og:url" content="https://yangzhou-whu.github.io/">
 <meta property="og:title" content="Yang Zhou — School of Computer Science, Wuhan University">
-<meta property="og:description" content="Yang Zhou is a Professor in the School of Computer Science, Wuhan University, working on medical foundation models, vision–language models and trustworthy AI for healthcare.">
+<meta property="og:description" content="Yang Zhou is a Professor in the School of Computer Science, Wuhan University, working on multimodal foundation models, LLM reasoning and agents, and trustworthy AI.">
 <meta property="og:image" content="https://yangzhou-whu.github.io/assets/img/portrait.jpg">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/dmsans.woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/style.css">
+<script>document.documentElement.className += " js";</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Yang Zhou","url":"https://yangzhou-whu.github.io/","image":"https://yangzhou-whu.github.io/assets/img/portrait.jpg","alternateName":"周阳",
 "jobTitle":"Professor",
 "affiliation":{"@type":"CollegeOrUniversity","name":"School of Computer Science, Wuhan University"},
-"knowsAbout":["Medical image analysis","Foundation models","Vision-language models","Multimodal large language models","Trustworthy AI for healthcare"],
+"knowsAbout":["Machine learning","Computer vision","Natural language processing","Multimodal foundation models","Vision-language models","Large language models","AI agents","Trustworthy AI","Explainable AI"],
 "sameAs":["https://scholar.google.com/citations?user=_-cbldUAAAAJ","https://github.com/yangzhou12"]}
 </script>
 </head>
@@ -67,15 +68,17 @@
         and <a href="https://haipinglu.github.io/" rel="noopener">Prof. Haiping Lu</a>.
       </p>
       <p>
-        My research focuses on <b>human- and evidence-grounded AI for health and life sciences</b>.
-        I am interested in building models that learn from diverse biomedical data, ground their
-        outputs in evidence, and know when they may be wrong.
+        My research spans <b>machine learning, computer vision and natural language processing</b>.
+        I build <b>multimodal foundation models</b> that see, read and reason, and work to make them
+        <b>trustworthy</b>: grounded in evidence, aware of when they may be wrong, and rigorously
+        evaluated. Healthcare is our main real-world testbed, where mistakes are costly and evidence
+        matters.
       </p>
       <p class="lead-in">My current work centers on:</p>
       <ul class="threads">
-        <li><b>Foundation:</b> Multimodal pretraining for medical and biomedical data.</li>
-        <li><b>Grounding:</b> Linking predictions and generated claims to visual and textual evidence.</li>
-        <li><b>Trustworthy:</b> Hallucination, uncertainty, robustness, and reliable evaluation.</li>
+        <li><b>Multimodal foundation models:</b> Vision&ndash;language pretraining, visual grounding, and language-guided generation.</li>
+        <li><b>LLM reasoning &amp; agents:</b> Multi-turn dialogue, document-level reasoning, and agents with traceable reasoning.</li>
+        <li><b>Trustworthy &amp; explainable AI:</b> Hallucination, uncertainty and Bayesian modelling, robustness under long-tailed data, and reliable benchmarks.</li>
       </ul>
   </section>
 
@@ -90,72 +93,93 @@
   </section>
 
   <section class="card" id="publications">
-      <h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"></path></svg> Selected Publications</h2>
-        <div class="pub">
-          <div class="t">EVLF-FM: Explainable Vision Language Foundation Model for Medicine</div>
-          <div class="au">Yang Bai<sup>*</sup>, Haoran Cheng<sup>*</sup>, <b>Yang Zhou</b><sup>*</sup>, et al.</div>
-          <div class="vn"><span class="lk"><a href="https://arxiv.org/pdf/2509.24231" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>Paper</a></span><span><em>Nature Medicine</em> (Accepted), 2026</span></div>
+      <div class="sec-head">
+        <h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"></path></svg> Publications</h2>
+        <div class="seg" role="tablist" aria-label="Publication list">
+          <button type="button" role="tab" id="tab-selected" aria-controls="pub-selected" aria-selected="true">Selected</button>
+          <button type="button" role="tab" id="tab-all" aria-controls="pub-all" aria-selected="false">All by year</button>
         </div>
-        <div class="pub">
-          <div class="t">MerMED-FM: Multimodal, Multi-Disease Medical Imaging Foundation Model</div>
-          <div class="au"><b>Yang Zhou</b><sup>*</sup>, Chrystie Wan Ning Quek<sup>*</sup>, Jun Zhou, et al.</div>
-          <div class="vn"><span class="lk"><a href="https://doi.org/10.1016/j.landig.2026.101007" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>Paper</a><a href="https://github.com/yangzhou12/MerMED" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a><a href="https://huggingface.co/youngzhou12/MerMED" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m21 8-9-5-9 5v8l9 5 9-5Z"></path><path d="m3 8 9 5 9-5"></path><path d="M12 13v9"></path></svg>Model</a></span><span><em>The Lancet Digital Health</em>, 2026</span></div>
-        </div>
-        <div class="pub">
-          <div class="t">Note2Chat: Improving LLMs for Multi-Turn Clinical History Taking Using Medical Notes</div>
-          <div class="au"><b>Yang Zhou</b><sup>*</sup>, Zhenting Sheng<sup>*</sup>, Mingrui Tan, et al.</div>
-          <div class="vn"><span class="lk"><a href="https://ojs.aaai.org/index.php/AAAI/article/view/40821/44782" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>Paper</a><a href="https://github.com/zhentingsheng/Note2Chat" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a></span><span><em>AAAI</em>, 2026</span></div>
-        </div>
-        <div class="pub">
-          <div class="t">Topicwise Separable Sentence Retrieval for Medical Report Generation</div>
-          <div class="au">Junting Zhao, <b>Yang Zhou</b>, Zhihao Chen, et al.</div>
-          <div class="vn"><span class="lk"><a href="https://doi.org/10.1109/TMI.2024.3507076" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>Paper</a><a href="https://github.com/CindyZJT/Teaser" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a></span><span><em>IEEE TMI</em>, 2025</span></div>
-        </div>
-        <div class="pub">
-          <div class="t">BenchX: A Unified Benchmark Framework for Medical Vision-Language Pretraining on Chest X-Rays</div>
-          <div class="au"><b>Yang Zhou</b>, Tan Li Lin Faith, Yanyu Xu, et al.</div>
-          <div class="vn"><span class="lk"><a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/0cb35e10bf7bb73d10c12414edbd63fd-Paper-Datasets_and_Benchmarks_Track.pdf" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>Paper</a><a href="https://github.com/yangzhou12/BenchX" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a></span><span><em>NeurIPS</em>, 2024</span></div>
-        </div>
-        <div class="pub">
-          <div class="t">UrFound: Towards Universal Retinal Foundation Models via Knowledge-Guided Masked Modeling</div>
-          <div class="au">Kai Yu, <b>Yang Zhou</b><sup>#</sup>, Yang Bai, et al.</div>
-          <div class="vn"><span class="lk"><a href="https://doi.org/10.1007/978-3-031-72390-2_70" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>Paper</a><a href="https://github.com/yukkai/UrFound" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a><a href="https://huggingface.co/yyyyk/UrFound" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m21 8-9-5-9 5v8l9 5 9-5Z"></path><path d="m3 8 9 5 9-5"></path><path d="M12 13v9"></path></svg>Model</a></span><span><em>MICCAI</em>, 2024</span></div>
-        </div>
-        <div class="pub">
-          <div class="t">Medical Phrase Grounding with Region-Phrase Context Contrastive Alignment</div>
-          <div class="au">Zhihao Chen<sup>*</sup>, <b>Yang Zhou</b><sup>*</sup>, Anh Tran, et al.</div>
-          <div class="vn"><span class="lk"><a href="https://doi.org/10.1007/978-3-031-43990-2_35" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>Paper</a><a href="https://github.com/eraserNut/MedRPG" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a></span><span><em>MICCAI</em>, 2023</span></div>
-        </div>
-        <div class="pub">
-          <div class="t">Tell2Design: A Dataset for Language-Guided Floor Plan Generation</div>
-          <div class="au">Sicong Leng<sup>*</sup>, <b>Yang Zhou</b><sup>*</sup>, Mohammed Haroon Dupty, et al.</div>
-          <div class="vn"><span class="lk"><a href="https://aclanthology.org/2023.acl-long.820.pdf" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>Paper</a><a href="https://github.com/LengSicong/Tell2Design" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a></span><span><em>ACL</em>, 2023<span class="award"> &middot; Oral, Area Chair Award</span></span></div>
-        </div>
-        <div class="pub">
-          <div class="t">None Class Ranking Loss for Document-Level Relation Extraction</div>
-          <div class="au"><b>Yang Zhou</b>, Wee Sun Lee</div>
-          <div class="vn"><span class="lk"><a href="https://www.ijcai.org/proceedings/2022/0630.pdf" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>Paper</a><a href="https://github.com/yangzhou12/NCRL" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a></span><span><em>IJCAI</em>, 2022</span></div>
-        </div>
-        <div class="pub">
-          <div class="t">Bayesian Low-Tubal-Rank Robust Tensor Factorization with Multi-Rank Determination</div>
-          <div class="au"><b>Yang Zhou</b>, Yiu-ming Cheung</div>
-          <div class="vn"><span class="lk"><a href="https://doi.org/10.1109/TPAMI.2019.2923240" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>Paper</a><a href="https://github.com/yangzhou12/BTRTF" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a></span><span><em>IEEE TPAMI</em>, 2021</span></div>
-        </div>
+      </div>
+      <div class="pub-panel on" id="pub-selected" role="tabpanel" aria-labelledby="tab-selected">
+          <div class="pub">
+            <div class="t">EVLF-FM: Explainable Vision Language Foundation Model for Medicine</div>
+            <div class="au">Yang Bai<sup>*</sup>, Haoran Cheng<sup>*</sup>, <b>Yang Zhou</b><sup>*</sup>, et al.</div>
+            <div class="vn"><span class="lk"><a href="https://arxiv.org/pdf/2509.24231" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>Paper</a></span><span><em>Nature Medicine</em> (Accepted), 2026<span class="award"> &middot; Top medical journal, IF 52.5</span></span></div>
+          </div>
+          <div class="pub">
+            <div class="t">MerMED-FM: Multimodal, Multi-Disease Medical Imaging Foundation Model</div>
+            <div class="au"><b>Yang Zhou</b><sup>*</sup>, Chrystie Wan Ning Quek<sup>*</sup>, Jun Zhou, et al.</div>
+            <div class="vn"><span class="lk"><a href="https://doi.org/10.1016/j.landig.2026.101007" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>Paper</a><a href="https://github.com/yangzhou12/MerMED" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a><a href="https://huggingface.co/youngzhou12/MerMED" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m21 8-9-5-9 5v8l9 5 9-5Z"></path><path d="m3 8 9 5 9-5"></path><path d="M12 13v9"></path></svg>Model</a></span><span><em>The Lancet Digital Health</em>, 2026<span class="award"> &middot; Top digital-health journal, IF 25.5</span></span></div>
+          </div>
+          <div class="pub">
+            <div class="t">BenchX: A Unified Benchmark Framework for Medical Vision-Language Pretraining on Chest X-Rays</div>
+            <div class="au"><b>Yang Zhou</b>, Tan Li Lin Faith, Yanyu Xu, et al.</div>
+            <div class="vn"><span class="lk"><a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/0cb35e10bf7bb73d10c12414edbd63fd-Paper-Datasets_and_Benchmarks_Track.pdf" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>Paper</a><a href="https://github.com/yangzhou12/BenchX" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a></span><span><em>NeurIPS</em>, 2024</span></div>
+          </div>
+          <div class="pub">
+            <div class="t">Tell2Design: A Dataset for Language-Guided Floor Plan Generation</div>
+            <div class="au">Sicong Leng<sup>*</sup>, <b>Yang Zhou</b><sup>*</sup>, Mohammed Haroon Dupty, et al.</div>
+            <div class="vn"><span class="lk"><a href="https://aclanthology.org/2023.acl-long.820.pdf" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>Paper</a><a href="https://github.com/LengSicong/Tell2Design" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a></span><span><em>ACL</em>, 2023<span class="award"> &middot; Oral, Area Chair Award, Best Paper Candidate</span></span></div>
+          </div>
+          <div class="pub">
+            <div class="t">Bayesian Low-Tubal-Rank Robust Tensor Factorization with Multi-Rank Determination</div>
+            <div class="au"><b>Yang Zhou</b>, Yiu-ming Cheung</div>
+            <div class="vn"><span class="lk"><a href="https://doi.org/10.1109/TPAMI.2019.2923240" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path></svg>Paper</a><a href="https://github.com/yangzhou12/BTRTF" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"></path></svg>Code</a></span><span><em>IEEE TPAMI</em>, 2021<span class="award"> &middot; Top AI journal, IF 20.4</span></span></div>
+          </div>
+      </div>
+      <div class="pub-panel pubs" id="pub-all" role="tabpanel" aria-labelledby="tab-all">
+        <div class="row"><div class="yr">2026</div><ol class="d">
+          <li><a class="t" href="https://arxiv.org/abs/2509.24231" rel="noopener">EVLF-FM: Explainable Vision Language Foundation Model for Medicine</a><div class="m"><span class="au">Yang Bai<sup>*</sup>, Haoran Cheng<sup>*</sup>, <b>Yang Zhou</b><sup>*</sup>, et al.</span> &middot; <em>Nature Medicine</em> (Accepted)<span class="award"> &middot; Top medical journal, IF 52.5</span></div></li>
+          <li><a class="t" href="https://doi.org/10.1016/j.landig.2026.101007" rel="noopener">MerMED-FM: Multimodal, Multi-Disease Medical Imaging Foundation Model</a><div class="m"><span class="au"><b>Yang Zhou</b><sup>*</sup>, Chrystie Wan Ning Quek<sup>*</sup>, Jun Zhou, et al.</span> &middot; <em>The Lancet Digital Health</em><span class="award"> &middot; Top digital-health journal, IF 25.5</span></div></li>
+          <li><a class="t" href="https://ojs.aaai.org/index.php/AAAI/article/view/40821/44782" rel="noopener">Note2Chat: Improving LLMs for Multi-Turn Clinical History Taking Using Medical Notes</a><div class="m"><span class="au"><b>Yang Zhou</b><sup>*</sup>, Zhenting Sheng<sup>*</sup>, Mingrui Tan, et al.</span> &middot; <em>AAAI</em></div></li>
+          <li><a class="t" href="https://arxiv.org/abs/2605.01309" rel="noopener">CUE: Concept-Aware Multi-Label Expansion to Mitigate Concept Confusion in Long-Tailed Learning</a><div class="m"><span class="au">Ruichi Zhang<sup>*</sup>, Chikai Shang<sup>*</sup>, Jiacheng Yang, Mengke Li, <b>Yang Zhou</b>, et al.</span> &middot; <em>CVPR</em></div></li>
+          <li><a class="t" href="https://doi.org/10.1016/j.inffus.2025.103631" rel="noopener">EH-Benchmark: Ophthalmic Hallucination Benchmark and Agent-Driven Top-Down Traceable Reasoning Workflow</a><div class="m"><span class="au">Xiaoyu Pan, Yang Bai, Ke Zou, <b>Yang Zhou</b>, et al.</span> &middot; <em>Information Fusion</em></div></li>
+        </ol></div>
+        <div class="row"><div class="yr">2025</div><ol class="d">
+          <li><a class="t" href="https://doi.org/10.52202/085713-3601" rel="noopener">The Curse of Multi-Modalities: Evaluating Hallucinations of Large Multimodal Models across Language, Visual, and Audio</a><div class="m"><span class="au">Sicong Leng, Yun Xing, Zesen Cheng, <b>Yang Zhou</b>, et al.</span> &middot; <em>NeurIPS</em></div></li>
+          <li><a class="t" href="https://doi.org/10.1109/TPAMI.2025.3596878" rel="noopener">Uncertainty-Aware Medical Diagnostic Phrase Identification and Grounding</a><div class="m"><span class="au">Ke Zou, Yang Bai, Bo Liu, &hellip;, <b>Yang Zhou</b>, et al.</span> &middot; <em>IEEE TPAMI</em><span class="award"> &middot; Top AI journal, IF 20.4</span></div></li>
+          <li><a class="t" href="https://doi.org/10.1109/TMI.2024.3507076" rel="noopener">Topicwise Separable Sentence Retrieval for Medical Report Generation</a><div class="m"><span class="au">Junting Zhao, <b>Yang Zhou</b>, Zhihao Chen, et al.</span> &middot; <em>IEEE TMI</em></div></li>
+          <li><a class="t" href="https://doi.org/10.1016/j.xcrm.2025.102476" rel="noopener">An Integrated Language-Vision Foundation Model for Conversational Diagnostics and Triaging in Primary Eye Care</a><div class="m"><span class="au">Zhi Da Soh, Yang Bai, Kai Yu, <b>Yang Zhou</b>, et al.</span> &middot; <em>Cell Reports Medicine</em></div></li>
+        </ol></div>
+        <div class="row"><div class="yr">2024</div><ol class="d">
+          <li><a class="t" href="https://proceedings.neurips.cc/paper_files/paper/2024/file/0cb35e10bf7bb73d10c12414edbd63fd-Paper-Datasets_and_Benchmarks_Track.pdf" rel="noopener">BenchX: A Unified Benchmark Framework for Medical Vision-Language Pretraining on Chest X-Rays</a><div class="m"><span class="au"><b>Yang Zhou</b>, Tan Li Lin Faith, Yanyu Xu, et al.</span> &middot; <em>NeurIPS</em> (Datasets &amp; Benchmarks)</div></li>
+          <li><a class="t" href="https://doi.org/10.1007/978-3-031-72390-2_70" rel="noopener">UrFound: Towards Universal Retinal Foundation Models via Knowledge-Guided Masked Modeling</a><div class="m"><span class="au">Kai Yu, <b>Yang Zhou</b><sup>#</sup>, Yang Bai, et al.</span> &middot; <em>MICCAI</em></div></li>
+        </ol></div>
+        <div class="row"><div class="yr">2023</div><ol class="d">
+          <li><a class="t" href="https://aclanthology.org/2023.acl-long.820.pdf" rel="noopener">Tell2Design: A Dataset for Language-Guided Floor Plan Generation</a><div class="m"><span class="au">Sicong Leng<sup>*</sup>, <b>Yang Zhou</b><sup>*</sup>, Mohammed Haroon Dupty, et al.</span> &middot; <em>ACL</em><span class="award"> &middot; Oral, Area Chair Award, Best Paper Candidate</span></div></li>
+          <li><a class="t" href="https://doi.org/10.1007/978-3-031-43990-2_35" rel="noopener">Medical Phrase Grounding with Region-Phrase Context Contrastive Alignment</a><div class="m"><span class="au">Zhihao Chen<sup>*</sup>, <b>Yang Zhou</b><sup>*</sup>, Anh Tran, et al.</span> &middot; <em>MICCAI</em></div></li>
+        </ol></div>
+        <div class="row"><div class="yr">2022</div><ol class="d">
+          <li><a class="t" href="https://www.ijcai.org/proceedings/2022/0630.pdf" rel="noopener">None Class Ranking Loss for Document-Level Relation Extraction</a><div class="m"><span class="au"><b>Yang Zhou</b>, Wee Sun Lee</span> &middot; <em>IJCAI</em></div></li>
+        </ol></div>
+        <div class="row"><div class="yr">2021</div><ol class="d">
+          <li><a class="t" href="https://doi.org/10.1109/TPAMI.2019.2923240" rel="noopener">Bayesian Low-Tubal-Rank Robust Tensor Factorization with Multi-Rank Determination</a><div class="m"><span class="au"><b>Yang Zhou</b>, Yiu-ming Cheung</span> &middot; <em>IEEE TPAMI</em><span class="award"> &middot; Top AI journal, IF 20.4</span></div></li>
+          <li><a class="t" href="https://doi.org/10.1109/TCYB.2019.2914316" rel="noopener">Probabilistic Rank-One Tensor Analysis with Concurrent Regularizations</a><div class="m"><span class="au"><b>Yang Zhou</b>, Haiping Lu, Yiu-ming Cheung</span> &middot; <em>IEEE TCYB</em></div></li>
+        </ol></div>
+        <div class="row"><div class="yr">2020</div><ol class="d">
+          <li><a class="t" href="https://doi.org/10.1109/TCYB.2018.2870440" rel="noopener">Probabilistic Rank-One Discriminant Analysis via Collective and Individual Variation Modeling</a><div class="m"><span class="au"><b>Yang Zhou</b>, Yiu-ming Cheung</span> &middot; <em>IEEE TCYB</em></div></li>
+        </ol></div>
+        <div class="row"><div class="yr">2017</div><ol class="d">
+          <li><a class="t" href="https://doi.org/10.1609/aaai.v31i1.10817" rel="noopener">Bilinear Probabilistic Canonical Correlation Analysis via Hybrid Concatenations</a><div class="m"><span class="au"><b>Yang Zhou</b>, Haiping Lu, Yiu-ming Cheung</span> &middot; <em>AAAI</em></div></li>
+          <li><a class="t" href="https://doi.org/10.1109/TCYB.2016.2529299" rel="noopener">Manifold Partition Discriminant Analysis</a><div class="m"><span class="au"><b>Yang Zhou</b>, Shiliang Sun</span> &middot; <em>IEEE TCYB</em></div></li>
+        </ol></div>
+        <div class="row"><div class="yr">2016</div><ol class="d">
+          <li><a class="t" href="https://www.ijcai.org/proceedings/2016/0346.pdf" rel="noopener">Probabilistic Rank-One Matrix Analysis with Concurrent Regularization</a><div class="m"><span class="au"><b>Yang Zhou</b>, Haiping Lu</span> &middot; <em>IJCAI</em></div></li>
+        </ol></div>
+      </div>
       <p class="note">
         <sup>*</sup> co-first author &nbsp;&middot;&nbsp; <sup>#</sup> corresponding author
-        &nbsp;&middot;&nbsp; full list on <a href="https://scholar.google.com/citations?user=_-cbldUAAAAJ&amp;hl=en" rel="noopener">Google Scholar</a>
       </p>
   </section>
 
   <section class="card" id="funding">
       <h2><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><circle cx="12" cy="8" r="6"></circle><path d="m8.2 13.6-1.4 8L12 19l5.2 2.6-1.4-8"></path></svg> Funding &amp; Awards</h2>
       <h3>Funding</h3>
-        <div class="row rec"><div class="yr">2026 &ndash;</div><div class="d"><b>Excellent Young Scientists Fund (Overseas)</b> <span class="m">NSFC &middot; PI</span></div></div>
         <div class="row rec"><div class="yr">2026 &ndash;</div><div class="d"><b>Young Scientists Fund (Type C)</b> <span class="m">NSFC &middot; PI</span></div></div>
         <div class="row rec"><div class="yr">2023 &ndash; 25</div><div class="d"><b>AIDoc: Telehealth AI Grounded by Medical Knowledge</b> <span class="m">AI Singapore &middot; Co-PI &middot; S$1M</span></div></div>
       <h3>Awards</h3>
         <div class="row rec"><div class="yr">2026</div><div class="d">Excellent Young Scientists Fund (Overseas), NSFC</div></div>
-        <div class="row rec"><div class="yr">2025</div><div class="d">Outstanding Reviewer, CVPR</div></div>
+        <div class="row rec"><div class="yr">2025 &ndash; 26</div><div class="d">Outstanding Reviewer, CVPR 2025 &amp; 2026</div></div>
         <div class="row rec"><div class="yr">2023</div><div class="d">Area Chair Award &amp; Best Paper Candidate, ACL</div></div>
   </section>
 
@@ -180,6 +204,22 @@
     a[i].href = 'mailto:' + a[i].getAttribute('data-u') + '@' + a[i].getAttribute('data-d') +
       (s ? '?subject=' + encodeURIComponent(s) : '');
   }
+})();
+/* Publications: one card, two lists. Without JS both lists show and the
+   switch is hidden; #all-publications opens the full list. */
+(function () {
+  var tabs = document.querySelectorAll('.seg [role="tab"]'), i;
+  function show(id) {
+    for (var j = 0; j < tabs.length; j++) {
+      var on = tabs[j].getAttribute('aria-controls') === id;
+      tabs[j].setAttribute('aria-selected', on ? 'true' : 'false');
+      document.getElementById(tabs[j].getAttribute('aria-controls')).classList.toggle('on', on);
+    }
+  }
+  for (i = 0; i < tabs.length; i++) {
+    tabs[i].addEventListener('click', function () { show(this.getAttribute('aria-controls')); });
+  }
+  if (location.hash === '#all-publications') show('pub-all');
 })();
 </script>
 </body>

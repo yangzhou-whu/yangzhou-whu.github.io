@@ -1,8 +1,8 @@
 # Yang Zhou — academic homepage
 
 Live at **<https://yangzhou-whu.github.io/>** (GitHub Pages, organisation `yangzhou-whu`, branch
-`main`, root). Plain static files: one stylesheet per page, ~20 lines of JavaScript (email
-obfuscation only), no build step, no Jekyll (`.nojekyll`). Nothing loads from a CDN, so the pages
+`main`, root). Plain static files: one stylesheet per page, ~40 lines of JavaScript (email
+obfuscation and the publications switch), no build step, no Jekyll (`.nojekyll`). Nothing loads from a CDN, so the pages
 render identically inside and outside China.
 
 ```
@@ -42,6 +42,14 @@ To add a paper, copy one `.pub` block in `index.html`:
   <div class="vn"><span class="lk"><a href="…" rel="noopener"><!-- icon svg -->Paper</a></span><span><em>NeurIPS</em>, 2027</span></div>
 </div>
 ```
+
+The **Publications** card has a Selected / All by year switch (`.seg` tabs, script at the bottom
+of `index.html`). `#pub-selected` holds the few headline papers as `.pub` blocks with Paper/Code/Model
+buttons. `#pub-all` is the by-year list: one `<li>` per paper inside that year's `.row`, the title
+linking to the DOI (or the open PDF when there is none). It holds main-author papers plus
+middle-author papers at top venues, with no preprints, workshops or minor venues. A selected paper goes in
+both panels. Without JavaScript both panels show and the switch is hidden; `#all-publications`
+in a link opens the full list.
 
 `<b>` marks your name, `<sup>*</sup>` co-first, `<sup>#</sup>` corresponding, `.award` renders in
 red. Accepted-but-unpublished work is written `<em>Journal</em> (Accepted), year`; "Paper" links go to
