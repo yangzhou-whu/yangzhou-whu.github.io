@@ -7,15 +7,15 @@
 .lab-page .guide-shell h1 .sep{color:var(--faint);font-weight:400;margin:0 .45em}
 .lab-page .guide-shell>section.card{padding:24px 28px 26px}
 .lab-page .principles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;list-style:none;padding:0;margin:16px 0 18px}
-.lab-page .principles>li{margin:0;padding:12px 14px 14px;background:var(--surface-2);border:1px solid var(--line);border-radius:var(--r);display:grid;grid-template-rows:auto auto 1fr;row-gap:6px;align-content:start}
-@supports(grid-template-rows:subgrid){.lab-page .principles>li{grid-template-rows:subgrid;grid-row:span 3}}
+.lab-page .principles>li{margin:0;padding:12px 14px 14px;background:var(--surface-2);border:1px solid var(--line);border-radius:var(--r);display:grid;grid-template-rows:auto auto auto auto 1fr;row-gap:6px;align-content:start}
+/* heading, tagline and each bullet sit on one shared row across the three tiles */
+@supports(grid-template-rows:subgrid){.lab-page .principles>li{grid-template-rows:subgrid;grid-row:span 5}}
 .lab-page .principles .head{display:flex;align-items:center;gap:10px}
 .lab-page .principles .mark{display:inline-flex;align-items:center;justify-content:center;flex:none;width:28px;height:28px;border-radius:7px;background:var(--accent-soft);color:var(--accent-dark);font-weight:600;font-size:.9375rem}
 .lab-page .principles strong{color:var(--ink);font-size:1rem;line-height:1.3}
 .lab-page .principles p{margin:0;color:var(--ink);font-size:.9375rem;line-height:1.45;font-weight:500}
-.lab-page .principles ul{list-style:disc;padding-left:1.1em;margin:0}
-.lab-page .principles ul li{display:list-item;padding:0;margin:0;background:none;border:0;border-radius:0;font-size:.875rem;line-height:1.5;color:var(--body)}
-.lab-page .principles ul li+li{margin-top:4px}
+.lab-page .principles ul{display:contents;list-style:disc}
+.lab-page .principles ul li{display:list-item;padding:0;margin:0 0 0 1.1em;background:none;border:0;border-radius:0;font-size:.875rem;line-height:1.5;color:var(--body)}
 .lab-page .lab-note{font-size:.875rem;line-height:1.7;padding-left:14px;border-left:3px solid var(--line-2)}
 .lab-page .lab-note p{margin:0 0 8px}
 .lab-page .mag{margin:0;overflow-x:auto}
