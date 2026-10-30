@@ -68,9 +68,10 @@ R = [
       booktitle="Medical Image Computing and Computer Assisted Intervention (MICCAI)", conf="MICCAI",
       pages="371--381", year="2023", doi="10.1007/978-3-031-43990-2_35",
       arxiv="2303.07618", code="https://github.com/eraserNut/MedRPG"),
- dict(key="bai2026evlffm", type="article",
-      title="EVLF-FM: Explainable Vision Language Foundation Model for Medicine",
-      journal="Nature Medicine", status="Accepted", year="2026", arxiv="2509.24231"),
+ dict(key="bai2026evlffm", short="EVLF-FM", type="article",
+      title="A clinical multimodal vision language foundation model with fine-grain explainability",
+      journal="Nature Medicine", year="2026", doi="10.1038/s41591-026-04655-5", arxiv="2509.24231",
+      note="Published online 29 October 2026"),
  dict(key="ma2024medsam", short="MedSAM", type="article",
       title="Segment anything in medical images",
       journal="Nature Communications", volume="15", number="1", pages="654", year="2024",
@@ -155,6 +156,8 @@ def html_venue(r):
         s = f"<em>{html.escape(r['journal'])}</em>"
         if r.get("status"):
             return f"{s} ({r['status']}), {r['year']}."
+        if not r.get("volume"):
+            return f"{s}, {r['year']}."
         vol = r.get("volume", "") + (f"({r['number']})" if r.get("number") else "")
         return f"{s}, {vol}:{dash(r['pages'])}, {r['year']}."
     s = f"<em>{html.escape(r['conf'])}</em>"

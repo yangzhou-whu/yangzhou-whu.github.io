@@ -1,5 +1,5 @@
 {
-"_note": "Full author lists per BibTeX key, from Crossref (DOI records) and arXiv (2509.24231, 2608.10915v2), fetched 2026-09-15; BenchX typed from the paper. Used by build_references.py.",
+"_note": "Full author lists per BibTeX key, from Crossref (DOI records) and arXiv (2608.10915v2), fetched 2026-09-15; bai2026evlffm re-fetched from Crossref 2026-10-30; BenchX typed from the paper. Used by build_references.py.",
 "authors": {
 "zhou2026mermedfm": [
 {
@@ -925,11 +925,15 @@
 },
 {
 "family": "Hong",
-"given": "Ashley"
+"given": "Ashley Shuen Ying"
 },
 {
 "family": "Gutierrez",
 "given": "Laura"
+},
+{
+"family": "Berni",
+"given": "Alessandro"
 },
 {
 "family": "Teo",
@@ -956,8 +960,16 @@
 "given": "Zengxiang"
 },
 {
-"family": "Dinh",
-"given": "Linh Le"
+"family": "Sharma",
+"given": "Sumit"
+},
+{
+"family": "Ruthmann",
+"given": "Nicholas"
+},
+{
+"family": "Linh",
+"given": "Le Dinh"
 },
 {
 "family": "Chan",
@@ -996,6 +1008,14 @@
 "given": "Leopold"
 },
 {
+"family": "Kim",
+"given": "Rae-Young"
+},
+{
+"family": "Wong",
+"given": "Damon"
+},
+{
 "family": "Ang",
 "given": "Marcus"
 },
@@ -1005,7 +1025,7 @@
 },
 {
 "family": "Mehta",
-"given": "Jod"
+"given": "Jodhbir S."
 },
 {
 "family": "Aung",
@@ -1016,8 +1036,8 @@
 "given": "Lionel Tim-Ee"
 },
 {
-"family": "Anh",
-"given": "Tran Nguyen Tuan"
+"family": "Tran",
+"given": "Nguyen Tuan Anh"
 },
 {
 "family": "Cheng",
@@ -1026,6 +1046,10 @@
 {
 "family": "Wong",
 "given": "Tien Yin"
+},
+{
+"family": "Moshfeghi",
+"given": "Darius M."
 },
 {
 "family": "Liu",
